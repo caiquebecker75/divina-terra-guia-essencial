@@ -1,18 +1,18 @@
-SLOTS DE RENDER — apresentação Divina Terra × 75LAB
-====================================================
-O slide 05 ("Como fica na loja") tem 3 espaços reservados para os renders da solução.
+SLOTS DE RENDER — Divina Navegação · Divina Terra × 75LAB
+==========================================================
+O slide 05 ("A loja em imagem") tem 3 espaços reservados para os renders da solução.
 
 Para inserir uma imagem, abra index.html, localize o bloco do slide 05 e adicione
 a tag <img> como PRIMEIRO filho de cada <div class="render">:
 
   <div class="render" data-slot="hero">
-    <img src="renders/planograma-proteinas.jpg" alt="Planograma-base de proteínas">
+    <img src="renders/loja-piloto-navegacao.jpg" alt="Loja piloto com navegação por categoria">
     ...
   </div>
 
 Slots disponíveis:
-  data-slot="hero" → Render 01 · Planograma-base · Proteínas   (proporção larga, ~1600x1100px)
-  data-slot="b"    → Render 02 · Bloco de creatina            (~1000x700px)
-  data-slot="c"    → Render 03 · Mini manual digital          (~1000x700px)
+  data-slot="hero" → Render 01 · Loja piloto · navegação por categoria  (larga, ~1600x1100px)
+  data-slot="b"    → Render 02 · Planograma modular                     (~1000x700px)
+  data-slot="c"    → Render 03 · Sistema visual de gôndola               (~1000x700px)
 
 A imagem preenche o slot automaticamente (object-fit: cover) e o placeholder fica atrás.

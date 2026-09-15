@@ -3,35 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Divina Terra × 75LAB — Guia Essencial de Organização de Loja</title>
-<meta name="description" content="Proposta comercial 75LAB para a Divina Terra — Healthy Market. Guia Essencial de Organização de Loja, Fase 1.">
+<title>Divina Navegação — Divina Terra × 75LAB</title>
+<meta name="description" content="Proposta comercial 75LAB para a Divina Terra — Healthy Market. Divina Navegação: sistema proprietário de organização, navegação e execução de loja.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Jost:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ==========================================================================
-   DIVINA TERRA × 75LAB — deck comercial (arquivo único)
-   IDENTIDADE aplicada a partir do material oficial da marca (Behance):
-     âmbar   #DE9835  · cor de campanha dominante das peças
-     terra   #473225  · marrom institucional (fundos e texto)
-     mata    #133F2E  · verde institucional (uniformes, blocos)
-     areia   #D1CBB8  · neutro claro das peças
-     ouro    #C8963E  · linha fina, logo e padrão de pétalas
-   Elementos: padrão de pétalas (círculos sobrepostos), anéis concêntricos,
-   selos circulares com ícone linear, títulos caps com palavra em âmbar.
+   DIVINA NAVEGAÇÃO · DIVINA TERRA × 75LAB — deck comercial (arquivo único)
+   Conteúdo: "Divina Terra — Estratégia Completa de Organização, Navegação e
+   Execução de Loja" (docx, 15/09/2026).
+   Identidade oficial da marca (Behance): âmbar #DE9835 · terra #473225 ·
+   mata #133F2E · areia #D1CBB8 · ouro de linha #C8963E. Padrão de pétalas,
+   anéis concêntricos, selos circulares, títulos caps com palavra em âmbar.
    ========================================================================== */
 :root{
   --amber:#DE9835; --amber-d:#C17B30; --amber-l:#EFC079; --amber-x:#9C6B24;
-  --gold:#C8963E;
-  --terra:#473225; --terra-d:#2F2119; --terra-l:#6B4F3C;
-  --mata:#133F2E;  --mata-l:#1E5B41;
-  --areia:#D1CBB8; --creme:#F5F0E4; --off:#FCFAF5;
-  --lime:#C0EE4E;
+  --terra:#473225; --mata:#133F2E; --areia:#D1CBB8; --creme:#F5F0E4;
   --ease:cubic-bezier(.22,.9,.24,1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;overflow:hidden;background:var(--terra)}
 body{font-family:'Jost',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+button{font-family:inherit}
 @media (pointer:fine){ body,a,button,.ci{cursor:none} }
 
 /* ---------- cursor harmonioso ---------- */
@@ -44,17 +38,15 @@ body{font-family:'Jost',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 @media (pointer:coarse){.cur,.curDot{display:none}}
 
 /* ---------- temas por slide ---------- */
-.slide{
-  --bg:var(--creme); --fg:#3A2A1E; --fg2:#6E5B4B; --fg3:#9A8875;
-  --acc:var(--amber-x); --line:#DFD6C3; --card:#FFFDF8; --cardline:#E6DDCA; --pat:.10;
-}
+.slide{--bg:var(--creme);--fg:#3A2A1E;--fg2:#6E5B4B;--fg3:#9A8875;
+  --acc:var(--amber-x);--line:#DFD6C3;--card:#FFFDF8;--cardline:#E6DDCA;--pat:.10}
 .bg-terra{--bg:#473225;--fg:#F5F0E4;--fg2:#CFC2B0;--fg3:#9E8E7C;--acc:#DE9835;
   --line:rgba(222,152,53,.3);--card:rgba(255,255,255,.055);--cardline:rgba(222,152,53,.26);--pat:.16}
 .bg-mata{--bg:#133F2E;--fg:#F5F0E4;--fg2:#C2D2C6;--fg3:#8CA294;--acc:#DE9835;
   --line:rgba(222,152,53,.3);--card:rgba(255,255,255,.06);--cardline:rgba(222,152,53,.26);--pat:.16}
-.bg-amber{--bg:#DE9835;--fg:#3A2A1E;--fg2:#5C4430;--fg3:#8A6B4C;--acc:#473225;
+.bg-amber{--bg:#DE9835;--fg:#3A2A1E;--fg2:#5C4430;--fg3:#7E6146;--acc:#473225;
   --line:rgba(71,50,37,.26);--card:rgba(255,253,246,.55);--cardline:rgba(71,50,37,.2);--pat:.13}
-.bg-areia{--bg:#D1CBB8;--fg:#3A2A1E;--fg2:#5C4B3B;--fg3:#8A7A66;--acc:#9C6B24;
+.bg-areia{--bg:#D1CBB8;--fg:#3A2A1E;--fg2:#5C4B3B;--fg3:#7F705D;--acc:#8A5E1F;
   --line:rgba(71,50,37,.2);--card:rgba(255,253,246,.72);--cardline:rgba(71,50,37,.16);--pat:.12}
 
 /* ---------- estrutura ---------- */
@@ -77,8 +69,9 @@ body{font-family:'Jost',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 .act .pop{animation:pop .8s var(--ease) both}
 .pop{opacity:0}
 @keyframes pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
-/* ---------- padrão de pétalas + anéis (elementos da marca) ---------- */
+/* ---------- padrão de pétalas + anéis ---------- */
 .pat{position:absolute;pointer-events:none;z-index:0}
 .pat.top{top:0;left:0;right:0;height:clamp(70px,9vw,150px);opacity:var(--pat)}
 .pat.full{inset:0;opacity:calc(var(--pat)*.62)}
@@ -89,9 +82,10 @@ body{font-family:'Jost',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 
 .chrome{display:flex;justify-content:space-between;align-items:center;gap:16px;flex:0 0 auto}
 .content{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;min-height:0;
-  padding:clamp(10px,1.9vw,24px) 0;gap:clamp(11px,1.6vw,26px)}
+  padding:clamp(10px,1.8vw,24px) 0;gap:clamp(11px,1.5vw,24px)}
 .foot{flex:0 0 auto;display:flex;justify-content:space-between;align-items:center;
   border-top:1px solid var(--line);padding-top:clamp(8px,1vw,13px)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
 
 /* ---------- marca ---------- */
 .dtlogo{height:clamp(18px,1.8vw,28px);display:block}
@@ -105,30 +99,31 @@ body{font-family:'Jost',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 
 /* ---------- tipografia ---------- */
 h1,h2{font-weight:300;text-transform:uppercase;line-height:1.04;letter-spacing:.005em;color:var(--fg)}
-h1{font-size:clamp(29px,4.9vw,80px)}
-h2{font-size:clamp(22px,3.1vw,50px)}
+h1{font-size:clamp(29px,4.8vw,78px)}
+h2{font-size:clamp(22px,3vw,48px)}
 h1 b,h2 b{font-weight:600;color:var(--acc)}
-h3{font-weight:500;font-size:clamp(12px,1.16vw,17px);text-transform:uppercase;letter-spacing:.075em;
+h3{font-weight:500;font-size:clamp(11.5px,1.1vw,16.5px);text-transform:uppercase;letter-spacing:.075em;
   line-height:1.2;color:var(--fg)}
-.eyebrow{font-size:clamp(8.5px,.74vw,11px);letter-spacing:.28em;text-transform:uppercase;
-  color:var(--acc);font-weight:500}
+.eyebrow{font-size:clamp(8.5px,.74vw,11px);letter-spacing:.28em;text-transform:uppercase;color:var(--acc);font-weight:500}
 .lbl{font-size:clamp(8.5px,.72vw,10.5px);letter-spacing:.24em;text-transform:uppercase;color:var(--fg3)}
-.lead{font-weight:300;font-size:clamp(12.5px,1.12vw,17px);line-height:1.55;color:var(--fg2);max-width:60ch}
+.lead{font-weight:300;font-size:clamp(12.5px,1.1vw,16.5px);line-height:1.55;color:var(--fg2);max-width:60ch}
 .tiny{font-size:clamp(10.5px,.84vw,12.8px);line-height:1.5;color:var(--fg2);font-weight:300}
+.qsm{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+  font-size:clamp(15px,1.5vw,24px);line-height:1.28;color:var(--fg);max-width:32ch}
 b{font-weight:500}
 
 /* ---------- botões ---------- */
 .btn{display:inline-flex;align-items:center;gap:9px;border:1.4px solid var(--amber);border-radius:100px;
-  padding:clamp(9px,.95vw,14px) clamp(17px,1.6vw,27px);font-family:'Jost',sans-serif;
-  font-size:clamp(10px,.86vw,13px);font-weight:600;letter-spacing:.14em;text-transform:uppercase;
-  background:var(--amber);color:#3A2A1E;transition:transform .3s var(--ease),background .3s,border-color .3s,color .3s}
+  padding:clamp(9px,.95vw,14px) clamp(17px,1.6vw,27px);font-size:clamp(10px,.86vw,13px);font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;background:var(--amber);color:#3A2A1E;
+  transition:transform .3s var(--ease),background .3s,border-color .3s,color .3s}
 .btn:hover{transform:translateY(-3px);background:transparent;color:var(--amber)}
 .bg-amber .btn{background:var(--terra);border-color:var(--terra);color:var(--amber)}
 .bg-amber .btn:hover{background:transparent;color:var(--terra)}
+.bg-creme .btn:hover,.slide:not([class*="bg-"]) .btn:hover{color:var(--amber-x);border-color:var(--amber-x)}
 .btn.gh{background:transparent;color:var(--fg);border-color:var(--line)}
 .btn.gh:hover{background:var(--amber);border-color:var(--amber);color:#3A2A1E}
-.btn svg{width:13px;height:13px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.9;
-  stroke-linecap:round;stroke-linejoin:round}
+.btn svg{width:13px;height:13px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .btns{display:flex;gap:clamp(8px,.9vw,13px);flex-wrap:wrap}
 
 .nav{display:flex;align-items:center;gap:8px}
@@ -138,184 +133,226 @@ b{font-weight:500}
 .nb:hover{background:var(--amber);border-color:var(--amber);transform:scale(1.1)}
 .nb:hover svg{stroke:#3A2A1E}
 .cnt{font-size:clamp(9.5px,.78vw,12px);letter-spacing:.16em;color:var(--fg3);min-width:50px;text-align:center}
-.ixb{border:1px solid var(--line);background:transparent;border-radius:100px;
-  padding:6px clamp(11px,.95vw,15px);font-family:'Jost',sans-serif;font-size:clamp(8.5px,.72vw,10.5px);
-  font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--fg2);transition:.28s var(--ease)}
+.ixb{border:1px solid var(--line);background:transparent;border-radius:100px;padding:6px clamp(11px,.95vw,15px);
+  font-size:clamp(8.5px,.72vw,10.5px);font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--fg2);transition:.28s var(--ease)}
 .ixb:hover{background:var(--amber);color:#3A2A1E;border-color:var(--amber)}
+#prog{position:fixed;top:0;left:0;height:3px;background:var(--amber);z-index:60;width:0;transition:width .5s var(--ease)}
+.bg-amber ~ #prog{background:var(--terra)}
 
-#prog{position:fixed;top:0;left:0;height:3px;background:var(--amber);z-index:60;width:0;
-  transition:width .5s var(--ease)}
-
-/* ---------- selo circular (elemento da marca) ---------- */
-.selo{display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(7px,.8vw,12px)}
-.ring{width:clamp(46px,4.4vw,74px);height:clamp(46px,4.4vw,74px);border-radius:50%;
+/* ---------- selos ---------- */
+.selo{display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(7px,.8vw,12px);
+  background:none;border:none;color:inherit}
+.ring{width:var(--rs,clamp(46px,4.4vw,74px));height:var(--rs,clamp(46px,4.4vw,74px));border-radius:50%;
   border:1.4px solid var(--acc);display:grid;place-items:center;flex:0 0 auto;transition:.4s var(--ease)}
-.ring svg{width:46%;height:46%;fill:none;stroke:var(--acc);stroke-width:1.5;
-  stroke-linecap:round;stroke-linejoin:round;transition:.4s var(--ease)}
-.selo:hover .ring{background:var(--acc);transform:scale(1.06)}
-.selo:hover .ring svg{stroke:var(--bg)}
-.selo b{font-size:clamp(9.5px,.82vw,12.5px);letter-spacing:.16em;text-transform:uppercase;
-  font-weight:500;color:var(--fg);line-height:1.35}
+.ring svg{width:46%;height:46%;fill:none;stroke:var(--acc);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:.4s var(--ease)}
+.selo:hover .ring,.selo.on .ring{background:var(--acc);transform:scale(1.06)}
+.selo:hover .ring svg,.selo.on .ring svg{stroke:var(--bg)}
+.selo b{font-size:clamp(9px,.8vw,12px);letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--fg);line-height:1.35}
+
+/* cadeia de selos (capa) */
+.chain{display:flex;align-items:flex-start;gap:clamp(6px,1vw,16px);flex-wrap:wrap;--rs:clamp(38px,3.4vw,56px)}
+.chain .ar{height:var(--rs);display:grid;place-items:center}
+.chain .ar svg{width:clamp(12px,1vw,16px);fill:none;stroke:var(--acc);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.7}
+
+/* equação dos 7 componentes */
+.eq{display:flex;align-items:flex-start;justify-content:space-between;gap:clamp(3px,.5vw,9px);flex-wrap:wrap;--rs:clamp(42px,4vw,66px)}
+.eq .op{height:var(--rs);display:grid;place-items:center;font-weight:200;font-size:clamp(16px,1.6vw,26px);color:var(--acc)}
+.eqres{height:var(--rs);display:flex;align-items:center;gap:10px;padding:0 clamp(14px,1.5vw,24px);background:var(--terra);
+  color:var(--amber);border-radius:100px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  font-size:clamp(9.5px,.86vw,13px);white-space:nowrap;line-height:1.2}
+.eqdet{display:flex;align-items:center;gap:clamp(12px,1.4vw,22px);background:var(--card);border:1px solid var(--cardline);
+  border-radius:clamp(9px,.95vw,15px);padding:clamp(12px,1.3vw,20px) clamp(14px,1.6vw,26px)}
+.eqdet .num{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3vw,50px);font-weight:600;line-height:1;color:var(--acc);opacity:.55}
+.eqdet .anim{animation:fade .45s var(--ease) both}
 
 /* ícone linear pequeno */
-.ic{width:clamp(28px,2.5vw,42px);height:clamp(28px,2.5vw,42px);border-radius:50%;
-  border:1.2px solid var(--acc);display:grid;place-items:center;flex:0 0 auto}
+.ic{width:clamp(28px,2.5vw,42px);height:clamp(28px,2.5vw,42px);border-radius:50%;border:1.2px solid var(--acc);display:grid;place-items:center;flex:0 0 auto}
 .ic svg{width:48%;height:48%;fill:none;stroke:var(--acc);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 
 /* ---------- cards ---------- */
 .grid{display:grid;gap:clamp(9px,1.05vw,18px)}
-.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
-.g4{grid-template-columns:repeat(4,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
-
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
 .tile{background:var(--card);border:1px solid var(--cardline);border-radius:clamp(9px,.95vw,15px);
-  padding:clamp(12px,1.25vw,22px);display:flex;flex-direction:column;gap:clamp(6px,.6vw,10px);
-  text-align:left;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s}
-.tile.ci:hover{transform:translateY(-6px);border-color:var(--amber);
-  box-shadow:0 16px 32px -20px rgba(47,33,25,.55)}
-.tile .num{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.1vw,34px);font-weight:600;
-  color:var(--acc);opacity:.42;line-height:1}
-.tile.solid-amber{background:var(--amber);border-color:var(--amber);color:#3A2A1E}
-.tile.solid-amber h3{color:#3A2A1E}
-.tile.solid-amber .tiny,.tile.solid-amber .ul li{color:#5C4430}
-.tile.solid-amber .eyebrow{color:#5C4430}
+  padding:clamp(12px,1.25vw,22px);display:flex;flex-direction:column;gap:clamp(6px,.6vw,10px);text-align:left;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s}
+.tile.ci:hover{transform:translateY(-6px);border-color:var(--amber);box-shadow:0 16px 32px -20px rgba(47,33,25,.55)}
+.tile .num{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.1vw,34px);font-weight:600;color:var(--acc);opacity:.42;line-height:1}
+.trow{display:flex;justify-content:space-between;align-items:flex-start}
+.tile.solid-amber{background:var(--amber);border-color:var(--amber)}
+.tile.solid-amber h3{color:#3A2A1E}.tile.solid-amber .tiny,.tile.solid-amber .ul li{color:#5C4430}
+.tile.solid-amber .eyebrow{color:#5C4430}.tile.solid-amber .num{color:#3A2A1E}
 .tile.solid-amber .ic{border-color:#3A2A1E}.tile.solid-amber .ic svg{stroke:#3A2A1E}
-.tile.solid-amber .num{color:#3A2A1E}
-.tile.solid-mata{background:var(--mata);border-color:var(--mata);color:var(--creme)}
-.tile.solid-mata h3{color:#fff}
-.tile.solid-mata .tiny,.tile.solid-mata .ul li{color:#C2D2C6}
-.tile.solid-mata .eyebrow{color:var(--amber)}
+.tile.solid-amber .ul li .dt{background:#3A2A1E}
+.tile.solid-mata{background:var(--mata);border-color:var(--mata)}
+.tile.solid-mata h3{color:#fff}.tile.solid-mata .tiny,.tile.solid-mata .ul li{color:#C2D2C6}
+.tile.solid-mata .eyebrow,.tile.solid-mata .num{color:var(--amber)}
 .tile.solid-mata .ic{border-color:var(--amber)}.tile.solid-mata .ic svg{stroke:var(--amber)}
-.tile.solid-mata .num{color:var(--amber)}
+.tile.solid-mata .ul li .dt{background:var(--amber)}
+.tile.solid-terra{background:var(--terra);border-color:var(--terra)}
+.tile.solid-terra h3{color:#fff}.tile.solid-terra .tiny,.tile.solid-terra .ul li{color:#CFC2B0}
+.tile.solid-terra .eyebrow,.tile.solid-terra .num{color:var(--amber)}
+.tile.solid-terra .ic{border-color:var(--amber)}.tile.solid-terra .ic svg{stroke:var(--amber)}
+.tile.solid-terra .ul li .dt{background:var(--amber)}
 
-/* ---------- listas ---------- */
-.ul{display:flex;flex-direction:column;gap:clamp(5px,.62vw,10px);list-style:none}
-.ul li{display:flex;gap:10px;align-items:flex-start;font-size:clamp(11px,.93vw,14.5px);
-  font-weight:300;line-height:1.45;color:var(--fg2)}
-.ul li .dt{width:6px;height:6px;border-radius:50%;background:var(--acc);flex:0 0 auto;margin-top:.5em}
-.ul li svg{width:clamp(13px,1.1vw,16px);height:clamp(13px,1.1vw,16px);flex:0 0 auto;margin-top:.15em;
+/* ---------- listas / chips ---------- */
+.ul{display:flex;flex-direction:column;gap:clamp(5px,.6vw,9px);list-style:none}
+.ul.cols{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(14px,2vw,30px);row-gap:clamp(5px,.6vw,9px)}
+.ul li{display:flex;gap:10px;align-items:flex-start;font-size:clamp(11px,.92vw,14px);font-weight:300;line-height:1.42;color:var(--fg2)}
+.ul li .dt{width:6px;height:6px;border-radius:50%;background:var(--acc);flex:0 0 auto;margin-top:.52em}
+.ul li svg{width:clamp(13px,1.1vw,16px);height:clamp(13px,1.1vw,16px);flex:0 0 auto;margin-top:.12em;
   fill:none;stroke:var(--acc);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.ul.no li{color:var(--fg3)}
-.ul.no li svg{stroke:var(--fg3);stroke-width:1.8}
+.ul.no li{color:var(--fg3)}.ul.no li svg{stroke:var(--fg3);stroke-width:1.8}
+.chips{display:flex;gap:7px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:100px;
+  padding:5px 13px;font-size:clamp(10px,.8vw,12.3px);font-weight:400;color:var(--fg);background:var(--card)}
+.chip svg{width:12px;height:12px;fill:none;stroke:var(--acc);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
-/* ---------- faixas e dados ---------- */
-.band{display:flex;align-items:center;gap:clamp(9px,1.2vw,18px);flex-wrap:wrap;
-  border:1px solid var(--line);border-radius:100px;padding:clamp(8px,.95vw,15px) clamp(15px,1.7vw,28px);
-  font-size:clamp(10px,.85vw,13px);color:var(--fg2);font-weight:300}
+/* ---------- faixas / dados ---------- */
+.band{display:flex;align-items:center;gap:clamp(9px,1.2vw,18px);flex-wrap:wrap;border:1px solid var(--line);border-radius:100px;
+  padding:clamp(8px,.95vw,15px) clamp(15px,1.7vw,28px);font-size:clamp(10px,.85vw,13px);color:var(--fg2);font-weight:300}
 .band b{color:var(--fg);font-weight:500}
 .band .sep{width:4px;height:4px;border-radius:50%;background:var(--acc);flex:0 0 auto}
 .band svg{fill:none;stroke:var(--acc);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
-.band.warn{border-radius:clamp(9px,.95vw,15px);border-color:var(--acc);background:var(--card)}
-
 .dl{display:flex;flex-direction:column}
-.dl div{display:flex;justify-content:space-between;gap:14px;align-items:baseline;
-  padding:clamp(6px,.68vw,11px) 0;border-bottom:1px solid var(--line);
-  font-size:clamp(10.5px,.9vw,13.5px);font-weight:300;color:var(--fg2)}
+.dl div{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:clamp(6px,.68vw,11px) 0;
+  border-bottom:1px solid var(--line);font-size:clamp(10.5px,.9vw,13.5px);font-weight:300;color:var(--fg2)}
 .dl div:last-child{border:none}
 .dl b{font-weight:500;color:var(--fg);text-align:right}
 
-/* ---------- citação ---------- */
-.quote{position:relative;padding-left:clamp(30px,3.2vw,58px)}
-.quote:before{content:'“';position:absolute;left:0;top:-.2em;font-family:'Cormorant Garamond',serif;
-  font-size:clamp(64px,7.4vw,140px);line-height:1;color:var(--acc);opacity:.5}
-.quote p.q{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
-  font-size:clamp(18px,2.25vw,36px);line-height:1.24;color:var(--fg);text-transform:none;letter-spacing:0}
+/* ---------- hoje → proposto ---------- */
+.fromto{display:flex;align-items:stretch;gap:clamp(6px,.8vw,13px)}
+.ft{flex:1;border:1px solid var(--cardline);background:var(--card);border-radius:clamp(9px,.95vw,15px);
+  padding:clamp(11px,1.2vw,19px) clamp(13px,1.4vw,22px);display:flex;flex-direction:column;gap:9px}
+.ft.on{background:var(--terra);border-color:var(--terra)}
+.ft.on .eyebrow{color:var(--amber)}
+.seq{display:flex;align-items:center;gap:clamp(5px,.6vw,9px);flex-wrap:wrap}
+.seq span{border:1px solid var(--line);border-radius:100px;padding:5px clamp(9px,.9vw,14px);font-size:clamp(9.5px,.8vw,12px);
+  font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--fg)}
+.ft.on .seq span{border-color:rgba(222,152,53,.5);color:#F5F0E4}
+.seq svg{width:12px;height:12px;fill:none;stroke:var(--fg3);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ft.on .seq svg{stroke:var(--amber)}
+.ft.muted .seq span{color:var(--fg3)}
+
+/* ---------- Divina Logic: matriz + regra modular ---------- */
+.oar{display:flex;flex-direction:column;gap:clamp(7px,.8vw,12px)}
+.oar .tile{flex-direction:row;align-items:center;gap:clamp(11px,1.2vw,18px);padding:clamp(11px,1.1vw,18px) clamp(13px,1.3vw,20px)}
+.oar .tag{font-size:clamp(9.5px,.8vw,12px);font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  min-width:clamp(96px,9.5vw,146px)}
+.tile.solid-terra .tag{color:var(--amber)}.tile.solid-amber .tag{color:#3A2A1E}.tile.solid-mata .tag{color:var(--amber)}
+.modbox{background:var(--card);border:1px solid var(--cardline);border-radius:clamp(9px,.95vw,15px);
+  padding:clamp(12px,1.3vw,22px);display:flex;flex-direction:column;gap:clamp(9px,1vw,14px)}
+.steps{display:inline-flex;border:1px solid var(--line);border-radius:100px;padding:3px;gap:3px;align-self:flex-start}
+.mod{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(4px,.5vw,8px);height:clamp(96px,15vh,170px);position:relative}
+.mcol{border:1.3px solid var(--terra);border-radius:5px;display:grid;grid-template-rows:repeat(4,1fr);gap:3px;padding:4px;
+  background:#FBF8F1;transition:opacity .4s,border-color .4s}
+.mcol.off{border:1.3px dashed var(--line);background:transparent;opacity:.6}
+.mcol.off .shelf{display:none}
+.shelf{display:flex;gap:2px;border-bottom:2px solid rgba(71,50,37,.35)}
+.sg{height:100%;border-radius:2px 2px 0 0;transition:flex-basis .55s var(--ease);
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.28) 0 1px,transparent 1px 9px)}
+.sg.a{background-color:var(--terra)}.sg.b{background-color:var(--amber)}.sg.c{background-color:var(--mata)}
+.more4{position:absolute;right:-6px;top:50%;transform:translate(100%,-50%);font-weight:200;font-size:22px;color:var(--acc)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:clamp(9.5px,.78vw,11.5px);color:var(--fg2);letter-spacing:.06em}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:2px;display:inline-block}
+.modcap{font-size:clamp(12px,1vw,15.5px);font-weight:400;color:var(--fg)}
+.modcap b{color:var(--acc);font-weight:600}
 
 /* ---------- slot de render ---------- */
-.render{position:relative;border:1.4px solid var(--acc);border-radius:clamp(9px,.95vw,15px);
-  background:rgba(255,255,255,.045);display:flex;flex-direction:column;align-items:center;
-  justify-content:center;gap:9px;overflow:hidden;min-height:0;transition:.4s var(--ease)}
+.render{position:relative;border:1.4px solid var(--acc);border-radius:clamp(9px,.95vw,15px);background:rgba(255,255,255,.045);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;overflow:hidden;min-height:0;transition:.4s var(--ease)}
 .render:hover{background:rgba(222,152,53,.1)}
 .render img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.render .ric{width:clamp(24px,2.2vw,36px);height:clamp(24px,2.2vw,36px);
-  fill:none;stroke:var(--acc);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
-.render .rlbl{font-size:clamp(9px,.78vw,11.5px);letter-spacing:.2em;text-transform:uppercase;
-  color:var(--acc);font-weight:500;text-align:center;padding:0 12px}
+.render .ric{width:clamp(24px,2.2vw,36px);height:clamp(24px,2.2vw,36px);fill:none;stroke:var(--acc);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.render .rlbl{font-size:clamp(9px,.78vw,11.5px);letter-spacing:.2em;text-transform:uppercase;color:var(--acc);font-weight:500;text-align:center;padding:0 12px}
 .render .rsub{font-size:clamp(9px,.76vw,11px);color:var(--fg3);font-weight:300;text-align:center;padding:0 14px}
-.render .tag{position:absolute;top:10px;left:10px;border:1px solid var(--acc);color:var(--acc);
-  font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;padding:3px 9px;border-radius:100px}
+.render .tag{position:absolute;top:10px;left:10px;border:1px solid var(--acc);color:var(--acc);font-size:8.5px;letter-spacing:.18em;
+  text-transform:uppercase;font-weight:500;padding:3px 9px;border-radius:100px}
 
-/* ---------- timeline / gantt ---------- */
-.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,.95vw,15px);position:relative}
+/* ---------- timeline 7 fases ---------- */
+.tl{display:grid;grid-template-columns:repeat(7,1fr);gap:clamp(5px,.7vw,12px);position:relative}
 .tl:before{content:'';position:absolute;left:0;right:0;top:clamp(14px,1.25vw,21px);height:1px;background:var(--line)}
-.tstep{position:relative;text-align:left;background:transparent;border:none;display:flex;
-  flex-direction:column;gap:clamp(5px,.62vw,10px)}
-.tdot{width:clamp(28px,2.5vw,42px);height:clamp(28px,2.5vw,42px);border-radius:50%;background:var(--bg);
-  border:1.4px solid var(--line);display:grid;place-items:center;font-family:'Cormorant Garamond',serif;
-  font-size:clamp(12px,1.1vw,18px);font-weight:600;color:var(--fg3);transition:.35s var(--ease);z-index:1}
+.tstep{position:relative;text-align:left;background:transparent;border:none;display:flex;flex-direction:column;gap:clamp(5px,.6vw,9px)}
+.tdot{width:clamp(28px,2.5vw,42px);height:clamp(28px,2.5vw,42px);border-radius:50%;background:var(--bg);border:1.4px solid var(--fg3);
+  display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.1vw,18px);font-weight:600;color:var(--fg2);
+  transition:.35s var(--ease);z-index:1}
 .tstep.on .tdot,.tstep:hover .tdot{background:var(--amber);border-color:var(--amber);color:#3A2A1E;transform:scale(1.1)}
-.tstep.on .tdays{color:var(--acc)}
-.tdays{font-size:clamp(9px,.76vw,11.5px);letter-spacing:.2em;text-transform:uppercase;color:var(--fg3);font-weight:500}
+.tstep h3{font-size:clamp(10px,.9vw,13.5px);letter-spacing:.06em;transition:color .3s}
+.tstep .tiny{font-size:clamp(9.5px,.76vw,11.5px);line-height:1.4}
+.tstep.on h3{color:var(--acc)}
+.phase{display:grid;grid-template-columns:.9fr 1.6fr;gap:clamp(12px,1.6vw,26px);background:var(--card);border:1px solid var(--cardline);
+  border-radius:clamp(9px,.95vw,15px);padding:clamp(13px,1.35vw,22px) clamp(15px,1.6vw,26px)}
+.phase .anim{animation:fade .45s var(--ease) both}
+.phase .ph-n{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,2.6vw,44px);font-weight:600;color:var(--acc);line-height:1}
 
-.gantt{display:flex;flex-direction:column;gap:5px}
-.grow{display:grid;grid-template-columns:clamp(62px,6.6vw,104px) 1fr;gap:12px;align-items:center}
-.grow span{font-size:clamp(9px,.75vw,11px);letter-spacing:.16em;text-transform:uppercase;color:var(--fg3)}
-.gbar{height:clamp(7px,.78vw,12px);border-radius:100px;background:var(--line);position:relative;overflow:hidden}
-.gfill{position:absolute;top:0;bottom:0;border-radius:100px;background:var(--terra);
-  transform:scaleX(0);transform-origin:left;transition:transform .9s var(--ease)}
-.act .gfill{transform:scaleX(1)}
-.gfill.s2{background:var(--mata)}.gfill.s3{background:var(--amber-d)}.gfill.s4{background:var(--amber)}
-
-/* ---------- número gigante ---------- */
-.big{font-weight:200;line-height:.86;letter-spacing:-.02em;font-size:clamp(54px,10.4vw,168px);color:var(--fg)}
-.big small{font-size:.26em;font-weight:400;letter-spacing:.06em;vertical-align:super;margin-right:.08em}
+/* ---------- clusters / auditoria ---------- */
+.clu{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1vw,16px);align-items:end}
+.clu div{display:flex;flex-direction:column;align-items:center;text-align:center;gap:7px}
+.clu .c{border-radius:50%;border:1.4px solid var(--amber);display:grid;place-items:center;font-weight:600;color:var(--amber);letter-spacing:.06em}
+.clu .p{width:clamp(34px,3vw,48px);height:clamp(34px,3vw,48px);font-size:clamp(12px,1vw,15px)}
+.clu .m{width:clamp(48px,4.3vw,68px);height:clamp(48px,4.3vw,68px);font-size:clamp(15px,1.3vw,20px);background:rgba(222,152,53,.14)}
+.clu .g{width:clamp(62px,5.6vw,90px);height:clamp(62px,5.6vw,90px);font-size:clamp(18px,1.6vw,25px);background:var(--amber);color:#3A2A1E}
+.audit{display:flex;flex-direction:column;gap:6px}
+.audit div{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid var(--line);
+  font-size:clamp(10.5px,.86vw,13px);font-weight:300;color:var(--fg2)}
+.audit div:last-child{border:none}
+.pill{font-size:clamp(8.5px,.7vw,10.5px);font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:3px 10px;border-radius:100px;white-space:nowrap}
+.pill.ok{background:#2E6B4E;color:#F5F0E4}.pill.aj{background:var(--amber);color:#3A2A1E}.pill.na{border:1px solid var(--line);color:var(--fg3)}
 
 /* ---------- fluxo ---------- */
 .flow{display:flex;align-items:stretch;gap:clamp(6px,.75vw,13px)}
 .fstep{flex:1;background:var(--card);border:1px solid var(--cardline);border-radius:clamp(9px,.95vw,15px);
   padding:clamp(11px,1.2vw,20px);display:flex;flex-direction:column;gap:8px;transition:.35s var(--ease)}
 .fstep:hover{transform:translateY(-5px);border-color:var(--amber)}
-.farr{display:grid;place-items:center;flex:0 0 auto;width:clamp(16px,1.6vw,28px)}
+.farr{display:grid;place-items:center;flex:0 0 auto;width:clamp(14px,1.5vw,26px)}
 .farr svg{width:100%;fill:none;stroke:var(--acc);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.skuflow{display:flex;align-items:center;gap:clamp(4px,.5vw,8px);flex-wrap:wrap}
+.skuflow span{font-size:clamp(9px,.74vw,11px);font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--fg);
+  border:1px solid var(--line);border-radius:100px;padding:4px 10px;background:var(--card)}
+.skuflow svg{width:11px;height:11px;fill:none;stroke:var(--acc);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
-/* ---------- tabs / detalhe ---------- */
-.tabs{display:inline-flex;border:1px solid var(--line);border-radius:100px;padding:3px;gap:3px}
-.tab{border:none;background:transparent;border-radius:100px;padding:7px clamp(13px,1.35vw,23px);
-  font-family:'Jost',sans-serif;font-size:clamp(9.5px,.8vw,12px);font-weight:500;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--fg2);transition:.3s var(--ease)}
+/* ---------- tabs ---------- */
+.tabs{display:inline-flex;border:1px solid var(--line);border-radius:100px;padding:3px;gap:3px;align-self:flex-start}
+.tab{border:none;background:transparent;border-radius:100px;padding:7px clamp(12px,1.3vw,22px);font-size:clamp(9.5px,.8vw,12px);
+  font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--fg2);transition:.3s var(--ease)}
 .tab.on{background:var(--amber);color:#3A2A1E}
+.bg-amber .tab.on{background:var(--terra);color:var(--amber)}
 .pane{display:none}.pane.on{display:block;animation:rise .5s var(--ease) both}
 
-.det{max-height:0;overflow:hidden;transition:max-height .45s var(--ease),opacity .35s;opacity:0}
-.tile.open .det{max-height:220px;opacity:1}
-.more{font-size:clamp(8.5px,.7vw,10.5px);letter-spacing:.2em;text-transform:uppercase;color:var(--acc);
-  font-weight:500;display:flex;align-items:center;gap:6px;margin-top:auto}
-.more svg{width:9px;height:9px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;
-  stroke-linejoin:round;transition:transform .35s var(--ease)}
-.tile.open .more svg{transform:rotate(180deg)}
+/* ---------- número gigante ---------- */
+.big{font-weight:200;line-height:.86;letter-spacing:-.02em;font-size:clamp(52px,9.6vw,156px);color:var(--fg);white-space:nowrap}
+.big small{font-size:.26em;font-weight:400;letter-spacing:.06em;vertical-align:super;margin-right:.08em}
 
 /* ---------- índice ---------- */
-#ix{position:fixed;inset:0;z-index:80;background:var(--terra);display:none;
-  padding:clamp(26px,3.6vw,64px);overflow:auto}
+#ix{position:fixed;inset:0;z-index:80;background:var(--terra);display:none;padding:clamp(26px,3.6vw,64px);overflow:auto}
 #ix.on{display:block;animation:rise .4s var(--ease) both}
 .ixg{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:9px;margin-top:24px}
-.ixi{text-align:left;background:transparent;border:1px solid rgba(222,152,53,.28);
-  border-radius:10px;padding:13px 15px;display:flex;gap:12px;align-items:baseline;transition:.3s var(--ease)}
+.ixi{text-align:left;background:transparent;border:1px solid rgba(222,152,53,.28);border-radius:10px;padding:13px 15px;
+  display:flex;gap:12px;align-items:baseline;transition:.3s var(--ease)}
 .ixi:hover{background:var(--amber);border-color:var(--amber)}
 .ixi span{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--amber);font-weight:600;min-width:20px}
 .ixi p{font-size:11.5px;color:#CFC2B0;font-weight:400;text-transform:uppercase;letter-spacing:.14em}
 .ixi:hover span,.ixi:hover p{color:#3A2A1E}
-
-.hint{position:fixed;bottom:clamp(50px,5vw,76px);left:50%;transform:translateX(-50%);z-index:50;
-  font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);opacity:.65;
-  pointer-events:none;transition:opacity .5s}
+.hint{position:fixed;bottom:clamp(50px,5vw,76px);left:50%;transform:translateX(-50%);z-index:50;font-size:9.5px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--amber);opacity:.65;pointer-events:none;transition:opacity .5s}
 .hint.hide{opacity:0}
 
 @media (max-width:860px){
-  .g3,.g4,.g5{grid-template-columns:repeat(2,1fr)}
-  .g2{grid-template-columns:1fr}
-  .tl{grid-template-columns:repeat(2,1fr)}.tl:before{display:none}
-  .flow{flex-direction:column}.farr{width:auto;height:18px;transform:rotate(90deg)}
+  .g3,.g4{grid-template-columns:repeat(2,1fr)}
+  .g2,.phase,.split{grid-template-columns:1fr!important}
+  .ul.cols{grid-template-columns:1fr}
+  .tl{grid-template-columns:repeat(4,1fr)}.tl:before{display:none}
+  .flow,.fromto{flex-direction:column}.farr{width:auto;height:18px;transform:rotate(90deg)}
   .hideM{display:none!important}
-  .slide{overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .slide{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
   .content{justify-content:flex-start}
   .hint{display:none}
 }
 @media print{
   html,body{overflow:visible;height:auto}
   #stage{position:static}
-  .slide{position:relative;opacity:1!important;visibility:visible!important;transform:none!important;
-    clip-path:none!important;height:100vh;page-break-after:always;break-after:page;
-    -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .slide{position:relative;opacity:1!important;visibility:visible!important;transform:none!important;clip-path:none!important;
+    height:100vh;page-break-after:always;break-after:page;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .nav,.ixb,#ix,.cur,.curDot,.hint,#prog{display:none!important}
   .rv,.pop{opacity:1!important;animation:none!important}
 }
@@ -331,43 +368,37 @@ b{font-weight:500}
 <svg style="position:absolute;width:0;height:0" aria-hidden="true">
  <defs>
   <pattern id="petG" width="56" height="56" patternUnits="userSpaceOnUse">
-    <g fill="none" stroke="#DE9835" stroke-width="1">
-      <circle cx="0" cy="0" r="28"/><circle cx="56" cy="0" r="28"/>
-      <circle cx="0" cy="56" r="28"/><circle cx="56" cy="56" r="28"/>
-      <circle cx="28" cy="28" r="28"/>
-    </g>
+    <g fill="none" stroke="#DE9835" stroke-width="1"><circle cx="0" cy="0" r="28"/><circle cx="56" cy="0" r="28"/>
+      <circle cx="0" cy="56" r="28"/><circle cx="56" cy="56" r="28"/><circle cx="28" cy="28" r="28"/></g>
   </pattern>
   <pattern id="petT" width="56" height="56" patternUnits="userSpaceOnUse">
-    <g fill="none" stroke="#473225" stroke-width="1">
-      <circle cx="0" cy="0" r="28"/><circle cx="56" cy="0" r="28"/>
-      <circle cx="0" cy="56" r="28"/><circle cx="56" cy="56" r="28"/>
-      <circle cx="28" cy="28" r="28"/>
-    </g>
+    <g fill="none" stroke="#473225" stroke-width="1"><circle cx="0" cy="0" r="28"/><circle cx="56" cy="0" r="28"/>
+      <circle cx="0" cy="56" r="28"/><circle cx="56" cy="56" r="28"/><circle cx="28" cy="28" r="28"/></g>
   </pattern>
  </defs>
-
  <symbol id="i-arr" viewBox="0 0 24 24"><path d="M4 12h15M13.5 6.5 19.5 12l-6 5.5"/></symbol>
  <symbol id="i-l" viewBox="0 0 24 24"><path d="M20 12H5M10.5 6.5 5 12l5.5 5.5"/></symbol>
- <symbol id="i-dn" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6"/></symbol>
  <symbol id="i-ok" viewBox="0 0 24 24"><path d="m4 12.5 5.5 5.5L20 6.5"/></symbol>
  <symbol id="i-no" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
- <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.5 2.5 5 14h6.2l-1 7.5L19 10h-6.3z"/></symbol>
- <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21.5v-9M12 12.5c0-4.4-3.4-8-8-8 0 4.4 3.4 8 8 8zM12 12.5c0-4.4 3.4-8 8-8 0 4.4-3.4 8-8 8z"/></symbol>
- <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M4 20.5C4 12 10 5 20.5 3.5 20.5 13 14 20 4 20.5zM4 20.5c2.6-4.4 6.2-7.8 11-10"/></symbol>
- <symbol id="i-shelf" viewBox="0 0 24 24"><path d="M3 3.5h18M3 3.5v17M21 3.5v17M3 20.5h18M3 11.5h18M6.5 6h3.5v5.5H6.5zM13.5 7.5h4v4h-4zM6.5 14h4.5v6H6.5zM14 15.5h3.5V20H14z"/></symbol>
- <symbol id="i-jar" viewBox="0 0 24 24"><path d="M9 2.5h6v2.2l2.2 3.3V19a2.5 2.5 0 0 1-2.5 2.5h-5.4A2.5 2.5 0 0 1 6.8 19V8l2.2-3.3zM6.8 12.5h10.4"/></symbol>
- <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.3"/></symbol>
- <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.5s6.5 7 6.5 11a6.5 6.5 0 0 1-13 0c0-4 6.5-11 6.5-11z"/><path d="M8.8 14.2a3.4 3.4 0 0 0 3.2 3.4"/></symbol>
  <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 3.5 3 5.8v15L9 18.5l6 2.3 6-2.3v-15L15 5.8 9 3.5zM9 3.5v15M15 5.8v15"/></symbol>
+ <symbol id="i-shelf" viewBox="0 0 24 24"><path d="M3 3.5h18M3 3.5v17M21 3.5v17M3 20.5h18M3 11.5h18M6.5 6h3.5v5.5H6.5zM13.5 7.5h4v4h-4zM6.5 14h4.5v6H6.5zM14 15.5h3.5V20H14z"/></symbol>
+ <symbol id="i-tree" viewBox="0 0 24 24"><path d="M9.5 2.5h5v4h-5zM12 6.5v3.5M5.5 10h13M5.5 10v3M12 10v3M18.5 10v3M3 13h5v4.5H3zM9.5 13h5v4.5h-5zM16 13h5v4.5h-5z"/></symbol>
+ <symbol id="i-grid" viewBox="0 0 24 24"><path d="M3.5 3.5h17v17h-17zM3.5 9.2h17M3.5 14.8h17M9.2 3.5v17M14.8 3.5v17"/></symbol>
+ <symbol id="i-sign" viewBox="0 0 24 24"><path d="M12 21.5V2.5M12 4.5h6.5l2.5 2.6-2.5 2.6H12M12 12H5.5L3 14.6l2.5 2.6H12"/></symbol>
+ <symbol id="i-cycle" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-13.7 5.6M4 12a8 8 0 0 1 13.7-5.6M17.7 2.8v3.8h-3.8M6.3 21.2v-3.8h3.8"/></symbol>
+ <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9.2 12 4.5l10 4.7-10 4.7zM6 11.1v4.7c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.7M22 9.2v5.8"/></symbol>
+ <symbol id="i-copy" viewBox="0 0 24 24"><path d="M8.5 8.5h12v12h-12zM15.5 8.5v-5h-12v12h5"/></symbol>
+ <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.3"/></symbol>
  <symbol id="i-rule" viewBox="0 0 24 24"><path d="M2.5 8.5h19v7h-19zM6.5 8.5v3M10.5 8.5v3.8M14.5 8.5v3M18.5 8.5v3.8"/></symbol>
  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5h11a3 3 0 0 1 3 3V20H7a3 3 0 0 1-3-3zM4 17a3 3 0 0 1 3-3h11M8 8.5h6"/></symbol>
  <symbol id="i-team" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M2.8 20c0-3.4 2.8-5.2 6.2-5.2s6.2 1.8 6.2 5.2"/><circle cx="17.4" cy="9.2" r="2.3"/><path d="M16.6 14.9c2.9.1 4.6 1.7 4.6 4.5"/></symbol>
- <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6.8v5.5l3.4 2"/></symbol>
  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 3.5h16l1.5 5.2a3 3 0 0 1-5.7 1.5 3 3 0 0 1-5.6 0 3 3 0 0 1-5.7-1.5zM5 11v9.5h14V11M10 20.5V15h4v5.5"/></symbol>
  <symbol id="i-grow" viewBox="0 0 24 24"><path d="M3.5 20.5h17M7 20.5v-5.5M12 20.5v-9.5M17 20.5v-3.5M4 10l5-4.5 4 3 6.5-5.5"/></symbol>
  <symbol id="i-img" viewBox="0 0 24 24"><path d="M3 4.5h18v15H3zM3 16l5-5 4 4 3-3 6 6"/><circle cx="8.3" cy="9.3" r="1.4"/></symbol>
  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8.5V3h10v5.5M7 17.5H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14.5h10V21H7z"/></symbol>
  <symbol id="i-seal" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.2 12.2 2.6 2.6 5-5.4"/></symbol>
+ <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5.5 5.5"/></symbol>
+ <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11.5M9 12h11.5M9 18h11.5"/><path d="m3 6 1.3 1.3L6.5 5M3 12l1.3 1.3L6.5 11M3 18l1.3 1.3L6.5 17"/></symbol>
 </svg>
 
 <div id="stage">
@@ -376,214 +407,144 @@ b{font-weight:500}
 <section class="slide bg-terra" data-t="Capa">
   <svg class="pat full"><rect width="100%" height="100%" fill="url(#petG)"/></svg>
   <svg class="rings" viewBox="0 0 100 100" style="right:-8vw;bottom:-14vw;width:52vw;height:52vw">
-    <circle cx="50" cy="50" r="18"/><circle cx="50" cy="50" r="28"/>
-    <circle cx="50" cy="50" r="38"/><circle cx="50" cy="50" r="48"/></svg>
+    <circle cx="50" cy="50" r="18"/><circle cx="50" cy="50" r="28"/><circle cx="50" cy="50" r="38"/><circle cx="50" cy="50" r="48"/></svg>
   <div class="chrome">
     <div class="lockup">
-      <div class="dtlock">
-        <img class="dtlogo" src="data:image/png;base64,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" alt="Divina Terra">
-        <span class="desc">Healthy Market</span>
-      </div>
-      <span class="x">×</span>
-      <span class="lab">75<i>LAB</i></span>
+      <div class="dtlock"><img class="dtlogo" src="data:image/png;base64,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" alt="Divina Terra"><span class="desc">Healthy Market</span></div>
+      <span class="x">×</span><span class="lab">75<i>LAB</i></span>
     </div>
     <span class="lbl hideM">Proposta comercial · Setembro 2026</span>
   </div>
-  <div class="content" style="justify-content:center;gap:clamp(13px,1.7vw,28px)">
-    <div class="rv"><span class="eyebrow">Fase 1 · Guia Essencial de Organização de Loja</span></div>
-    <h1 class="rv">Uma prateleira clara<br><b>vende por você</b></h1>
-    <p class="lead rv" style="max-width:50ch">Antes de redesenhar a rede, organizamos a decisão do shopper onde ela é mais difícil: proteína, creatina e ômega. Um guia pronto em 15 dias úteis — e uma base para crescer.</p>
-    <div class="rv" style="display:flex;gap:clamp(18px,3vw,52px);flex-wrap:wrap;margin-top:clamp(2px,.6vw,10px)">
-      <div class="selo ci"><span class="ring"><svg><use href="#i-bolt"/></svg></span><b>Rápido</b></div>
-      <div class="selo ci"><span class="ring"><svg><use href="#i-leaf"/></svg></span><b>Prático</b></div>
-      <div class="selo ci"><span class="ring"><svg><use href="#i-sprout"/></svg></span><b>Evolutivo</b></div>
+  <div class="content" style="gap:clamp(13px,1.6vw,26px)">
+    <div class="rv"><span class="eyebrow">Projeto Divina Navegação</span></div>
+    <h1 class="rv">Transformar estratégia<br>em <b>padrão de loja</b></h1>
+    <p class="lead rv" style="max-width:52ch">Um sistema proprietário de organização, navegação e execução de loja — simples para o franqueado aplicar e fácil para a rede replicar.</p>
+    <div class="chain rv">
+      <div class="selo ci"><span class="ring"><svg><use href="#i-tree"/></svg></span><b>Estruturar</b></div>
+      <div class="ar"><svg viewBox="0 0 24 24"><use href="#i-arr"/></svg></div>
+      <div class="selo ci"><span class="ring"><svg><use href="#i-shelf"/></svg></span><b>Organizar</b></div>
+      <div class="ar"><svg viewBox="0 0 24 24"><use href="#i-arr"/></svg></div>
+      <div class="selo ci"><span class="ring"><svg><use href="#i-sign"/></svg></span><b>Sinalizar</b></div>
+      <div class="ar"><svg viewBox="0 0 24 24"><use href="#i-arr"/></svg></div>
+      <div class="selo ci"><span class="ring"><svg><use href="#i-seal"/></svg></span><b>Testar</b></div>
+      <div class="ar"><svg viewBox="0 0 24 24"><use href="#i-arr"/></svg></div>
+      <div class="selo ci"><span class="ring"><svg><use href="#i-cap"/></svg></span><b>Ensinar</b></div>
+      <div class="ar"><svg viewBox="0 0 24 24"><use href="#i-arr"/></svg></div>
+      <div class="selo ci"><span class="ring"><svg><use href="#i-copy"/></svg></span><b>Replicar</b></div>
     </div>
-    <div class="btns rv" style="margin-top:clamp(4px,.7vw,12px)">
+    <div class="btns rv" style="margin-top:clamp(2px,.5vw,8px)">
       <button class="btn ci" data-go="1">Ver a proposta <svg><use href="#i-arr"/></svg></button>
       <button class="btn gh ci" data-go="8">Ir direto ao investimento</button>
     </div>
   </div>
   <div class="foot">
     <span class="lab">75<i>LAB</i></span>
-    <div class="nav">
-      <button class="ixb ci" data-ix>Índice</button>
-      <button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
-      <span class="cnt"><b class="cur-n">01</b> / 10</span>
-      <button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button>
-    </div>
+    <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
+      <span class="cnt"><b class="cur-n">01</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
   </div>
 </section>
 
-<!-- ================= 2 · O QUE OUVIMOS ================= -->
-<section class="slide" data-t="O que ouvimos">
+<!-- ================= 2 · O DESAFIO ================= -->
+<section class="slide" data-t="O desafio">
   <svg class="pat corner"><rect width="100%" height="100%" fill="url(#petT)"/></svg>
-  <div class="chrome">
-    <span class="eyebrow">01 · O ponto de partida</span>
-    <span class="lbl hideM">Divina Terra × 75LAB</span>
-  </div>
+  <div class="chrome"><span class="eyebrow">01 · O ponto de partida</span><span class="lbl hideM">Contexto e problema de negócio</span></div>
   <div class="content">
-    <div class="rv"><h2>Vocês pediram <b>passos</b>,<br>não um projeto gigante</h2></div>
-    <div class="quote rv">
-      <p class="q">A gente precisa ir por passos. Se vier uma proposta estrondosa, a gente não vai conseguir nem sair do lugar.</p>
-      <p class="tiny" style="margin-top:13px;color:var(--fg3)">— Síntese da fala da Divina Terra na reunião de alinhamento</p>
+    <div class="head rv">
+      <h2>O conhecimento existe.<br><b>Falta virar sistema</b></h2>
+      <div><div class="eyebrow" style="margin-bottom:7px">Pergunta-guia · Shopper first</div>
+        <p class="qsm">“Como alguém que não conhece o portfólio da Divina Terra procuraria esse produto na loja?”</p></div>
     </div>
-    <div class="grid g3 rv">
-      <div class="tile">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <span class="ic"><svg><use href="#i-bolt"/></svg></span><span class="num">01</span></div>
-        <h3>Rápido</h3>
-        <p class="tiny"><b>15 dias úteis</b> do zero até um guia pronto para uso.</p>
-      </div>
-      <div class="tile">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <span class="ic"><svg><use href="#i-leaf"/></svg></span><span class="num">02</span></div>
-        <h3>Prático</h3>
-        <p class="tiny">Foco no que já pode ser aplicado em <b>uma loja referência</b>.</p>
-      </div>
-      <div class="tile">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <span class="ic"><svg><use href="#i-sprout"/></svg></span><span class="num">03</span></div>
-        <h3>Evolutivo</h3>
-        <p class="tiny">A rede amplia categorias <b>conforme ganha confiança</b>.</p>
-      </div>
+    <div class="grid g4 rv">
+      <div class="tile"><div class="trow"><span class="ic"><svg><use href="#i-team"/></svg></span><span class="num">01</span></div>
+        <h3>Conhecimento disperso</h3><p class="tiny">Parte nas pessoas, parte nas indústrias, parte na prática de cada loja.</p></div>
+      <div class="tile"><div class="trow"><span class="ic"><svg><use href="#i-tree"/></svg></span><span class="num">02</span></div>
+        <h3>Organização por marca</h3><p class="tiny">O shopper precisa conhecer a marca para encontrar a solução.</p></div>
+      <div class="tile"><div class="trow"><span class="ic"><svg><use href="#i-search"/></svg></span><span class="num">03</span></div>
+        <h3>Dependência da equipe</h3><p class="tiny">Sem uma loja autoexplicativa, cliente e vendedor novo dependem de memória.</p></div>
+      <div class="tile"><div class="trow"><span class="ic"><svg><use href="#i-copy"/></svg></span><span class="num">04</span></div>
+        <h3>Baixa replicabilidade</h3><p class="tiny">Cada unidade interpreta o padrão do seu jeito.</p></div>
+    </div>
+    <div class="fromto rv">
+      <div class="ft muted"><span class="eyebrow" style="color:var(--fg3)">Hoje</span>
+        <div class="seq"><span>Marca</span><svg><use href="#i-arr"/></svg><span>Produto</span><svg><use href="#i-arr"/></svg><span>Pedir ajuda</span></div></div>
+      <div class="farr"><svg viewBox="0 0 24 24"><use href="#i-arr"/></svg></div>
+      <div class="ft on"><span class="eyebrow">Com a Divina Navegação</span>
+        <div class="seq"><span>Necessidade</span><svg><use href="#i-arr"/></svg><span>Categoria</span><svg><use href="#i-arr"/></svg><span>Marca</span></div></div>
+    </div>
+  </div>
+  <div class="foot">
+    <span class="lab">75<i>LAB</i></span>
+    <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
+      <span class="cnt"><b class="cur-n">02</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
+  </div>
+</section>
+
+<!-- ================= 3 · O CONCEITO ================= -->
+<section class="slide bg-amber" data-t="O sistema">
+  <svg class="pat top"><rect width="100%" height="100%" fill="url(#petT)"/></svg>
+  <div class="chrome"><span class="eyebrow">02 · A solução</span><span class="lbl hideM">Clique em cada componente</span></div>
+  <div class="content">
+    <div class="head rv">
+      <h2>Não é um manual.<br>É um <b>sistema de execução</b></h2>
+      <p class="lead" style="max-width:34ch">Divina Navegação é a metodologia guarda-chuva: sete componentes que, juntos, formam o padrão da rede.</p>
+    </div>
+    <div class="eq rv">
+      <button class="selo ci on" data-eq="0"><span class="ring"><svg><use href="#i-tree"/></svg></span><b>Categorias</b></button><span class="op">+</span>
+      <button class="selo ci" data-eq="1"><span class="ring"><svg><use href="#i-shelf"/></svg></span><b>Exposição</b></button><span class="op">+</span>
+      <button class="selo ci" data-eq="2"><span class="ring"><svg><use href="#i-grid"/></svg></span><b>Planograma</b></button><span class="op">+</span>
+      <button class="selo ci" data-eq="3"><span class="ring"><svg><use href="#i-sign"/></svg></span><b>Comunicação</b></button><span class="op">+</span>
+      <button class="selo ci" data-eq="4"><span class="ring"><svg><use href="#i-cycle"/></svg></span><b>Operação</b></button><span class="op">+</span>
+      <button class="selo ci" data-eq="5"><span class="ring"><svg><use href="#i-cap"/></svg></span><b>Treinamento</b></button><span class="op">+</span>
+      <button class="selo ci" data-eq="6"><span class="ring"><svg><use href="#i-copy"/></svg></span><b>Replicação</b></button><span class="op">=</span>
+      <div class="eqres">Padrão<br>Divina Terra</div>
+    </div>
+    <div class="eqdet rv" id="eqdet">
+      <span class="num">01</span>
+      <div class="anim"><h3 id="eqn">Categorias</h3><p class="tiny" id="eqd" style="margin-top:4px">Define o que existe e como está organizado.</p></div>
     </div>
     <div class="band rv"><svg style="width:15px;height:15px"><use href="#i-seal"/></svg>
-      Nesta fase <b>não</b> redesenhamos a rede inteira <span class="sep"></span> <b>não</b> criamos um sistema pesado de gestão por categorias</div>
+      O investimento deixa de ser compra de arquivos e passa a ser a <b>criação de um ativo da rede</b></div>
   </div>
   <div class="foot">
     <span class="lab">75<i>LAB</i></span>
-    <div class="nav">
-      <button class="ixb ci" data-ix>Índice</button>
-      <button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
-      <span class="cnt"><b class="cur-n">02</b> / 10</span>
-      <button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button>
-    </div>
+    <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
+      <span class="cnt"><b class="cur-n">03</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
   </div>
 </section>
 
-<!-- ================= 3 · RECORTE DA FASE 1 ================= -->
-<section class="slide bg-amber" data-t="O recorte da Fase 1">
-  <svg class="pat top"><rect width="100%" height="100%" fill="url(#petT)"/></svg>
-  <div class="chrome">
-    <span class="eyebrow">02 · O recorte</span>
-    <span class="lbl hideM">Fase 1</span>
-  </div>
-  <div class="content">
-    <div class="rv" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
-      <h2>Começamos por três<br>categorias que <b>decidem a venda</b></h2>
-      <p class="lead" style="max-width:32ch">Em vez de organizar todos os produtos e todas as lojas, criamos uma base simples e replicável.</p>
-    </div>
-    <div class="flow rv">
-      <div class="fstep">
-        <span class="eyebrow" style="color:var(--fg3)">Universo</span>
-        <div style="font-weight:200;font-size:clamp(26px,3vw,48px);line-height:1">80<span style="font-size:.36em;font-weight:400;letter-spacing:.1em;text-transform:uppercase"> lojas</span></div>
-        <p class="tiny">A rede inteira — o destino, não o começo.</p>
-      </div>
-      <div class="farr"><svg viewBox="0 0 24 24"><use href="#i-arr"/></svg></div>
-      <div class="fstep">
-        <span class="eyebrow">Foco</span>
-        <div style="font-weight:200;font-size:clamp(26px,3vw,48px);line-height:1;color:var(--acc)">1<span style="font-size:.36em;font-weight:400;letter-spacing:.1em;text-transform:uppercase"> loja referência</span></div>
-        <p class="tiny">Um módulo padrão de gôndola e uma regra simples de adaptação.</p>
-      </div>
-      <div class="farr"><svg viewBox="0 0 24 24"><use href="#i-arr"/></svg></div>
-      <div class="fstep" style="background:var(--terra);border-color:var(--terra)">
-        <span class="eyebrow" style="color:var(--amber)">Entrega</span>
-        <div style="font-weight:200;font-size:clamp(26px,3vw,48px);line-height:1;color:var(--creme)">3<span style="font-size:.36em;font-weight:400;letter-spacing:.1em;text-transform:uppercase"> categorias</span></div>
-        <p class="tiny" style="color:#CFC2B0">Proteína, creatina e ômega — organizadas por blocos.</p>
-      </div>
-    </div>
-    <div class="grid g3 rv">
-      <div class="tile ci">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <span class="ic"><svg><use href="#i-jar"/></svg></span><span class="num">01</span></div>
-        <h3>Proteínas</h3>
-        <p class="tiny">Organização por <b>tipo, objetivo, formato e marca</b> — o shopper acha sozinho.</p>
-      </div>
-      <div class="tile ci">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <span class="ic"><svg><use href="#i-target"/></svg></span><span class="num">02</span></div>
-        <h3>Creatinas</h3>
-        <p class="tiny">Um <b>bloco claro</b>, fácil de localizar e de adaptar ao mix local.</p>
-      </div>
-      <div class="tile ci">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <span class="ic"><svg><use href="#i-drop"/></svg></span><span class="num">03</span></div>
-        <h3>Ômegas</h3>
-        <p class="tiny">Separação visual que ajuda <b>o shopper e a equipe de vendas</b>.</p>
-      </div>
-    </div>
-    <p class="tiny rv" style="color:var(--fg3)">As demais categorias entram em novas ondas, depois do uso e da validação desta primeira base.</p>
-  </div>
-  <div class="foot">
-    <span class="lab">75<i>LAB</i></span>
-    <div class="nav">
-      <button class="ixb ci" data-ix>Índice</button>
-      <button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
-      <span class="cnt"><b class="cur-n">03</b> / 10</span>
-      <button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 4 · ENTREGÁVEIS ================= -->
-<section class="slide" data-t="Entregáveis">
+<!-- ================= 4 · DIVINA LOGIC ================= -->
+<section class="slide" data-t="Divina Logic">
   <svg class="pat corner" style="left:auto;right:0;transform:scaleX(-1)"><rect width="100%" height="100%" fill="url(#petT)"/></svg>
-  <div class="chrome">
-    <span class="eyebrow">03 · O que você recebe</span>
-    <span class="lbl hideM">Clique nos cards para o detalhe</span>
-  </div>
+  <div class="chrome"><span class="eyebrow">03 · Divina Logic · sistema modular de exposição</span><span class="lbl hideM">Teste a regra modular</span></div>
   <div class="content">
-    <div class="rv" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
-      <h2>Cinco peças — todas<br><b>usáveis na segunda-feira</b></h2>
-      <p class="lead" style="max-width:32ch">Um pacote leve, visual e aplicável. Sem transformar esta fase em consultoria longa.</p>
+    <div class="head rv">
+      <h2>Padrão<br><b>sem engessamento</b></h2>
+      <p class="lead" style="max-width:36ch">O franqueado não copia a foto de uma gôndola. Ele entende a regra por trás dela — e aplica no espaço que tem.</p>
     </div>
-    <div class="grid g5 rv">
-      <button class="tile ci" data-exp>
-        <span class="ic"><svg><use href="#i-map"/></svg></span>
-        <h3>Mapa de categorias</h3>
-        <p class="tiny">Uma página com a lógica principal de organização da suplementação.</p>
-        <div class="det"><p class="tiny" style="border-top:1px solid var(--cardline);padding-top:8px;margin-top:2px;color:var(--acc)">Define blocos, sequência de leitura e critério de agrupamento — a régua que todas as lojas passam a usar.</p></div>
-        <span class="more">Detalhe <svg><use href="#i-dn"/></svg></span>
-      </button>
-      <button class="tile ci" data-exp>
-        <span class="ic"><svg><use href="#i-shelf"/></svg></span>
-        <h3>3 planogramas-base</h3>
-        <p class="tiny">Proteína, creatina e ômega, organizados por blocos e sequência visual.</p>
-        <div class="det"><p class="tiny" style="border-top:1px solid var(--cardline);padding-top:8px;margin-top:2px;color:var(--acc)">Modulares: cabem no módulo padrão de gôndola e se adaptam ao mix de cada unidade.</p></div>
-        <span class="more">Detalhe <svg><use href="#i-dn"/></svg></span>
-      </button>
-      <button class="tile ci" data-exp>
-        <span class="ic"><svg><use href="#i-rule"/></svg></span>
-        <h3>Regra para as demais prateleiras</h3>
-        <p class="tiny">Orientações curtas para manter coerência fora das três prioritárias.</p>
-        <div class="det"><p class="tiny" style="border-top:1px solid var(--cardline);padding-top:8px;margin-top:2px;color:var(--acc)">Evita a loja "meio organizada": um princípio único para o restante do salão.</p></div>
-        <span class="more">Detalhe <svg><use href="#i-dn"/></svg></span>
-      </button>
-      <button class="tile ci" data-exp>
-        <span class="ic"><svg><use href="#i-book"/></svg></span>
-        <h3>Mini manual digital</h3>
-        <p class="tiny">De 12 a 18 páginas, com exemplos e instruções de aplicação.</p>
-        <div class="det"><p class="tiny" style="border-top:1px solid var(--cardline);padding-top:8px;margin-top:2px;color:var(--acc)">O documento que o franqueado abre no celular enquanto arruma a gôndola.</p></div>
-        <span class="more">Detalhe <svg><use href="#i-dn"/></svg></span>
-      </button>
-      <button class="tile ci" data-exp>
-        <span class="ic"><svg><use href="#i-team"/></svg></span>
-        <h3>Guia rápido + treinamento</h3>
-        <p class="tiny">Resumo de uma página e encontro remoto para explicar a aplicação.</p>
-        <div class="det"><p class="tiny" style="border-top:1px solid var(--cardline);padding-top:8px;margin-top:2px;color:var(--acc)">Uma página impressa fica na loja; o encontro alinha a equipe em uma única conversa.</p></div>
-        <span class="more">Detalhe <svg><use href="#i-dn"/></svg></span>
-      </button>
+    <div class="rv split" style="display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(12px,1.6vw,26px);align-items:stretch">
+      <div class="oar">
+        <div class="tile solid-terra"><span class="tag">Obrigatório</span><p class="tiny">O que define o padrão Divina Terra. <b style="color:#fff">Não muda.</b></p></div>
+        <div class="tile solid-amber"><span class="tag">Adaptável</span><p class="tiny">Varia com o tamanho, o estoque e o sortimento da loja.</p></div>
+        <div class="tile solid-mata"><span class="tag">Recomendado</span><p class="tiny">Boas práticas que elevam a exposição, conforme a realidade da unidade.</p></div>
+      </div>
+      <div class="modbox">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+          <span class="eyebrow">Regra modular</span>
+          <div class="steps">
+            <button class="tab on ci" data-mod="1">1 módulo</button><button class="tab ci" data-mod="2">2</button>
+            <button class="tab ci" data-mod="3">3</button><button class="tab ci" data-mod="4">4+</button>
+          </div>
+        </div>
+        <div class="mod" id="mod"></div>
+        <p class="modcap" id="modcap"><b>1 módulo:</b> as subcategorias e os SKUs essenciais.</p>
+        <div class="legend"><span><i style="background:var(--terra)"></i>Essenciais</span><span><i style="background:var(--amber)"></i>Complementares</span><span><i style="background:var(--mata)"></i>Novidades e variedade</span><span style="color:var(--fg3)">Ilustrativo</span></div>
+      </div>
     </div>
-    <div class="btns rv"><button class="btn ci" data-go="4">Ver como fica na loja <svg><use href="#i-arr"/></svg></button></div>
   </div>
   <div class="foot">
     <span class="lab">75<i>LAB</i></span>
-    <div class="nav">
-      <button class="ixb ci" data-ix>Índice</button>
-      <button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
-      <span class="cnt"><b class="cur-n">04</b> / 10</span>
-      <button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button>
-    </div>
+    <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
+      <span class="cnt"><b class="cur-n">04</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
   </div>
 </section>
 
@@ -591,213 +552,191 @@ b{font-weight:500}
   SLOTS DE RENDER — para inserir o visual final, adicione como PRIMEIRO filho
   de cada <div class="render">:   <img src="renders/arquivo.jpg" alt="...">
   A imagem cobre o slot (object-fit:cover) e o placeholder fica atrás.  -->
-<section class="slide bg-mata" data-t="Como fica na loja">
+<section class="slide bg-mata" data-t="A loja em imagem">
   <svg class="pat top"><rect width="100%" height="100%" fill="url(#petG)"/></svg>
-  <div class="chrome">
-    <span class="eyebrow">04 · A solução em imagem</span>
-    <span class="lbl hideM">Renders ilustrativos</span>
-  </div>
+  <div class="chrome"><span class="eyebrow">04 · A solução em imagem</span><span class="lbl hideM">Renders ilustrativos</span></div>
   <div class="content" style="gap:clamp(9px,1.2vw,18px)">
-    <div class="rv" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
-      <h2>Do conceito<br>à <b>gôndola real</b></h2>
-      <p class="lead" style="max-width:34ch">Cada entregável nasce visual: o franqueado vê a prateleira pronta antes de encostar no produto.</p>
+    <div class="head rv">
+      <h2>O shopper<br><b>enxerga a lógica</b></h2>
+      <p class="lead" style="max-width:36ch">Arquitetura, planograma e sinalização trabalham juntos: a organização da gôndola precisa ser percebida.</p>
     </div>
-    <div class="rv" style="display:grid;grid-template-columns:1.55fr 1fr;gap:clamp(9px,1.1vw,16px);flex:1 1 auto;min-height:0">
+    <div class="rv split" style="display:grid;grid-template-columns:1.55fr 1fr;gap:clamp(9px,1.1vw,16px);flex:1 1 auto;min-height:0">
       <div class="render" data-slot="hero">
-        <span class="tag">Render 01</span>
-        <svg class="ric"><use href="#i-shelf"/></svg>
-        <span class="rlbl">Planograma-base · Proteínas</span>
-        <span class="rsub">Módulo padrão de gôndola, blocos por objetivo e formato</span>
+        <span class="tag">Render 01</span><svg class="ric"><use href="#i-store"/></svg>
+        <span class="rlbl">Loja piloto · navegação por categoria</span>
+        <span class="rsub">Testeiras de categoria e leitura por necessidade</span>
       </div>
       <div style="display:grid;grid-template-rows:1fr 1fr;gap:clamp(9px,1.1vw,16px);min-height:0">
         <div class="render" data-slot="b">
-          <span class="tag">Render 02</span>
-          <svg class="ric"><use href="#i-target"/></svg>
-          <span class="rlbl">Bloco de creatina</span>
-          <span class="rsub">Leitura imediata na loja referência</span>
+          <span class="tag">Render 02</span><svg class="ric"><use href="#i-grid"/></svg>
+          <span class="rlbl">Planograma modular</span><span class="rsub">A mesma lógica em diferentes quantidades de módulos</span>
         </div>
         <div class="render" data-slot="c">
-          <span class="tag">Render 03</span>
-          <svg class="ric"><use href="#i-book"/></svg>
-          <span class="rlbl">Mini manual digital</span>
-          <span class="rsub">Páginas de exemplo e guia rápido de uma página</span>
+          <span class="tag">Render 03</span><svg class="ric"><use href="#i-sign"/></svg>
+          <span class="rlbl">Sistema visual de gôndola</span><span class="rsub">Faixa de subcategoria, régua, stopper e benefício</span>
         </div>
       </div>
     </div>
-    <div class="band rv"><svg style="width:14px;height:14px"><use href="#i-img"/></svg>
-      Os renders finais são produzidos a partir das <b>fotos da loja referência</b> enviadas pela Divina Terra</div>
+    <div class="band rv"><b>Poucas peças, muitas situações</b><span class="sep"></span>testeira<span class="sep"></span>faixa de categoria<span class="sep"></span>faixa de subcategoria<span class="sep"></span>régua<span class="sep"></span>stopper<span class="sep"></span>benefício<span class="sep"></span>lançamento<span class="sep"></span>cross-selling</div>
   </div>
   <div class="foot">
     <span class="lab">75<i>LAB</i></span>
-    <div class="nav">
-      <button class="ixb ci" data-ix>Índice</button>
-      <button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
-      <span class="cnt"><b class="cur-n">05</b> / 10</span>
-      <button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button>
-    </div>
+    <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
+      <span class="cnt"><b class="cur-n">05</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
   </div>
 </section>
 
-<!-- ================= 6 · INSUMOS MÍNIMOS ================= -->
-<section class="slide bg-areia" data-t="Insumos mínimos">
-  <svg class="pat corner"><rect width="100%" height="100%" fill="url(#petT)"/></svg>
-  <div class="chrome">
-    <span class="eyebrow">05 · O que precisamos</span>
-    <span class="lbl hideM">Alterne entre as duas listas</span>
-  </div>
+<!-- ================= 6 · METODOLOGIA E FASES ================= -->
+<section class="slide bg-areia" data-t="Metodologia em 7 fases">
+  <svg class="pat top"><rect width="100%" height="100%" fill="url(#petT)"/></svg>
+  <div class="chrome"><span class="eyebrow">05 · Como vamos construir</span><span class="lbl hideM">Clique em uma fase</span></div>
   <div class="content">
-    <div class="rv" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
-      <h2>Não precisamos de uma<br>base de dados <b>para começar</b></h2>
-      <p class="lead" style="max-width:33ch">Trabalhamos com o que a Divina Terra já tem. O primeiro planograma é uma referência modular, não engenharia de precisão.</p>
+    <div class="head rv">
+      <h2>10 etapas em 7 fases.<br><b>Um único sistema</b></h2>
+      <p class="lead" style="max-width:36ch">Cada etapa alimenta a seguinte. Aprovações ao fim de cada fase evitam retrabalho acumulado.</p>
     </div>
-    <div class="rv"><div class="tabs">
-      <button class="tab on ci" data-tab="0">O que precisamos</button>
-      <button class="tab ci" data-tab="1">O que não vamos exigir</button>
-    </div></div>
-    <div class="rv" style="min-height:clamp(140px,19vh,220px)">
+    <div class="tl rv" id="tl">
+      <button class="tstep on ci" data-ph="0"><span class="tdot">1</span><h3>Imersão</h3><p class="tiny">Diagnóstico da loja piloto</p></button>
+      <button class="tstep ci" data-ph="1"><span class="tdot">2</span><h3>Estratégia</h3><p class="tiny">Categorias, naming e Divina Logic</p></button>
+      <button class="tstep ci" data-ph="2"><span class="tdot">3</span><h3>Desenvolvimento</h3><p class="tiny">Planogramas e sistema visual</p></button>
+      <button class="tstep ci" data-ph="3"><span class="tdot">4</span><h3>Piloto</h3><p class="tiny">Implantação assistida</p></button>
+      <button class="tstep ci" data-ph="4"><span class="tdot">5</span><h3>Validação</h3><p class="tiny">Testes e correções</p></button>
+      <button class="tstep ci" data-ph="5"><span class="tdot">6</span><h3>Manualização</h3><p class="tiny">Manual, guia e treinamento</p></button>
+      <button class="tstep ci" data-ph="6"><span class="tdot">7</span><h3>Escala</h3><p class="tiny">Clusters, rollout e suporte</p></button>
+    </div>
+    <div class="phase rv" id="phase">
+      <div class="anim">
+        <div style="display:flex;align-items:baseline;gap:12px"><span class="ph-n">01</span><h3 class="ph-t">Imersão e diagnóstico</h3></div>
+        <ul class="ul ph-et" style="margin-top:10px"><li><span class="dt"></span>Etapa 1 · Imersão e diagnóstico da loja piloto</li></ul>
+      </div>
+      <div class="anim">
+        <div class="eyebrow" style="margin-bottom:9px">Entregáveis da fase</div>
+        <div class="chips ph-en">
+          <span class="chip"><svg><use href="#i-ok"/></svg>Diagnóstico estratégico</span><span class="chip"><svg><use href="#i-ok"/></svg>Registro fotográfico comentado</span>
+          <span class="chip"><svg><use href="#i-ok"/></svg>Mapa AS IS</span><span class="chip"><svg><use href="#i-ok"/></svg>Inventário de categorias e mobiliário</span>
+          <span class="chip"><svg><use href="#i-ok"/></svg>Oportunidades priorizadas</span>
+        </div>
+      </div>
+    </div>
+    <p class="tiny rv" style="color:var(--fg3)">O prazo definitivo depende da entrega dos dados, das aprovações e da disponibilidade da loja piloto.</p>
+  </div>
+  <div class="foot">
+    <span class="lab">75<i>LAB</i></span>
+    <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
+      <span class="cnt"><b class="cur-n">06</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
+  </div>
+</section>
+
+<!-- ================= 7 · PILOTO ANTES DA ESCALA ================= -->
+<section class="slide bg-terra" data-t="Piloto e escala">
+  <svg class="pat full"><rect width="100%" height="100%" fill="url(#petG)"/></svg>
+  <div class="chrome"><span class="eyebrow">06 · Validar antes de escalar</span><span class="lbl hideM">Aplicação real antes da escala</span></div>
+  <div class="content">
+    <div class="head rv">
+      <h2>Provado na loja.<br><b>Depois, na rede</b></h2>
+      <p class="lead" style="max-width:34ch">Nenhuma regra é definitiva só porque funciona em uma apresentação.</p>
+    </div>
+    <div class="flow rv">
+      <div class="fstep"><span class="ic"><svg><use href="#i-store"/></svg></span><span class="eyebrow">Loja piloto</span>
+        <h3>O laboratório do sistema</h3><p class="tiny">Implantação assistida, registro de antes e depois e relatório de aprendizados.</p></div>
+      <div class="farr"><svg viewBox="0 0 24 24"><use href="#i-arr"/></svg></div>
+      <div class="fstep"><span class="ic"><svg><use href="#i-team"/></svg></span><span class="eyebrow">Teste de usabilidade</span>
+        <h3>Quem não participou consegue aplicar?</h3><p class="tiny">Se a execução depende de explicação constante, o sistema ainda não está simples.</p></div>
+      <div class="farr"><svg viewBox="0 0 24 24"><use href="#i-arr"/></svg></div>
+      <div class="fstep"><span class="ic"><svg><use href="#i-grow"/></svg></span><span class="eyebrow">Rollout em ondas</span>
+        <h3>Piloto · representativas · expansão</h3><p class="tiny">Cada onda confirma as regras antes de liberar manual, treinamento e kits para a rede.</p></div>
+    </div>
+    <div class="grid g2 rv">
+      <div class="tile">
+        <div class="trow"><div><span class="eyebrow">Clusterização</span><h3 style="margin-top:5px">Um formato, não uma loja por vez</h3></div></div>
+        <div class="clu" style="margin-top:4px">
+          <div><span class="c p">P</span><p class="tiny">Espaço reduzido, foco nos essenciais</p></div>
+          <div><span class="c m">M</span><p class="tiny">Mix intermediário, mais subcategorias</p></div>
+          <div><span class="c g">G</span><p class="tiny">Mix e profundidade completos</p></div>
+        </div>
+      </div>
+      <div class="tile">
+        <div class="trow"><div><span class="eyebrow">Auditoria simples</span><h3 style="margin-top:5px">Checklist de 10 a 15 critérios</h3></div>
+          <span class="ic"><svg><use href="#i-list"/></svg></span></div>
+        <div class="audit">
+          <div><span>Produtos na categoria correta</span><span class="pill ok">OK</span></div>
+          <div><span>Ordem de exposição respeitada</span><span class="pill aj">Ajustar</span></div>
+          <div><span>Testeiras atualizadas</span><span class="pill ok">OK</span></div>
+          <div><span>Comunicação de lançamento</span><span class="pill na">Não se aplica</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <span class="lab">75<i>LAB</i></span>
+    <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
+      <span class="cnt"><b class="cur-n">07</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
+  </div>
+</section>
+
+<!-- ================= 8 · RESPONSABILIDADES E GOVERNANÇA ================= -->
+<section class="slide" data-t="Papéis e governança">
+  <svg class="pat corner"><rect width="100%" height="100%" fill="url(#petT)"/></svg>
+  <div class="chrome"><span class="eyebrow">07 · Quem faz o quê</span><span class="lbl hideM">Alterne entre projeto e rede</span></div>
+  <div class="content">
+    <div class="head rv">
+      <h2>Papéis claros.<br><b>Um padrão que se mantém</b></h2>
+      <div class="tabs"><button class="tab on ci" data-tab="0">No projeto</button><button class="tab ci" data-tab="1">Depois, na rede</button></div>
+    </div>
+    <div class="rv" style="min-height:clamp(210px,31vh,300px)">
       <div class="pane on" data-pane="0">
-        <div class="grid g2" style="gap:clamp(10px,1.5vw,26px)">
-          <ul class="ul">
-            <li><svg><use href="#i-ok"/></svg>Lista atual de produtos — mesmo simples ou exportada do sistema.</li>
-            <li><svg><use href="#i-ok"/></svg>Fotos ou vídeos de <b>uma</b> loja referência.</li>
-            <li><svg><use href="#i-ok"/></svg>Medida de um módulo padrão de gôndola.</li>
-          </ul>
-          <ul class="ul">
-            <li><svg><use href="#i-ok"/></svg>Categorias já usadas no e-commerce ou internamente.</li>
-            <li><svg><use href="#i-ok"/></svg>Guia de marca da Divina Terra.</li>
-            <li><svg><use href="#i-ok"/></svg><b>Uma pessoa</b> responsável por aprovar.</li>
-          </ul>
+        <div class="grid g2">
+          <div class="tile solid-amber">
+            <div class="trow"><div><h3>75LAB</h3><span class="eyebrow">conduz e constrói</span></div><span class="num">01</span></div>
+            <ul class="ul">
+              <li><span class="dt"></span>Conduz o diagnóstico e estrutura a metodologia.</li>
+              <li><span class="dt"></span>Desenvolve categorias, naming e Divina Logic.</li>
+              <li><span class="dt"></span>Cria planogramas, sistema visual e templates.</li>
+              <li><span class="dt"></span>Acompanha o piloto e consolida aprendizados.</li>
+              <li><span class="dt"></span>Desenvolve manual, treinamento e auditoria.</li>
+              <li><span class="dt"></span>Propõe clusters e rollout.</li>
+            </ul>
+          </div>
+          <div class="tile">
+            <div class="trow"><div><h3>Divina Terra</h3><span class="eyebrow">viabiliza e aprova</span></div><span class="num">02</span></div>
+            <ul class="ul">
+              <li><span class="dt"></span>Indica o ponto focal e disponibiliza a loja piloto.</li>
+              <li><span class="dt"></span>Fornece mix, cadastros e dimensões.</li>
+              <li><span class="dt"></span>Consolida feedbacks e aprova etapas no prazo.</li>
+              <li><span class="dt"></span>Informa formatos e tamanhos de loja.</li>
+              <li><span class="dt"></span>Indica responsáveis por treinamento e rollout.</li>
+              <li><span class="dt"></span>Coordena a comunicação com os franqueados.</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="pane" data-pane="1">
-        <div class="grid g2" style="gap:clamp(10px,1.5vw,26px)">
-          <ul class="ul no">
-            <li><svg><use href="#i-no"/></svg>Histórico detalhado de vendas, margem e estoque por SKU.</li>
-            <li><svg><use href="#i-no"/></svg>Dashboard de BI ou estudos quantitativos.</li>
-            <li><svg><use href="#i-no"/></svg>Dimensão exata de todos os produtos.</li>
-          </ul>
-          <ul class="ul no">
-            <li><svg><use href="#i-no"/></svg>Plantas e medidas das 80 lojas.</li>
-            <li><svg><use href="#i-no"/></svg>Visitas a múltiplas unidades antes da primeira entrega.</li>
-          </ul>
+        <div class="grid g2">
+          <div class="tile solid-terra">
+            <div class="trow"><div><h3>Franqueadora</h3><span class="eyebrow">define o padrão</span></div><span class="ic"><svg><use href="#i-tree"/></svg></span></div>
+            <ul class="ul"><li><span class="dt"></span>Arquitetura de categorias e nomenclaturas oficiais.</li>
+              <li><span class="dt"></span>Regras centrais e planogramas-base.</li>
+              <li><span class="dt"></span>Aprovação de novas peças e versão do manual.</li></ul>
+          </div>
+          <div class="tile solid-mata">
+            <div class="trow"><div><h3>Franqueado · loja</h3><span class="eyebrow">executa e mantém</span></div><span class="ic"><svg><use href="#i-store"/></svg></span></div>
+            <ul class="ul"><li><span class="dt"></span>Execução, manutenção diária e reposição.</li>
+              <li><span class="dt"></span>Adaptações permitidas pela regra.</li>
+              <li><span class="dt"></span>Registro de dúvidas e correção de desvios.</li></ul>
+          </div>
+        </div>
+        <div style="margin-top:clamp(10px,1.2vw,18px)">
+          <div class="eyebrow" style="margin-bottom:8px">Fluxo do novo SKU</div>
+          <div class="skuflow"><span>Novo produto</span><svg><use href="#i-arr"/></svg><span>Classificar</span><svg><use href="#i-arr"/></svg><span>Categoria</span><svg><use href="#i-arr"/></svg><span>Prioridade</span><svg><use href="#i-arr"/></svg><span>Posicionar</span><svg><use href="#i-arr"/></svg><span>Atualizar material</span></div>
         </div>
       </div>
     </div>
-    <div class="band warn rv"><svg style="width:15px;height:15px"><use href="#i-rule"/></svg>
-      <span><b>Importante:</b> quando faltar medida exata, a entrega é orientativa por blocos e categorias — não um planograma técnico SKU a SKU.</span></div>
+    <div class="band rv"><b>Dependências críticas</b><span class="sep"></span>qualidade das informações de mix<span class="sep"></span>loja piloto disponível<span class="sep"></span>velocidade de aprovação<span class="sep"></span>responsáveis definidos</div>
   </div>
   <div class="foot">
     <span class="lab">75<i>LAB</i></span>
-    <div class="nav">
-      <button class="ixb ci" data-ix>Índice</button>
-      <button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
-      <span class="cnt"><b class="cur-n">06</b> / 10</span>
-      <button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 7 · CRONOGRAMA ================= -->
-<section class="slide" data-t="Cronograma">
-  <svg class="pat top"><rect width="100%" height="100%" fill="url(#petT)"/></svg>
-  <div class="chrome">
-    <span class="eyebrow">06 · Cronograma</span>
-    <span class="lbl hideM">Clique em uma etapa</span>
-  </div>
-  <div class="content">
-    <div class="rv" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
-      <h2><b>15 dias úteis</b><br>do alinhamento ao guia final</h2>
-      <p class="lead" style="max-width:31ch">Três conversas objetivas e uma única rodada consolidada de ajustes.</p>
-    </div>
-    <div class="tl rv">
-      <button class="tstep on ci" data-step="0"><span class="tdot">1</span><span class="tdays">Dias 1–3</span><h3>Alinhar</h3><p class="tiny">Kickoff, escolha da loja referência e recebimento dos materiais.</p></button>
-      <button class="tstep ci" data-step="1"><span class="tdot">2</span><span class="tdays">Dias 4–7</span><h3>Organizar</h3><p class="tiny">Mapa de categorias e lógica visual das prateleiras.</p></button>
-      <button class="tstep ci" data-step="2"><span class="tdot">3</span><span class="tdays">Dias 8–12</span><h3>Criar</h3><p class="tiny">Planogramas-base, mini manual e guia rápido.</p></button>
-      <button class="tstep ci" data-step="3"><span class="tdot">4</span><span class="tdays">Dias 13–15</span><h3>Validar</h3><p class="tiny">Feedback consolidado, ajustes e entrega final.</p></button>
-    </div>
-    <div class="gantt rv">
-      <div class="grow"><span>Alinhar</span><div class="gbar"><i class="gfill" style="left:0%;width:20%"></i></div></div>
-      <div class="grow"><span>Organizar</span><div class="gbar"><i class="gfill s2" style="left:20%;width:26.7%;transition-delay:.12s"></i></div></div>
-      <div class="grow"><span>Criar</span><div class="gbar"><i class="gfill s3" style="left:46.7%;width:33.3%;transition-delay:.24s"></i></div></div>
-      <div class="grow"><span>Validar</span><div class="gbar"><i class="gfill s4" style="left:80%;width:20%;transition-delay:.36s"></i></div></div>
-    </div>
-    <div class="grid g3 rv">
-      <div class="tile"><div style="display:flex;gap:11px;align-items:center"><span class="ic"><svg><use href="#i-team"/></svg></span><div><h3>Marco 1 · Kickoff</h3><p class="tiny">Dia 1 — alinhamento e materiais</p></div></div></div>
-      <div class="tile"><div style="display:flex;gap:11px;align-items:center"><span class="ic"><svg><use href="#i-seal"/></svg></span><div><h3>Marco 2 · Validação</h3><p class="tiny">Dia 12 — feedback único</p></div></div></div>
-      <div class="tile solid-amber"><div style="display:flex;gap:11px;align-items:center"><span class="ic"><svg><use href="#i-clock"/></svg></span><div><h3>Marco 3 · Entrega</h3><p class="tiny">Dia 15 — guia final</p></div></div></div>
-    </div>
-  </div>
-  <div class="foot">
-    <span class="lab">75<i>LAB</i></span>
-    <div class="nav">
-      <button class="ixb ci" data-ix>Índice</button>
-      <button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
-      <span class="cnt"><b class="cur-n">07</b> / 10</span>
-      <button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 8 · RESPONSABILIDADES ================= -->
-<section class="slide bg-terra" data-t="Responsabilidades">
-  <svg class="pat full"><rect width="100%" height="100%" fill="url(#petG)"/></svg>
-  <div class="chrome">
-    <span class="eyebrow">07 · Quem faz o quê</span>
-    <span class="lbl hideM">Governança essencial</span>
-  </div>
-  <div class="content">
-    <div class="rv" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
-      <h2>Um ponto focal.<br>Decisões <b>rápidas</b></h2>
-      <p class="lead" style="max-width:31ch">Sem comitês: cada parte tem poucas responsabilidades e a Divina Terra consolida o feedback.</p>
-    </div>
-    <div class="grid g3 rv">
-      <div class="tile solid-amber">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <span class="ic"><svg><use href="#i-rule"/></svg></span><span class="num">01</span></div>
-        <h3>75LAB</h3>
-        <span class="eyebrow">cria e entrega</span>
-        <ul class="ul" style="margin-top:4px">
-          <li><span class="dt" style="background:#3A2A1E"></span>Organiza as categorias prioritárias.</li>
-          <li><span class="dt" style="background:#3A2A1E"></span>Desenvolve os planogramas-base.</li>
-          <li><span class="dt" style="background:#3A2A1E"></span>Cria o mini manual e o guia rápido.</li>
-          <li><span class="dt" style="background:#3A2A1E"></span>Conduz a validação e o treinamento.</li>
-        </ul>
-      </div>
-      <div class="tile">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <span class="ic"><svg><use href="#i-target"/></svg></span><span class="num">02</span></div>
-        <h3>Divina Terra</h3>
-        <span class="eyebrow">orienta e aprova</span>
-        <ul class="ul" style="margin-top:4px">
-          <li><span class="dt"></span>Envia os materiais disponíveis.</li>
-          <li><span class="dt"></span>Escolhe a loja referência.</li>
-          <li><span class="dt"></span>Valida nomes e associação dos produtos.</li>
-          <li><span class="dt"></span>Entrega um <b>único</b> feedback consolidado.</li>
-        </ul>
-      </div>
-      <div class="tile solid-mata">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <span class="ic"><svg><use href="#i-store"/></svg></span><span class="num">03</span></div>
-        <h3>Loja referência</h3>
-        <span class="eyebrow">aplica e devolve</span>
-        <ul class="ul" style="margin-top:4px">
-          <li><span class="dt" style="background:var(--amber)"></span>Aplica o guia conforme o espaço real.</li>
-          <li><span class="dt" style="background:var(--amber)"></span>Registra dúvidas de execução.</li>
-          <li><span class="dt" style="background:var(--amber)"></span>Envia fotos do antes e depois.</li>
-          <li><span class="dt" style="background:var(--amber)"></span>Sinaliza ajustes necessários.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="band rv"><b>Governança essencial</b><span class="sep"></span>1 ponto focal<span class="sep"></span>1 rodada de ajustes<span class="sep"></span>retorno em até 2 dias úteis<span class="sep"></span>mudança após aprovação = nova etapa</div>
-  </div>
-  <div class="foot">
-    <span class="lab">75<i>LAB</i></span>
-    <div class="nav">
-      <button class="ixb ci" data-ix>Índice</button>
-      <button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
-      <span class="cnt"><b class="cur-n">08</b> / 10</span>
-      <button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button>
-    </div>
+    <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
+      <span class="cnt"><b class="cur-n">08</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
   </div>
 </section>
 
@@ -806,90 +745,89 @@ b{font-weight:500}
   <svg class="pat full"><rect width="100%" height="100%" fill="url(#petT)"/></svg>
   <svg class="rings" viewBox="0 0 100 100" style="right:-10vw;top:-16vw;width:48vw;height:48vw;opacity:.25">
     <circle cx="50" cy="50" r="22"/><circle cx="50" cy="50" r="33"/><circle cx="50" cy="50" r="44"/></svg>
-  <div class="chrome">
-    <span class="eyebrow">08 · Investimento</span>
-    <span class="lbl hideM">Fase 1 · 15 dias úteis</span>
-  </div>
+  <div class="chrome"><span class="eyebrow">08 · Investimento</span><span class="lbl hideM">Divina Navegação</span></div>
   <div class="content">
-    <div class="rv"><h2 style="max-width:19ch">Um primeiro passo <b>do tamanho certo</b></h2></div>
-    <div class="rv" style="display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(16px,2.3vw,44px);align-items:center">
+    <div class="rv"><h2 style="max-width:22ch">A metodologia central <b>da rede inteira</b></h2></div>
+    <div class="rv split" style="display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(16px,2.3vw,44px);align-items:start">
       <div>
-        <div class="big pop"><small>R$</small><span id="cUp">12.900</span></div>
+        <div class="big pop"><small>R$</small><span id="cUp">30.000</span></div>
         <div class="dl" style="margin-top:clamp(10px,1.3vw,20px)">
-          <div><span>Prazo</span><b>15 dias úteis</b></div>
-          <div><span>Pagamento sugerido</span><b>50% na contratação · 50% na entrega</b></div>
-          <div><span>Rodadas de ajuste</span><b>1 rodada consolidada</b></div>
+          <div><span>Base do projeto</span><b>1 loja piloto</b></div>
+          <div><span>Estrutura</span><b>10 etapas em 7 fases</b></div>
+          <div><span>Suporte</span><b>Janela limitada pós-entrega</b></div>
         </div>
       </div>
-      <div>
-        <div class="eyebrow" style="margin-bottom:12px">Está incluído</div>
-        <ul class="ul">
-          <li><svg><use href="#i-ok"/></svg>3 categorias prioritárias: proteína, creatina e ômega.</li>
-          <li><svg><use href="#i-ok"/></svg>1 formato-base de loja / módulo de gôndola.</li>
-          <li><svg><use href="#i-ok"/></svg>Mapa de categorias, planogramas-base e mini manual.</li>
-          <li><svg><use href="#i-ok"/></svg>Guia rápido, treinamento remoto e 1 rodada de ajustes.</li>
-        </ul>
-        <p class="tiny" style="margin-top:14px;color:var(--fg3)">Não inclui produção física, implantação presencial em múltiplas lojas ou planograma técnico SKU a SKU.</p>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="tabs"><button class="tab on ci" data-tab="0">Está incluído</button><button class="tab ci" data-tab="1">Não está incluído</button></div>
+        <div class="pane on" data-pane="0">
+          <ul class="ul cols">
+            <li><svg><use href="#i-ok"/></svg>Uma loja piloto</li>
+            <li><svg><use href="#i-ok"/></svg>Arquitetura principal de categorias</li>
+            <li><svg><use href="#i-ok"/></svg>Naming das categorias-chave</li>
+            <li><svg><use href="#i-ok"/></svg>Sistema Divina Logic</li>
+            <li><svg><use href="#i-ok"/></svg>Planogramas-base e lógica modular</li>
+            <li><svg><use href="#i-ok"/></svg>Sistema visual e templates de peças</li>
+            <li><svg><use href="#i-ok"/></svg>Implantação assistida do piloto</li>
+            <li><svg><use href="#i-ok"/></svg>Manual definitivo e guia rápido</li>
+            <li><svg><use href="#i-ok"/></svg>Treinamento centralizado</li>
+            <li><svg><use href="#i-ok"/></svg>Clusterização por formato</li>
+            <li><svg><use href="#i-ok"/></svg>Checklist de auditoria</li>
+            <li><svg><use href="#i-ok"/></svg>Janela limitada de suporte</li>
+          </ul>
+        </div>
+        <div class="pane" data-pane="1">
+          <ul class="ul cols no">
+            <li><svg><use href="#i-no"/></svg>Visita individual a todas as franquias</li>
+            <li><svg><use href="#i-no"/></svg>Implantação física em todas as lojas</li>
+            <li><svg><use href="#i-no"/></svg>Produção e instalação de materiais</li>
+            <li><svg><use href="#i-no"/></svg>Levantamento SKU a SKU da rede</li>
+            <li><svg><use href="#i-no"/></svg>Planograma customizado por loja</li>
+            <li><svg><use href="#i-no"/></svg>Suporte ilimitado e atualizações permanentes</li>
+            <li><svg><use href="#i-no"/></svg>Custos de terceiros, logística e deslocamentos</li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="band rv" style="justify-content:center"><b>Fase 1 agora</b><svg style="width:12px;height:12px"><use href="#i-arr"/></svg>usar<svg style="width:12px;height:12px"><use href="#i-arr"/></svg>aprender<svg style="width:12px;height:12px"><use href="#i-arr"/></svg><b>evoluir por novas categorias</b></div>
-    <div class="btns rv"><button class="btn ci" data-go="9">Ver como isso evolui <svg><use href="#i-arr"/></svg></button></div>
+    <div class="btns rv"><button class="btn ci" data-go="9">Ver o próximo passo <svg><use href="#i-arr"/></svg></button></div>
   </div>
   <div class="foot">
     <span class="lab">75<i>LAB</i></span>
-    <div class="nav">
-      <button class="ixb ci" data-ix>Índice</button>
-      <button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
-      <span class="cnt"><b class="cur-n">09</b> / 10</span>
-      <button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button>
-    </div>
+    <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
+      <span class="cnt"><b class="cur-n">09</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
   </div>
 </section>
 
-<!-- ================= 10 · EVOLUÇÃO E DECISÃO ================= -->
-<section class="slide bg-mata" data-t="Evolução e decisão">
+<!-- ================= 10 · SUCESSO E DECISÃO ================= -->
+<section class="slide bg-mata" data-t="Sucesso e próximo passo">
   <svg class="pat full"><rect width="100%" height="100%" fill="url(#petG)"/></svg>
   <div class="chrome">
     <span class="eyebrow">09 · O próximo passo</span>
-    <div class="lockup">
-      <img class="dtlogo" src="data:image/png;base64,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" alt="Divina Terra" style="height:clamp(14px,1.35vw,21px)">
-      <span class="x">×</span><span class="lab">75<i>LAB</i></span>
-    </div>
+    <div class="lockup"><img class="dtlogo" src="data:image/png;base64,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" alt="Divina Terra" style="height:clamp(14px,1.35vw,21px)"><span class="x">×</span><span class="lab">75<i>LAB</i></span></div>
   </div>
   <div class="content">
-    <div class="rv" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
-      <h2>Comece pequeno.<br><b>Cresça com segurança</b></h2>
-      <p class="lead" style="max-width:32ch">A primeira entrega resolve o agora. As próximas só entram depois do uso — e da confiança conquistada.</p>
-    </div>
-    <div class="flow rv">
-      <div class="fstep" style="background:var(--amber);border-color:var(--amber)">
-        <span class="ic" style="border-color:#3A2A1E"><svg style="stroke:#3A2A1E"><use href="#i-bolt"/></svg></span>
-        <span class="eyebrow" style="color:#5C4430">Agora</span>
-        <h3 style="color:#3A2A1E">Guia Essencial</h3>
-        <p class="tiny" style="color:#5C4430">3 categorias, 1 loja referência, mini manual e treinamento.</p>
-      </div>
-      <div class="farr"><svg viewBox="0 0 24 24"><use href="#i-arr"/></svg></div>
-      <div class="fstep">
-        <span class="ic"><svg><use href="#i-grow"/></svg></span>
-        <span class="eyebrow">Depois</span>
-        <h3>Ampliar categorias</h3>
-        <p class="tiny">Novos blocos entram conforme a rede testa e identifica prioridades.</p>
-      </div>
-      <div class="farr"><svg viewBox="0 0 24 24"><use href="#i-arr"/></svg></div>
-      <div class="fstep">
-        <span class="ic"><svg><use href="#i-store"/></svg></span>
-        <span class="eyebrow">Quando fizer sentido</span>
-        <h3>Escalar a rede</h3>
-        <p class="tiny">Novos formatos de loja, comunicação física, auditoria e indicadores.</p>
-      </div>
+    <div class="head rv">
+      <h2>O sucesso é a loja funcionar<br><b>sem depender de nós</b></h2>
+      <p class="lead" style="max-width:34ch">Um novo gerente ou colaborador entende a organização, aplica as regras e resolve situações reais com os materiais entregues.</p>
     </div>
     <div class="rv">
-      <div class="eyebrow" style="margin-bottom:clamp(9px,1.1vw,16px)">Decisão para iniciar</div>
+      <div class="eyebrow" style="margin-bottom:9px">Como vamos acompanhar</div>
+      <div class="chips">
+        <span class="chip"><svg><use href="#i-ok"/></svg>Categorias corretamente implementadas</span>
+        <span class="chip"><svg><use href="#i-ok"/></svg>Aderência ao checklist</span>
+        <span class="chip"><svg><use href="#i-ok"/></svg>Tempo para ler e aplicar o planograma</span>
+        <span class="chip"><svg><use href="#i-ok"/></svg>Dúvidas recorrentes dos franqueados</span>
+        <span class="chip"><svg><use href="#i-ok"/></svg>Desvios na auditoria</span>
+        <span class="chip"><svg><use href="#i-ok"/></svg>Lojas implantadas por onda</span>
+      </div>
+      <p class="tiny" style="margin-top:8px;color:var(--fg3)">Métricas comerciais entram em fase posterior, com baseline e método de medição adequados.</p>
+    </div>
+    <div class="rv">
+      <div class="eyebrow" style="margin-bottom:clamp(9px,1.1vw,15px)">Para começar</div>
       <div style="display:flex;gap:clamp(14px,2.6vw,46px);flex-wrap:wrap">
-        <div class="selo ci"><span class="ring"><svg><use href="#i-seal"/></svg></span><b>Aprovar as<br>3 categorias</b></div>
-        <div class="selo ci"><span class="ring"><svg><use href="#i-store"/></svg></span><b>Indicar a<br>loja referência</b></div>
-        <div class="selo ci"><span class="ring"><svg><use href="#i-team"/></svg></span><b>Nomear 1<br>responsável</b></div>
-        <div class="selo ci"><span class="ring"><svg><use href="#i-map"/></svg></span><b>Enviar os<br>materiais</b></div>
+        <div class="selo ci"><span class="ring"><svg><use href="#i-seal"/></svg></span><b>Aprovar<br>o escopo</b></div>
+        <div class="selo ci"><span class="ring"><svg><use href="#i-team"/></svg></span><b>Indicar o<br>ponto focal</b></div>
+        <div class="selo ci"><span class="ring"><svg><use href="#i-store"/></svg></span><b>Definir a<br>loja piloto</b></div>
+        <div class="selo ci"><span class="ring"><svg><use href="#i-list"/></svg></span><b>Enviar mix<br>e cadastros</b></div>
       </div>
     </div>
     <div class="btns rv">
@@ -900,12 +838,8 @@ b{font-weight:500}
   </div>
   <div class="foot">
     <span class="lab">75<i>LAB</i></span>
-    <div class="nav">
-      <button class="ixb ci" data-ix>Índice</button>
-      <button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
-      <span class="cnt"><b class="cur-n">10</b> / 10</span>
-      <button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button>
-    </div>
+    <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
+      <span class="cnt"><b class="cur-n">10</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
   </div>
 </section>
 
@@ -914,12 +848,8 @@ b{font-weight:500}
 <div id="ix">
   <div style="display:flex;justify-content:space-between;align-items:center">
     <div class="lockup">
-      <div class="dtlock">
-        <img class="dtlogo" src="data:image/png;base64,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" alt="Divina Terra">
-        <span class="desc" style="color:#DE9835">Healthy Market</span>
-      </div>
-      <span class="x" style="color:#9E8E7C">×</span>
-      <span class="lab" style="color:#F5F0E4">75<i style="color:#DE9835">LAB</i></span>
+      <div class="dtlock"><img class="dtlogo" src="data:image/png;base64,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" alt="Divina Terra"><span class="desc" style="color:#DE9835">Healthy Market</span></div>
+      <span class="x" style="color:#9E8E7C">×</span><span class="lab" style="color:#F5F0E4">75<i style="color:#DE9835">LAB</i></span>
     </div>
     <button class="ixb ci" id="ixClose" style="border-color:rgba(222,152,53,.4);color:#CFC2B0">Fechar</button>
   </div>
@@ -933,30 +863,101 @@ b{font-weight:500}
   var slides = [].slice.call(document.querySelectorAll('.slide'));
   var N = slides.length, i = 0, lock = false;
 
+  /* ---- conteúdo interativo ---- */
+  var EQ = [
+    ['Categorias','Define o que existe e como está organizado.'],
+    ['Exposição','Define a lógica usada dentro da gôndola.'],
+    ['Planograma','Traduz a lógica em orientação prática de execução.'],
+    ['Comunicação','Ajuda o shopper a entender a loja e os benefícios.'],
+    ['Operação','Define como manter o padrão no dia a dia.'],
+    ['Treinamento','Garante que as pessoas saibam executar.'],
+    ['Replicação','Leva a metodologia a diferentes formatos e unidades.']
+  ];
+  var MOD = {
+    1:{p:[.62,.38,0],  t:'<b>1 módulo:</b> as subcategorias e os SKUs essenciais.'},
+    2:{p:[.5,.32,.18], t:'<b>2 módulos:</b> os grupos principais ganham profundidade.'},
+    3:{p:[.44,.33,.23],t:'<b>3 módulos:</b> mais variedade, mantendo a hierarquia.'},
+    4:{p:[.4,.33,.27], t:'<b>4 ou mais:</b> profundidade sem perder a leitura.'}
+  };
+  var PH = [
+    {t:'Imersão e diagnóstico', et:['Etapa 1 · Imersão e diagnóstico da loja piloto'],
+     en:['Diagnóstico estratégico','Registro fotográfico comentado','Mapa AS IS','Inventário de categorias e mobiliário','Oportunidades priorizadas']},
+    {t:'Estratégia', et:['Etapa 2 · Arquitetura de categorias','Etapa 3 · Naming e hierarquia','Etapa 4 · Divina Logic'],
+     en:['Árvore mestre de categorias','Glossário e regras para novos SKUs','Matriz de nomenclatura','Documento Divina Logic','Matriz Obrigatório · Adaptável · Recomendado']},
+    {t:'Desenvolvimento', et:['Etapa 5 · Planogramas-base','Etapa 6 · Sistema visual de navegação'],
+     en:['Biblioteca de planogramas-base','Modelos modulares de adaptação','Ficha de leitura de planograma','Conceito visual de navegação','Templates das peças de gôndola']},
+    {t:'Piloto', et:['Etapa 7 · Implantação completa na loja piloto'],
+     en:['Plano de implantação','Checklist de execução','Implantação assistida','Registro de antes e depois','Relatório de aprendizados']},
+    {t:'Validação', et:['Etapa 8 · Teste de usabilidade e validação'],
+     en:['Roteiro de teste','Registro das dúvidas','Matriz de correções','Versão validada da metodologia']},
+    {t:'Manualização', et:['Etapa 9 · Manual definitivo e treinamento','Guia Rápido operacional'],
+     en:['Manual Digital Divina Navegação · 15 capítulos','Guia Rápido Divina Terra','Trilha de treinamento · 8 módulos','Exercícios, quiz e FAQ inicial']},
+    {t:'Escala', et:['Etapa 10 · Clusterização, rollout e suporte'],
+     en:['Matriz de clusters','Plano de rollout em ondas','Checklist de auditoria','Janela de suporte definida','Governança e versionamento']}
+  ];
+  var OK = '<svg><use href="#i-ok"/></svg>';
+
+  function drawMod(n){
+    var box = document.getElementById('mod'), m = MOD[n], ranges = [], acc = 0, html = '';
+    m.p.forEach(function(w){ ranges.push([acc, acc + w]); acc += w; });
+    var filled = Math.min(n, 4);
+    for(var c = 0; c < 4; c++){
+      if(c >= filled){ html += '<div class="mcol off"></div>'; continue; }
+      var a0 = c / filled, a1 = (c + 1) / filled, segs = '';
+      ['a','b','c'].forEach(function(k, j){
+        var o = Math.max(0, Math.min(a1, ranges[j][1]) - Math.max(a0, ranges[j][0]));
+        if(o > 0.0001) segs += '<i class="sg ' + k + '" style="flex:0 0 calc(' + (o / (a1 - a0) * 100).toFixed(2) + '% - 2px)"></i>';
+      });
+      var shelf = '<div class="shelf">' + segs + '</div>';
+      html += '<div class="mcol">' + shelf + shelf + shelf + shelf + '</div>';
+    }
+    if(n >= 4) html += '<span class="more4">+</span>';
+    box.innerHTML = html;
+    document.getElementById('modcap').innerHTML = m.t;
+  }
+  drawMod(1);
+
+  function setEq(k){
+    document.querySelectorAll('[data-eq]').forEach(function(b){ b.classList.toggle('on', +b.getAttribute('data-eq') === k); });
+    var det = document.getElementById('eqdet');
+    det.querySelector('.num').textContent = String(k + 1).padStart(2, '0');
+    document.getElementById('eqn').textContent = EQ[k][0];
+    document.getElementById('eqd').textContent = EQ[k][1];
+    var a = det.querySelector('.anim'); a.style.animation = 'none'; a.offsetHeight; a.style.animation = '';
+  }
+  function setPhase(k){
+    document.querySelectorAll('[data-ph]').forEach(function(b){ b.classList.toggle('on', +b.getAttribute('data-ph') === k); });
+    var p = document.getElementById('phase'), d = PH[k];
+    p.querySelector('.ph-n').textContent = String(k + 1).padStart(2, '0');
+    p.querySelector('.ph-t').textContent = d.t;
+    p.querySelector('.ph-et').innerHTML = d.et.map(function(e){ return '<li><span class="dt"></span>' + e + '</li>'; }).join('');
+    p.querySelector('.ph-en').innerHTML = d.en.map(function(e){ return '<span class="chip">' + OK + e + '</span>'; }).join('');
+    p.querySelectorAll('.anim').forEach(function(a){ a.style.animation = 'none'; a.offsetHeight; a.style.animation = ''; });
+  }
+
+  /* ---- navegação ---- */
   function go(n){
-    n = Math.max(0, Math.min(N-1, n));
+    n = Math.max(0, Math.min(N - 1, n));
     if(n === i || lock) return;
     lock = true;
     var old = slides[i];
     old.classList.add('prev'); old.classList.remove('act');
     i = n;
     slides[i].classList.add('act');
-    slides[i].querySelectorAll('.rv,.pop').forEach(function(el){
-      el.style.animation='none'; el.offsetHeight; el.style.animation='';
-    });
-    setTimeout(function(){ old.classList.remove('prev'); lock=false; }, 620);
+    slides[i].querySelectorAll('.rv,.pop').forEach(function(el){ el.style.animation = 'none'; el.offsetHeight; el.style.animation = ''; });
+    setTimeout(function(){ old.classList.remove('prev'); lock = false; }, 620);
     paint();
-    if(i===8) countUp();
+    if(i === 8) countUp();
   }
   function paint(){
-    document.getElementById('prog').style.width = ((i+1)/N*100)+'%';
-    document.querySelectorAll('.cur-n').forEach(function(e){ e.textContent = String(i+1).padStart(2,'0'); });
+    document.getElementById('prog').style.width = ((i + 1) / N * 100) + '%';
+    document.querySelectorAll('.cur-n').forEach(function(e){ e.textContent = String(i + 1).padStart(2, '0'); });
   }
-  function next(){ go(i+1); } function prev(){ go(i-1); }
+  function next(){ go(i + 1); } function prev(){ go(i - 1); }
   slides[0].classList.add('act'); paint();
 
   document.addEventListener('click', function(e){
-    var t = e.target.closest('[data-next],[data-prev],[data-go],[data-ix],[data-exp],[data-tab],[data-step],#ixClose,#pdf,.ixi');
+    var t = e.target.closest('[data-next],[data-prev],[data-go],[data-ix],[data-tab],[data-eq],[data-mod],[data-ph],#ixClose,#pdf,.ixi');
     if(!t) return;
     if(t.hasAttribute('data-next')) return next();
     if(t.hasAttribute('data-prev')) return prev();
@@ -965,16 +966,16 @@ b{font-weight:500}
     if(t.id === 'ixClose')          return closeIx();
     if(t.id === 'pdf')              return window.print();
     if(t.classList.contains('ixi')) { closeIx(); return go(+t.getAttribute('data-n')); }
-    if(t.hasAttribute('data-exp'))  { t.classList.toggle('open'); return; }
+    if(t.hasAttribute('data-eq'))   return setEq(+t.getAttribute('data-eq'));
+    if(t.hasAttribute('data-ph'))   return setPhase(+t.getAttribute('data-ph'));
+    if(t.hasAttribute('data-mod')){
+      t.parentNode.querySelectorAll('.tab').forEach(function(b){ b.classList.toggle('on', b === t); });
+      return drawMod(+t.getAttribute('data-mod'));
+    }
     if(t.hasAttribute('data-tab')){
       var k = t.getAttribute('data-tab'), s = t.closest('.slide');
-      s.querySelectorAll('.tab').forEach(function(b){ b.classList.toggle('on', b===t); });
-      s.querySelectorAll('.pane').forEach(function(p){ p.classList.toggle('on', p.getAttribute('data-pane')===k); });
-      return;
-    }
-    if(t.hasAttribute('data-step')){
-      t.closest('.tl').querySelectorAll('.tstep').forEach(function(b){ b.classList.toggle('on', b===t); });
-      return;
+      s.querySelectorAll('[data-tab]').forEach(function(b){ b.classList.toggle('on', b === t); });
+      s.querySelectorAll('.pane').forEach(function(p){ p.classList.toggle('on', p.getAttribute('data-pane') === k); });
     }
   });
 
@@ -982,60 +983,60 @@ b{font-weight:500}
   slides.forEach(function(s, n){
     var b = document.createElement('button');
     b.className = 'ixi ci'; b.setAttribute('data-n', n);
-    b.innerHTML = '<span>'+String(n+1).padStart(2,'0')+'</span><p>'+s.getAttribute('data-t')+'</p>';
+    b.innerHTML = '<span>' + String(n + 1).padStart(2, '0') + '</span><p>' + s.getAttribute('data-t') + '</p>';
     ixg.appendChild(b);
   });
   function openIx(){ ix.classList.add('on'); } function closeIx(){ ix.classList.remove('on'); }
 
   document.addEventListener('keydown', function(e){
-    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){ e.preventDefault(); next(); }
-    else if(e.key==='ArrowLeft'||e.key==='PageUp'){ e.preventDefault(); prev(); }
-    else if(e.key==='Home'){ go(0); } else if(e.key==='End'){ go(N-1); }
-    else if(e.key==='m'||e.key==='M'){ ix.classList.contains('on') ? closeIx() : openIx(); }
-    else if(e.key==='Escape'){ closeIx(); }
+    if(e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' '){ e.preventDefault(); next(); }
+    else if(e.key === 'ArrowLeft' || e.key === 'PageUp'){ e.preventDefault(); prev(); }
+    else if(e.key === 'Home'){ go(0); } else if(e.key === 'End'){ go(N - 1); }
+    else if(e.key === 'm' || e.key === 'M'){ ix.classList.contains('on') ? closeIx() : openIx(); }
+    else if(e.key === 'Escape'){ closeIx(); }
     hideHint();
   });
 
-  var x0=null,y0=null;
-  document.addEventListener('touchstart', function(e){ x0=e.touches[0].clientX; y0=e.touches[0].clientY; }, {passive:true});
+  var x0 = null, y0 = null;
+  document.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive:true});
   document.addEventListener('touchend', function(e){
-    if(x0===null) return;
-    var dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0;
-    if(Math.abs(dx)>60 && Math.abs(dx)>Math.abs(dy)) (dx<0?next:prev)();
-    x0=null; hideHint();
+    if(x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    if(Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)) (dx < 0 ? next : prev)();
+    x0 = null; hideHint();
   }, {passive:true});
 
-  var wt=0;
+  var wt = 0;
   document.addEventListener('wheel', function(e){
-    var now=Date.now(); if(now-wt<700 || Math.abs(e.deltaY)<24) return;
-    wt=now; (e.deltaY>0?next:prev)(); hideHint();
+    var now = Date.now(); if(now - wt < 700 || Math.abs(e.deltaY) < 24) return;
+    wt = now; (e.deltaY > 0 ? next : prev)(); hideHint();
   }, {passive:true});
 
-  var done=false;
+  var done = false;
   function countUp(){
-    if(done) return; done=true;
-    var el=document.getElementById('cUp'), end=12900, t0=null;
+    if(done) return; done = true;
+    var el = document.getElementById('cUp'), end = 30000, t0 = null;
     function step(ts){
-      if(!t0) t0=ts; var p=Math.min((ts-t0)/1300,1);
-      el.textContent = Math.round(end*(1-Math.pow(1-p,3))).toLocaleString('pt-BR');
-      if(p<1) requestAnimationFrame(step);
+      if(!t0) t0 = ts; var p = Math.min((ts - t0) / 1300, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString('pt-BR');
+      if(p < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
   }
 
-  var cur=document.getElementById('cur'), dot=document.getElementById('curDot');
-  var mx=innerWidth/2, my=innerHeight/2, cx=mx, cy=my;
+  var cur = document.getElementById('cur'), dot = document.getElementById('curDot');
+  var mx = innerWidth / 2, my = innerHeight / 2, cx = mx, cy = my;
   addEventListener('mousemove', function(e){
-    mx=e.clientX; my=e.clientY;
-    dot.style.transform='translate('+mx+'px,'+my+'px)';
-    cur.classList.toggle('on', !!e.target.closest('button,a,.ci,[data-go],[data-exp]'));
+    mx = e.clientX; my = e.clientY;
+    dot.style.transform = 'translate(' + mx + 'px,' + my + 'px)';
+    cur.classList.toggle('on', !!e.target.closest('button,a,.ci'));
   });
   addEventListener('mousedown', function(){ cur.classList.add('down'); });
   addEventListener('mouseup', function(){ cur.classList.remove('down'); });
-  (function loop(){ cx+=(mx-cx)*0.17; cy+=(my-cy)*0.17;
-    cur.style.transform='translate('+cx+'px,'+cy+'px)'; requestAnimationFrame(loop); })();
+  (function loop(){ cx += (mx - cx) * 0.17; cy += (my - cy) * 0.17;
+    cur.style.transform = 'translate(' + cx + 'px,' + cy + 'px)'; requestAnimationFrame(loop); })();
 
-  var hint=document.getElementById('hint'), ht=setTimeout(hideHint, 6000);
+  var hint = document.getElementById('hint'), ht = setTimeout(hideHint, 6000);
   function hideHint(){ hint.classList.add('hide'); clearTimeout(ht); }
 })();
 </script>
