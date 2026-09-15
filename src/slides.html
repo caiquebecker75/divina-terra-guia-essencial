@@ -1,0 +1,337 @@
+<div class="cur" id="cur"></div>
+<div class="curDot" id="curDot"></div>
+
+<!-- ===== padrões e ícones lineares da marca ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <pattern id="petG" width="56" height="56" patternUnits="userSpaceOnUse">
+    <g fill="none" stroke="#DE9835" stroke-width="1"><circle cx="0" cy="0" r="28"/><circle cx="56" cy="0" r="28"/>
+      <circle cx="0" cy="56" r="28"/><circle cx="56" cy="56" r="28"/><circle cx="28" cy="28" r="28"/></g>
+  </pattern>
+  <pattern id="petT" width="56" height="56" patternUnits="userSpaceOnUse">
+    <g fill="none" stroke="#473225" stroke-width="1"><circle cx="0" cy="0" r="28"/><circle cx="56" cy="0" r="28"/>
+      <circle cx="0" cy="56" r="28"/><circle cx="56" cy="56" r="28"/><circle cx="28" cy="28" r="28"/></g>
+  </pattern>
+ </defs>
+ <symbol id="i-arr" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13.5 6.5 19.5 12l-6 5.5"/></g></symbol>
+ <symbol id="i-l" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H5M10.5 6.5 5 12l5.5 5.5"/></g></symbol>
+ <symbol id="i-ok" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5.5 5.5L20 6.5"/></g></symbol>
+ <symbol id="i-no" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></g></symbol>
+ <symbol id="i-drag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6.5 3.5 12 9 17.5M15 6.5l5.5 5.5-5.5 5.5"/></g></symbol>
+ <symbol id="i-tree" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2.5h5v4h-5zM12 6.5v3.5M5.5 10h13M5.5 10v3M12 10v3M18.5 10v3M3 13h5v4.5H3zM9.5 13h5v4.5h-5zM16 13h5v4.5h-5z"/></g></symbol>
+ <symbol id="i-shelf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3.5h18M3 3.5v17M21 3.5v17M3 20.5h18M3 11.5h18M6.5 6h3.5v5.5H6.5zM13.5 7.5h4v4h-4zM6.5 14h4.5v6H6.5zM14 15.5h3.5V20H14z"/></g></symbol>
+ <symbol id="i-grid" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 3.5h17v17h-17zM3.5 9.2h17M3.5 14.8h17M9.2 3.5v17M14.8 3.5v17"/></g></symbol>
+ <symbol id="i-sign" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5V2.5M12 4.5h6.5l2.5 2.6-2.5 2.6H12M12 12H5.5L3 14.6l2.5 2.6H12"/></g></symbol>
+ <symbol id="i-cycle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-13.7 5.6M4 12a8 8 0 0 1 13.7-5.6M17.7 2.8v3.8h-3.8M6.3 21.2v-3.8h3.8"/></g></symbol>
+ <symbol id="i-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.2 12 4.5l10 4.7-10 4.7zM6 11.1v4.7c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.7M22 9.2v5.8"/></g></symbol>
+ <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 8.5h12v12h-12zM15.5 8.5v-5h-12v12h5"/></g></symbol>
+ <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.3"/></g></symbol>
+ <symbol id="i-rule" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.5h19v7h-19zM6.5 8.5v3M10.5 8.5v3.8M14.5 8.5v3M18.5 8.5v3.8"/></g></symbol>
+ <symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5h11a3 3 0 0 1 3 3V20H7a3 3 0 0 1-3-3zM4 17a3 3 0 0 1 3-3h11M8 8.5h6"/></g></symbol>
+ <symbol id="i-team" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.8 20c0-3.4 2.8-5.2 6.2-5.2s6.2 1.8 6.2 5.2"/><circle cx="17.4" cy="9.2" r="2.3"/><path d="M16.6 14.9c2.9.1 4.6 1.7 4.6 4.5"/></g></symbol>
+ <symbol id="i-store" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3.5h16l1.5 5.2a3 3 0 0 1-5.7 1.5 3 3 0 0 1-5.6 0 3 3 0 0 1-5.7-1.5zM5 11v9.5h14V11M10 20.5V15h4v5.5"/></g></symbol>
+ <symbol id="i-grow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5h17M7 20.5v-5.5M12 20.5v-9.5M17 20.5v-3.5M4 10l5-4.5 4 3 6.5-5.5"/></g></symbol>
+ <symbol id="i-list" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11.5M9 12h11.5M9 18h11.5M3 6l1.3 1.3L6.5 5M3 12l1.3 1.3L6.5 11M3 18l1.3 1.3L6.5 17"/></g></symbol>
+ <symbol id="i-seal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.2 12.2 2.6 2.6 5-5.4"/></g></symbol>
+ <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5.5 5.5"/></g></symbol>
+ <symbol id="i-jar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2.5h6v2.2l2.2 3.3V19a2.5 2.5 0 0 1-2.5 2.5h-5.4A2.5 2.5 0 0 1 6.8 19V8l2.2-3.3zM6.8 12.5h10.4"/></g></symbol>
+ <symbol id="i-drop" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5s6.5 7 6.5 11a6.5 6.5 0 0 1-13 0c0-4 6.5-11 6.5-11z"/><path d="M8.8 14.2a3.4 3.4 0 0 0 3.2 3.4"/></g></symbol>
+ <symbol id="i-print" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8.5V3h10v5.5M7 17.5H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14.5h10V21H7z"/></g></symbol>
+</svg>
+
+<div id="stage" data-theme="terra" data-slide="0">
+ <div id="prog"></div>
+
+ <!-- ============ 01 · CAPA — título + órbita dos 6 movimentos ============ -->
+ <section class="slide t-terra s1" data-t="Capa">
+  <svg class="pat" style="left:0;top:0;width:100%;height:100%;opacity:.09"><rect width="100%" height="100%" fill="url(#petG)"/></svg>
+  <div class="brand rv">
+    <div><img src="__LOGO_GOLD__" alt="Divina Terra"><div class="desc">Healthy Market</div></div>
+    <span class="x">×</span><span class="lab">75<i>LAB</i></span>
+  </div>
+  <div class="meta rv">Proposta comercial · Setembro 2026</div>
+  <div class="copy">
+    <div class="eyebrow rv" style="--d:1">Projeto Divina Navegação</div>
+    <h1 class="h rv" style="--d:2">Transformar estratégia em <b>padrão de loja</b></h1>
+    <p class="lead rv" style="--d:3">Um sistema proprietário de organização, navegação e execução de loja — simples para o franqueado aplicar e fácil para a rede replicar.</p>
+    <div class="btns rv" style="--d:4">
+      <button class="btn ci" data-go="1">Começar <svg><use href="#i-arr"/></svg></button>
+      <button class="btn alt ci" data-go="8">Ir ao investimento</button>
+    </div>
+  </div>
+  <div class="orbit rv" style="--d:2" id="orbit">
+    <svg class="ring" viewBox="0 0 660 660"></svg>
+    <div class="spin"><i></i></div>
+    <div class="core"><img src="__SYM_GOLD__" alt=""></div>
+  </div>
+ </section>
+
+ <!-- ============ 02 · DESAFIO — comparador antes × depois ============ -->
+ <section class="slide s2" data-t="O desafio">
+  <div class="sx eyebrow">01 · O ponto de partida</div>
+  <div class="title rv"><h2 class="h">O conhecimento existe.<br><b>Falta virar sistema</b></h2></div>
+  <div class="ctl rv" style="--d:1">
+    <div class="seg" id="cmpSeg">
+      <button class="ci" data-cmp="100">Hoje</button><button class="on ci" data-cmp="50">Comparar</button><button class="ci" data-cmp="0">Com a Divina Navegação</button>
+    </div>
+    <div class="legend2">
+      <span><svg><use href="#i-jar"/></svg>Proteína</span><span><svg><use href="#i-target"/></svg>Creatina</span><span><svg><use href="#i-drop"/></svg>Ômega</span>
+      <em>Arraste a linha</em>
+    </div>
+  </div>
+  <div class="cmp rv" style="--d:2" id="cmp">
+    <div class="ly before">
+      <svg class="shelfsvg" id="shB" viewBox="0 0 1440 400"></svg>
+      <span class="tagl">Hoje · por marca</span>
+      <div class="bubble">“Onde fica a creatina?”</div>
+      <span class="pin" style="left:150px;top:150px">1</span>
+      <span class="pin" style="left:420px;top:372px">2</span>
+      <span class="pin" style="left:660px;top:40px">3</span>
+      <span class="pin" style="left:560px;top:250px">4</span>
+    </div>
+    <div class="ly after">
+      <svg class="shelfsvg" id="shA" viewBox="0 0 1440 400"></svg>
+      <span class="tagl">Proposto · por necessidade</span>
+      <div class="bubble">Necessidade → categoria → marca</div>
+    </div>
+    <div class="handle"><div class="knob"><svg><use href="#i-drag"/></svg></div></div>
+  </div>
+  <div class="probs">
+    <div class="prob rv" style="--d:3"><span class="pn">1</span><div><h4>Conhecimento disperso</h4><p>Parte nas pessoas, parte nas indústrias, parte na prática de cada loja.</p></div></div>
+    <div class="prob rv" style="--d:4"><span class="pn">2</span><div><h4>Organização por marca</h4><p>O shopper precisa conhecer a marca para achar a solução.</p></div></div>
+    <div class="prob rv" style="--d:5"><span class="pn">3</span><div><h4>Dependência da equipe</h4><p>Sem loja autoexplicativa, cliente e vendedor novo dependem de memória.</p></div></div>
+    <div class="prob rv" style="--d:6"><span class="pn">4</span><div><h4>Baixa replicabilidade</h4><p>Cada unidade interpreta o padrão do seu jeito.</p></div></div>
+  </div>
+ </section>
+
+ <!-- ============ 03 · SISTEMA — roda dos 7 componentes ============ -->
+ <section class="slide t-amber s3" data-t="O sistema">
+  <svg class="pat" style="left:0;top:0;width:100%;height:150px;opacity:.12"><rect width="100%" height="100%" fill="url(#petT)"/></svg>
+  <div class="sx eyebrow">02 · A solução</div>
+  <div class="title rv"><h2 class="h">Não é um manual. É um <b>sistema de execução</b></h2><p class="tap">Clique em cada parte da roda</p></div>
+  <div class="isnt rv" style="--d:2">
+    <h5>Não é</h5>
+    <ul>
+      <li><span class="mk"><svg><use href="#i-no"/></svg></span>Um manual isolado</li>
+      <li><span class="mk"><svg><use href="#i-no"/></svg></span>Uma entrega pontual de design ou planograma</li>
+      <li><span class="mk"><svg><use href="#i-no"/></svg></span>A compra de uma pilha de arquivos</li>
+    </ul>
+  </div>
+  <div class="wheel rv" style="--d:1">
+    <svg id="wheel" viewBox="0 0 520 520"></svg>
+    <button class="hub ci" id="hub"><span class="anim"><span class="hn">7</span><h4>componentes</h4><p>Juntos, formam o Padrão Divina Terra</p></span></button>
+  </div>
+  <div class="is rv" style="--d:3">
+    <h5>É</h5>
+    <ul>
+      <li><span class="mk"><svg><use href="#i-ok"/></svg></span>Um sistema de execução de loja</li>
+      <li><span class="mk"><svg><use href="#i-ok"/></svg></span>A base para expansão, treinamento e auditoria</li>
+      <li><span class="mk"><svg><use href="#i-ok"/></svg></span>Um ativo da rede</li>
+    </ul>
+  </div>
+ </section>
+
+ <!-- ============ 04 · DIVINA LOGIC — simulador de gôndola + regras ============ -->
+ <section class="slide s4" data-t="Divina Logic">
+  <div class="sx eyebrow">03 · Divina Logic · sistema modular de exposição</div>
+  <div class="title rv"><h2 class="h">Padrão <b>sem engessamento</b></h2><p class="lead">O franqueado aprende a regra — não copia a foto de uma gôndola.</p></div>
+  <div class="howto rv" style="--d:1">
+    <span class="st"><i>1</i>Escolha quantos módulos a loja tem</span><span class="sep2"></span>
+    <span class="st"><i>2</i>Veja o que muda</span><span class="sep2"></span>
+    <span class="st"><i>3</i>Repare no que não muda: a ordem</span>
+  </div>
+  <div class="sim rv" style="--d:2">
+    <div class="top">
+      <span class="caps">Módulos na loja</span>
+      <div class="seg" id="modSeg"><button class="on ci" data-mod="1">1 módulo</button><button class="ci" data-mod="2">2</button><button class="ci" data-mod="3">3</button><button class="ci" data-mod="4">4 ou mais</button></div>
+    </div>
+    <div class="gond" id="gond"></div>
+    <div class="gcap"><p id="gcap"></p><span class="ill">Ilustrativo</span></div>
+  </div>
+  <div class="rules">
+    <div class="rt rv" style="--d:2">Três tipos de regra</div>
+    <div class="rule r1 rv" style="--d:3"><div class="rk"><b>Obrigatório</b><i class="light"></i></div><span class="q">Posso mudar?</span><span class="a">Não.</span><p>É o que define o padrão Divina Terra.</p></div>
+    <div class="rule r2 rv" style="--d:4"><div class="rk"><b>Adaptável</b><i class="light"></i></div><span class="q">Posso mudar?</span><span class="a">Sim, dentro da regra.</span><p>Conforme tamanho, estoque e sortimento da loja.</p></div>
+    <div class="rule r3 rv" style="--d:5"><div class="rk"><b>Recomendado</b><i class="light"></i></div><span class="q">Devo seguir?</span><span class="a">Sempre que der.</span><p>Boas práticas que elevam a qualidade da exposição.</p></div>
+  </div>
+ </section>
+
+ <!-- ============ 05 · METODOLOGIA — escada de 7 fases ============ -->
+ <section class="slide t-areia s5" data-t="Metodologia em 7 fases">
+  <div class="sx eyebrow">04 · Como vamos construir</div>
+  <div class="title rv"><h2 class="h">Da imersão à escala, <b>em 7 fases</b></h2><p class="small">São 10 etapas numa subida só. Cada degrau termina com uma aprovação, para o retrabalho não se acumular.</p></div>
+  <p class="note5 rv" style="--d:1">Prazo definitivo conforme entrega de dados, aprovações e disponibilidade da loja piloto.</p>
+  <div class="pcard5 rv" style="--d:1" id="pcard"></div>
+  <div id="stairs"></div>
+  <div class="floor"></div>
+ </section>
+
+ <!-- ============ 06 · PILOTO E ESCALA — ondas ============ -->
+ <section class="slide t-terra s6" data-t="Piloto e escala">
+  <svg class="pat" style="left:0;top:0;width:100%;height:100%;opacity:.07"><rect width="100%" height="100%" fill="url(#petG)"/></svg>
+  <div class="sx eyebrow">05 · Validar antes de escalar</div>
+  <div class="rip rv" style="--d:1">
+    <button class="rc c3 ci" data-onda="2"><span class="rl" style="top:30px"><b>Onda 3</b><span>Expansão</span></span></button>
+    <button class="rc c2 ci" data-onda="1"><span class="rl" style="top:26px"><b>Onda 2</b><span>Representativas</span></span></button>
+    <button class="rc c1 on ci" data-onda="0"><svg><use href="#i-store"/></svg><b>Onda 1</b><span>Loja piloto</span></button>
+  </div>
+  <div class="col6">
+    <h2 class="h rv">Provado na loja.<br><b>Depois, na rede</b></h2>
+    <div class="onda rv" style="--d:1" id="onda"></div>
+    <div class="gold rv" style="--d:2"><span class="caps">Critério de aprovação</span><p class="serif">“Se a execução depender de explicação constante, o sistema ainda não está simples.”</p></div>
+    <div class="duo rv" style="--d:3">
+      <div class="clus">
+        <span class="caps">Clusters por formato</span>
+        <div class="row">
+          <div class="cl"><span class="c p">P</span><small>Espaço reduzido, essenciais</small></div>
+          <div class="cl"><span class="c m">M</span><small>Mix intermediário</small></div>
+          <div class="cl"><span class="c g">G</span><small>Mix e profundidade completos</small></div>
+        </div>
+      </div>
+      <div class="clip">
+        <span class="caps">Checklist de auditoria</span><small>10 a 15 critérios · clique para marcar</small>
+        <div id="audit" style="margin-top:6px"></div>
+      </div>
+    </div>
+  </div>
+ </section>
+
+ <!-- ============ 07 · PAPÉIS — matriz quem faz o quê ============ -->
+ <section class="slide s7" data-t="Papéis e governança">
+  <svg class="pat" style="right:0;top:0;width:300px;height:300px;opacity:.09"><rect width="100%" height="100%" fill="url(#petT)"/></svg>
+  <div class="sx eyebrow">06 · Quem faz o quê</div>
+  <div class="title rv"><h2 class="h">Papéis claros.<br><b>Um padrão que se mantém</b></h2></div>
+  <div class="seg rv" style="--d:1" id="p7seg"><button class="on ci" data-p7="0">Durante o projeto</button><button class="ci" data-p7="1">Depois, na rede</button></div>
+
+  <div class="p7 on rv" style="--d:2" data-pane7="0">
+    <div class="mx">
+      <div class="row hd"><div>Etapa</div><div><i class="dt7 a"></i>&nbsp;75LAB conduz</div><div><i class="dt7 b"></i>&nbsp;Divina Terra viabiliza e aprova</div></div>
+      <div class="row"><div class="ac"><span class="rn">1</span>Diagnóstico</div><div class="ca">Conduz a imersão na loja piloto</div><div class="cb">Disponibiliza a loja piloto e indica o ponto focal</div></div>
+      <div class="row"><div class="ac"><span class="rn">2</span>Categorias e Divina Logic</div><div class="ca">Desenvolve arquitetura, naming e regras</div><div class="cb">Fornece mix e cadastros e aprova no prazo</div></div>
+      <div class="row"><div class="ac"><span class="rn">3</span>Planogramas e sistema visual</div><div class="ca">Cria planogramas, peças e templates</div><div class="cb">Fornece dimensões ou acesso ao levantamento</div></div>
+      <div class="row"><div class="ac"><span class="rn">4</span>Loja piloto</div><div class="ca">Acompanha a implantação e consolida aprendizados</div><div class="cb">Consolida os feedbacks num só retorno</div></div>
+      <div class="row"><div class="ac"><span class="rn">5</span>Manual e treinamento</div><div class="ca">Desenvolve manual, guia rápido e trilha</div><div class="cb">Indica os responsáveis pelo treinamento</div></div>
+      <div class="row"><div class="ac"><span class="rn">6</span>Escala</div><div class="ca">Propõe clusters, rollout e auditoria</div><div class="cb">Informa formatos de loja e coordena os franqueados</div></div>
+    </div>
+    <div class="strip"><b>Dependências críticas</b><span>Qualidade das informações de mix</span><span>Loja piloto disponível</span><span>Velocidade de aprovação</span><span>Responsáveis definidos</span></div>
+  </div>
+
+  <div class="p7" data-pane7="1">
+    <div class="mx tight">
+      <div class="row hd"><div>Decisão</div><div><i class="dt7 a"></i>&nbsp;Franqueadora define</div><div><i class="dt7 b"></i>&nbsp;Franqueado executa</div></div>
+      <div class="row"><div class="ac">Arquitetura e nomenclaturas</div><div class="ca">Define as categorias e os nomes oficiais</div><div class="cb no">—</div></div>
+      <div class="row"><div class="ac">Regras e planogramas-base</div><div class="ca">Define e atualiza as regras centrais</div><div class="cb">Aplica as adaptações permitidas</div></div>
+      <div class="row"><div class="ac">Peças de comunicação</div><div class="ca">Aprova novas peças</div><div class="cb no">—</div></div>
+      <div class="row"><div class="ac">Manual</div><div class="ca">Versiona e comunica mudanças oficiais</div><div class="cb no">—</div></div>
+      <div class="row"><div class="ac">Rotina da loja</div><div class="ca no">—</div><div class="cb">Executa, repõe e mantém o padrão todo dia</div></div>
+      <div class="row"><div class="ac">Dúvidas e desvios</div><div class="ca no">—</div><div class="cb">Registra dúvidas e corrige desvios</div></div>
+    </div>
+    <div class="strip flow"><b>Novo SKU</b><span>Novo produto</span><svg><use href="#i-arr"/></svg><span>Classificar</span><svg><use href="#i-arr"/></svg><span>Categoria</span><svg><use href="#i-arr"/></svg><span>Prioridade</span><svg><use href="#i-arr"/></svg><span>Posicionar</span><svg><use href="#i-arr"/></svg><span>Atualizar material</span></div>
+  </div>
+ </section>
+
+ <!-- ============ 08 · ENTREGÁVEIS — produtos na prateleira, serviços em tíquetes ============ -->
+ <section class="slide t-mata s8" data-t="Entregáveis">
+  <svg class="pat" style="left:0;top:0;width:100%;height:150px;opacity:.14"><rect width="100%" height="100%" fill="url(#petG)"/></svg>
+  <div class="sx eyebrow">07 · O que você recebe</div>
+  <div class="title rv"><h2 class="h">O que você leva:<br><b>9 produtos + 6 serviços</b></h2></div>
+  <div class="glabel rv" style="--d:1"><span class="caps">Produtos · ficam com a rede · clique para abrir</span></div>
+  <div class="gondola rv" style="--d:2" id="gondola"></div>
+  <div class="label8 rv" style="--d:3" id="label8"></div>
+  <div class="tickets rv" style="--d:4"><div class="caps">Serviços · a 75LAB conduz</div><div class="tkg" id="tkg"></div></div>
+ </section>
+
+ <!-- ============ 09 · INVESTIMENTO — etiqueta de preço + cupom ============ -->
+ <section class="slide t-amber s9" data-t="Investimento">
+  <svg class="pat" style="left:0;top:0;width:100%;height:100%;opacity:.07"><rect width="100%" height="100%" fill="url(#petT)"/></svg>
+  <div class="sx eyebrow">08 · Investimento</div>
+  <h2 class="h s9h rv">Um sistema para <b>a rede inteira</b></h2>
+  <div class="tag9 rv" style="--d:1">
+    <span class="hole"></span>
+    <span class="tl">Divina Navegação · projeto completo</span>
+    <div class="pn"><small>R$</small><span id="cUp">29.900</span></div>
+    <div class="facts"><span>1 loja piloto</span><span>10 etapas em 7 fases</span><span>Janela limitada de suporte</span></div>
+    <div class="bar"><span>Divina Terra × 75LAB</span><span>Um ativo da rede</span></div>
+  </div>
+  <div class="s9btn rv" style="--d:3"><button class="btn ci" data-go="9">Ver o próximo passo <svg><use href="#i-arr"/></svg></button></div>
+  <div class="rcpt rv" style="--d:2">
+    <div class="rh"><b>Divina Navegação</b><span>Divina Terra × 75LAB</span></div>
+    <div class="dash"></div>
+    <div class="rs">Você leva</div>
+    <button class="rl2 ci" data-go="7" data-pick="p0"><span>9 produtos que ficam com a rede</span><i class="ld"></i><em>ver <svg><use href="#i-arr"/></svg></em></button>
+    <button class="rl2 ci" data-go="7" data-pick="s0"><span>6 serviços conduzidos pela 75LAB</span><i class="ld"></i><em>ver <svg><use href="#i-arr"/></svg></em></button>
+    <div class="rl2"><span>Implantação assistida na loja piloto</span><i class="ld"></i><em><svg><use href="#i-ok"/></svg></em></div>
+    <div class="rl2"><span>Janela limitada de suporte</span><i class="ld"></i><em><svg><use href="#i-ok"/></svg></em></div>
+    <div class="dash"></div>
+    <div class="rs">Não está incluído</div>
+    <ul class="nx">
+      <li><svg><use href="#i-no"/></svg>Visita individual a todas as franquias</li>
+      <li><svg><use href="#i-no"/></svg>Implantação física em todas as lojas</li>
+      <li><svg><use href="#i-no"/></svg>Produção e instalação de materiais</li>
+      <li><svg><use href="#i-no"/></svg>Levantamento SKU a SKU da rede</li>
+      <li><svg><use href="#i-no"/></svg>Planograma customizado por loja</li>
+      <li><svg><use href="#i-no"/></svg>Suporte ilimitado e atualizações permanentes</li>
+      <li><svg><use href="#i-no"/></svg>Custos de terceiros, logística e deslocamentos</li>
+    </ul>
+    <div class="dash"></div>
+    <div class="tot"><span>Total</span><b>R$ 29.900</b></div>
+    <svg class="zig" viewBox="0 0 580 16" preserveAspectRatio="none"><path id="zig"/></svg>
+  </div>
+ </section>
+
+ <!-- ============ 10 · FECHO — manifesto + caminho para começar ============ -->
+ <section class="slide t-terra s10" data-t="Próximo passo">
+  <svg class="pat" style="left:0;top:0;width:100%;height:100%;opacity:.08"><rect width="100%" height="100%" fill="url(#petG)"/></svg>
+  <div class="sx eyebrow">09 · O próximo passo</div>
+  <div class="man rv">
+    <h2 class="h">O sucesso é a loja funcionar<br><b>sem depender de nós</b></h2>
+    <p class="lead">Um novo gerente ou colaborador entende a organização, aplica as regras e resolve situações reais com os materiais entregues.</p>
+  </div>
+  <div class="path rv" style="--d:1">
+    <button class="pst ci" data-check="0"><span class="box"><svg><use href="#i-seal"/></svg><span class="ck"><svg><use href="#i-ok"/></svg></span></span><small>Passo 1</small><b>Aprovar<br>o escopo</b></button>
+    <button class="pst ci" data-check="1"><span class="box"><svg><use href="#i-team"/></svg><span class="ck"><svg><use href="#i-ok"/></svg></span></span><small>Passo 2</small><b>Indicar o<br>ponto focal</b></button>
+    <button class="pst ci" data-check="2"><span class="box"><svg><use href="#i-store"/></svg><span class="ck"><svg><use href="#i-ok"/></svg></span></span><small>Passo 3</small><b>Definir a<br>loja piloto</b></button>
+    <button class="pst ci" data-check="3"><span class="box"><svg><use href="#i-list"/></svg><span class="ck"><svg><use href="#i-ok"/></svg></span></span><small>Passo 4</small><b>Enviar mix<br>e cadastros</b></button>
+  </div>
+  <p class="ready rv" style="--d:2" id="ready"></p>
+  <div class="ind rv" style="--d:3">
+    <span class="caps">Como vamos acompanhar · indicadores operacionais</span>
+    <div class="chips">
+      <span class="chip"><svg><use href="#i-ok"/></svg>Categorias corretamente implementadas</span>
+      <span class="chip"><svg><use href="#i-ok"/></svg>Aderência ao checklist</span>
+      <span class="chip"><svg><use href="#i-ok"/></svg>Tempo para ler e aplicar o planograma</span>
+      <span class="chip"><svg><use href="#i-ok"/></svg>Dúvidas recorrentes</span>
+      <span class="chip"><svg><use href="#i-ok"/></svg>Desvios na auditoria</span>
+      <span class="chip"><svg><use href="#i-ok"/></svg>Lojas implantadas por onda</span>
+    </div>
+    <em>Métricas comerciais só numa fase posterior, com baseline e método de medição adequados.</em>
+  </div>
+  <div class="btns10 rv" style="--d:4">
+    <button class="btn ci" data-go="8">Rever o investimento <svg><use href="#i-arr"/></svg></button>
+    <button class="btn alt ci" data-go="0">Voltar ao início</button>
+    <button class="btn alt ci" id="pdf">Baixar PDF <svg><use href="#i-print"/></svg></button>
+  </div>
+ </section>
+
+ <!-- ===== HUD: logo, começo/meio/fim, navegação ===== -->
+ <div id="hud">
+   <img class="hud-logo l-dark" src="__LOGO_GOLD__" alt="Divina Terra">
+   <img class="hud-logo l-light" src="__LOGO_TERRA__" alt="Divina Terra">
+   <div class="hud-foot">
+     <span class="lab">75<i>LAB</i></span>
+     <div class="acts" id="acts"></div>
+     <div class="nav">
+       <button class="ixb ci" data-ix>Índice</button>
+       <button class="nb ci" data-prev aria-label="Anterior"><svg><use href="#i-l"/></svg></button>
+       <span class="cnt" id="cnt">01 / 10</span>
+       <button class="nb ci" data-next aria-label="Próxima"><svg><use href="#i-arr"/></svg></button>
+     </div>
+   </div>
+ </div>
+ <div class="hint" id="hint">← → para navegar · M abre o índice</div>
+
+ <div id="ix">
+   <div class="top"><img src="__LOGO_GOLD__" alt="Divina Terra"><button class="ci" id="ixClose">Fechar</button></div>
+   <div class="cols" id="ixcols"></div>
+ </div>
+</div>
