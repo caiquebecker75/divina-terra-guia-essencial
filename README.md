@@ -19,10 +19,9 @@ Divina Navegação: sistema proprietário de organização, navegação e execu�
 | 4 | Divina Logic | Simulador de gôndola de 1 a 4+ módulos + regras Obrigatório/Adaptável/Recomendado |
 | 5 | Metodologia | Escada de 7 fases (10 etapas) com entregáveis e aprovação por fase |
 | 6 | Piloto e escala | Ondas concêntricas, critério de aprovação, clusters P/M/G e checklist marcável |
-| 7 | Papéis e governança | Matriz quem faz o quê, no projeto e na rede, e fluxo do novo SKU |
-| 8 | Entregáveis | 9 produtos como embalagens na prateleira + 6 serviços como tíquetes |
-| 9 | Investimento | Etiqueta de gôndola com R$ 29.900 + cupom "você leva / não está incluído" |
-| 10 | Próximo passo | Manifesto + caminho de 4 passos marcáveis e indicadores operacionais |
+| 7 | Entregáveis | 9 produtos como embalagens na prateleira + 6 serviços como tíquetes |
+| 8 | Investimento | Etiqueta de gôndola com R$ 29.900 + cupom "você leva / não está incluído" |
+| 9 | Próximo passo | Manifesto + caminho de 4 passos marcáveis e indicadores operacionais |
 
 Fonte do conteúdo: documento *Estratégia Completa de Organização, Navegação e Execução de Loja* da Divina Terra (docx, 15/09/2026).
 

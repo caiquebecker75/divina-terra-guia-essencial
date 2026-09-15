@@ -70,7 +70,7 @@
     s4:{i:'i-grow',  n:'Rollout e governança', l:['Plano de implantação em ondas','Papéis da franqueadora e do franqueado','Fluxo de novos SKUs e versionamento']},
     s5:{i:'i-cycle', n:'Janela de suporte', l:['Período e canal definidos','Dúvidas de leitura de planograma e de categoria','Apoio na aplicação das regras e dos materiais']}
   };
-  var ACTS = [['Começo',0,1],['Meio',2,7],['Fim',8,9]];
+  var ACTS = [['Começo',0,1],['Meio',2,6],['Fim',7,8]];
 
   /* ================= 01 · ÓRBITA ================= */
   (function(){
@@ -321,13 +321,13 @@
     slides[i].querySelectorAll('.rv').forEach(restart);
     setTimeout(function(){ old.classList.remove('prev'); lock = false; }, 640);
     paint();
-    if(i === 8) countUp();
+    if(i === 7) countUp();
   }
   function next(){ go(i + 1); } function prev(){ go(i - 1); }
   slides[0].classList.add('act'); paint();
 
   document.addEventListener('click', function(e){
-    var t = e.target.closest('[data-go],[data-next],[data-prev],[data-ix],#ixClose,#pdf,[data-cmp],[data-wseg],#hub,[data-mod],[data-step],[data-onda],[data-audit],[data-p7],[data-item],[data-check]');
+    var t = e.target.closest('[data-go],[data-next],[data-prev],[data-ix],#ixClose,#pdf,[data-cmp],[data-wseg],#hub,[data-mod],[data-step],[data-onda],[data-audit],[data-item],[data-check]');
     if(!t) return;
     if(t.hasAttribute('data-go')){ closeIx(); if(t.hasAttribute('data-pick')) setItem(t.getAttribute('data-pick')); return go(+t.getAttribute('data-go')); }
     if(t.hasAttribute('data-next')) return next();
@@ -342,12 +342,6 @@
     if(t.hasAttribute('data-step')) return setStep(+t.getAttribute('data-step'));
     if(t.hasAttribute('data-onda')) return setOnda(+t.getAttribute('data-onda'));
     if(t.hasAttribute('data-audit')){ var a = AUD[+t.getAttribute('data-audit')]; a[1] = (a[1] + 1) % 3; return drawAudit(); }
-    if(t.hasAttribute('data-p7')){
-      var k = t.getAttribute('data-p7');
-      document.querySelectorAll('[data-p7]').forEach(function(b){ b.classList.toggle('on', b === t); });
-      document.querySelectorAll('.p7').forEach(function(p){ p.classList.toggle('on', p.getAttribute('data-pane7') === k); });
-      return;
-    }
     if(t.hasAttribute('data-item')) return setItem(t.getAttribute('data-item'));
     if(t.hasAttribute('data-check')){ var c = +t.getAttribute('data-check'); checks[c] = !checks[c]; return paintChecks(); }
   });

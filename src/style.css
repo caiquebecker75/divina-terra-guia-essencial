@@ -341,30 +341,7 @@ svg{overflow:visible}
 .pill{font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:100px;white-space:nowrap;transition:background .3s,color .3s}
 .pill.ok{background:#2E6B4E;color:var(--creme)}.pill.aj{background:var(--amber);color:var(--ink)}.pill.na{background:#EDE4D3;color:var(--ink3)}
 
-/* =================== 07 · PAPÉIS · matriz =================== */
-.s7 .title{position:absolute;left:80px;top:100px}
-.s7 .title .h{font-size:56px}
-.s7 .seg{position:absolute;right:80px;top:150px}
-.p7{position:absolute;left:80px;top:250px;width:1440px;display:none}
-.p7.on{display:block;animation:fadein .45s var(--ease) both}
-.mx .row{display:grid;grid-template-columns:420px 1fr 1fr;gap:10px;margin-bottom:9px}
-.mx .row>div{border-radius:16px;padding:0 22px;display:flex;align-items:center;gap:14px;min-height:62px}
-.mx.tight .row>div{min-height:55px}
-.mx .hd>div{min-height:0!important;padding:0 22px 6px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--ink2)}
-.mx .ac{background:#EDE4D3;font-size:17px;font-weight:500;color:var(--ink)}
-.mx .ac .rn{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--amber-x);min-width:30px}
-.mx .ca{background:rgba(222,152,53,.24)}.mx .cb{background:rgba(71,50,37,.1)}
-.mx .ca,.mx .cb{font-size:16px;font-weight:300;color:var(--ink)}
-.mx .no{background:rgba(71,50,37,.035);color:var(--ink3)!important;justify-content:center}
-.dt7{flex:0 0 14px;height:14px;border-radius:50%}
-.dt7.a{background:var(--amber)}.dt7.b{background:var(--terra)}
-.strip{margin-top:18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.strip>b{font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--amber-x);margin-right:8px}
-.strip span{background:#EDE4D3;border-radius:100px;padding:10px 16px;font-size:15px;color:var(--ink)}
-.strip svg{width:15px;height:15px;color:var(--amber-x)}
-.strip.flow span{background:var(--terra);color:var(--creme);font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
-
-/* =================== 08 · ENTREGÁVEIS · prateleira + tíquetes =================== */
+/* =================== 07 · ENTREGÁVEIS · prateleira + tíquetes =================== */
 .s8 .title{position:absolute;left:80px;top:100px}
 .s8 .title .h{font-size:52px}
 .glabel{position:absolute;left:80px;top:230px}
@@ -404,7 +381,7 @@ svg{overflow:visible}
 .tkt.on{background:var(--amber);color:var(--ink)}
 .tkt.on svg{color:var(--terra)}
 
-/* =================== 09 · INVESTIMENTO · etiqueta + cupom =================== */
+/* =================== 08 · INVESTIMENTO · etiqueta + cupom =================== */
 .s9 .s9h{position:absolute;left:80px;top:100px;font-size:46px}
 .tag9{position:absolute;left:96px;top:212px;width:700px;height:420px;background:var(--creme);border-radius:30px;transform:rotate(-3.5deg);padding:48px 54px;color:var(--ink);overflow:hidden}
 .tag9 .hole{position:absolute;left:36px;top:38px;width:30px;height:30px;border-radius:50%;background:var(--amber)}
@@ -434,7 +411,7 @@ button.rl2:hover span{color:var(--amber-x)}
 .tot span{font-size:15px;letter-spacing:.24em;text-transform:uppercase;font-weight:600}
 .tot b{font-size:36px;font-weight:600;letter-spacing:-.01em}
 
-/* =================== 10 · FECHO · manifesto + caminho =================== */
+/* =================== 09 · FECHO · manifesto + caminho =================== */
 .s10 .man{position:absolute;left:0;right:0;top:104px;text-align:center}
 .s10 .man .h{font-size:64px}
 .s10 .man .lead{max-width:840px;margin:20px auto 0;font-size:20px}
