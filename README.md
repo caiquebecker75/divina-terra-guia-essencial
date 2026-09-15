@@ -15,11 +15,11 @@ Divina Navegação: sistema proprietário de organização, navegação e execu�
 2. O desafio — 4 problemas e a virada de marca para necessidade
 3. O sistema — 7 componentes = Padrão Divina Terra (interativo)
 4. Divina Logic — Obrigatório / Adaptável / Recomendado + regra modular (interativo)
-5. A loja em imagem — 3 espaços de render
-6. Metodologia — 10 etapas em 7 fases, com entregáveis por fase (interativo)
-7. Piloto e escala — loja piloto, teste de usabilidade, rollout, clusters P/M/G e auditoria
-8. Papéis e governança — no projeto e na rede, fluxo do novo SKU
-9. Investimento — R$ 30.000, incluído × não incluído
+5. Metodologia — 10 etapas em 7 fases, com entregáveis por fase (interativo)
+6. Piloto e escala — loja piloto, teste de usabilidade, rollout, clusters P/M/G e auditoria
+7. Papéis e governança — no projeto e na rede, fluxo do novo SKU
+8. Entregáveis — 9 produtos e 6 serviços (abas)
+9. Investimento — R$ 29.900, atalhos para os entregáveis e o que não está incluído
 10. Sucesso e próximo passo — indicadores operacionais e decisões para começar
 
 Fonte do conteúdo: *Divina Terra — Estratégia Completa de Organização, Navegação e Execução de Loja* (docx, 15/09/2026).
@@ -37,9 +37,6 @@ Paleta e elementos extraídos do material oficial da marca Divina Terra:
 
 Padrão de pétalas, anéis concêntricos, selos circulares com ícone linear e títulos em caixa alta
 com uma palavra em âmbar. Tipografia: Jost + Cormorant Garamond. Logo oficial recolorido em âmbar.
-
-## Renders
-O slide 05 tem três espaços reservados. Instruções em [`renders/LEIA-ME.txt`](renders/LEIA-ME.txt).
 
 ---
 75LAB · Setembro de 2026

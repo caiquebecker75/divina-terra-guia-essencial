@@ -258,17 +258,6 @@ b{font-weight:500}
 .modcap{font-size:clamp(12px,1vw,15.5px);font-weight:400;color:var(--fg)}
 .modcap b{color:var(--acc);font-weight:600}
 
-/* ---------- slot de render ---------- */
-.render{position:relative;border:1.4px solid var(--acc);border-radius:clamp(9px,.95vw,15px);background:rgba(255,255,255,.045);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;overflow:hidden;min-height:0;transition:.4s var(--ease)}
-.render:hover{background:rgba(222,152,53,.1)}
-.render img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.render .ric{width:clamp(24px,2.2vw,36px);height:clamp(24px,2.2vw,36px);fill:none;stroke:var(--acc);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
-.render .rlbl{font-size:clamp(9px,.78vw,11.5px);letter-spacing:.2em;text-transform:uppercase;color:var(--acc);font-weight:500;text-align:center;padding:0 12px}
-.render .rsub{font-size:clamp(9px,.76vw,11px);color:var(--fg3);font-weight:300;text-align:center;padding:0 14px}
-.render .tag{position:absolute;top:10px;left:10px;border:1px solid var(--acc);color:var(--acc);font-size:8.5px;letter-spacing:.18em;
-  text-transform:uppercase;font-weight:500;padding:3px 9px;border-radius:100px}
-
 /* ---------- timeline 7 fases ---------- */
 .tl{display:grid;grid-template-columns:repeat(7,1fr);gap:clamp(5px,.7vw,12px);position:relative}
 .tl:before{content:'';position:absolute;left:0;right:0;top:clamp(14px,1.25vw,21px);height:1px;background:var(--line)}
@@ -310,6 +299,18 @@ b{font-weight:500}
 .skuflow span{font-size:clamp(9px,.74vw,11px);font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--fg);
   border:1px solid var(--line);border-radius:100px;padding:4px 10px;background:var(--card)}
 .skuflow svg{width:11px;height:11px;fill:none;stroke:var(--acc);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- catálogo de entregáveis ---------- */
+.pcard{gap:clamp(4px,.45vw,7px);padding:clamp(10px,1vw,17px) clamp(12px,1.2vw,19px)}
+.pcard h3{font-size:clamp(11px,1vw,15px)}
+.ptype{font-size:clamp(7.5px,.62vw,9.5px);font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  padding:3px 9px;border-radius:100px;border:1px solid var(--acc);color:var(--acc);white-space:nowrap}
+.ptype.sv{background:var(--acc);color:var(--bg)}
+.stat{align-items:flex-start}
+.stat .snum{font-weight:200;font-size:clamp(34px,3.4vw,56px);line-height:.9;color:var(--fg)}
+.stat .go{font-size:clamp(8.5px,.7vw,10.5px);letter-spacing:.18em;text-transform:uppercase;color:var(--acc);font-weight:600;
+  display:inline-flex;align-items:center;gap:6px;margin-top:2px}
+.stat .go svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 /* ---------- tabs ---------- */
 .tabs{display:inline-flex;border:1px solid var(--line);border-radius:100px;padding:3px;gap:3px;align-self:flex-start}
@@ -548,48 +549,10 @@ b{font-weight:500}
   </div>
 </section>
 
-<!-- ================= 5 · RENDERS =================
-  SLOTS DE RENDER — para inserir o visual final, adicione como PRIMEIRO filho
-  de cada <div class="render">:   <img src="renders/arquivo.jpg" alt="...">
-  A imagem cobre o slot (object-fit:cover) e o placeholder fica atrás.  -->
-<section class="slide bg-mata" data-t="A loja em imagem">
-  <svg class="pat top"><rect width="100%" height="100%" fill="url(#petG)"/></svg>
-  <div class="chrome"><span class="eyebrow">04 · A solução em imagem</span><span class="lbl hideM">Renders ilustrativos</span></div>
-  <div class="content" style="gap:clamp(9px,1.2vw,18px)">
-    <div class="head rv">
-      <h2>O shopper<br><b>enxerga a lógica</b></h2>
-      <p class="lead" style="max-width:36ch">Arquitetura, planograma e sinalização trabalham juntos: a organização da gôndola precisa ser percebida.</p>
-    </div>
-    <div class="rv split" style="display:grid;grid-template-columns:1.55fr 1fr;gap:clamp(9px,1.1vw,16px);flex:1 1 auto;min-height:0">
-      <div class="render" data-slot="hero">
-        <span class="tag">Render 01</span><svg class="ric"><use href="#i-store"/></svg>
-        <span class="rlbl">Loja piloto · navegação por categoria</span>
-        <span class="rsub">Testeiras de categoria e leitura por necessidade</span>
-      </div>
-      <div style="display:grid;grid-template-rows:1fr 1fr;gap:clamp(9px,1.1vw,16px);min-height:0">
-        <div class="render" data-slot="b">
-          <span class="tag">Render 02</span><svg class="ric"><use href="#i-grid"/></svg>
-          <span class="rlbl">Planograma modular</span><span class="rsub">A mesma lógica em diferentes quantidades de módulos</span>
-        </div>
-        <div class="render" data-slot="c">
-          <span class="tag">Render 03</span><svg class="ric"><use href="#i-sign"/></svg>
-          <span class="rlbl">Sistema visual de gôndola</span><span class="rsub">Faixa de subcategoria, régua, stopper e benefício</span>
-        </div>
-      </div>
-    </div>
-    <div class="band rv"><b>Poucas peças, muitas situações</b><span class="sep"></span>testeira<span class="sep"></span>faixa de categoria<span class="sep"></span>faixa de subcategoria<span class="sep"></span>régua<span class="sep"></span>stopper<span class="sep"></span>benefício<span class="sep"></span>lançamento<span class="sep"></span>cross-selling</div>
-  </div>
-  <div class="foot">
-    <span class="lab">75<i>LAB</i></span>
-    <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
-      <span class="cnt"><b class="cur-n">05</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
-  </div>
-</section>
-
-<!-- ================= 6 · METODOLOGIA E FASES ================= -->
+<!-- ================= 5 · METODOLOGIA E FASES ================= -->
 <section class="slide bg-areia" data-t="Metodologia em 7 fases">
   <svg class="pat top"><rect width="100%" height="100%" fill="url(#petT)"/></svg>
-  <div class="chrome"><span class="eyebrow">05 · Como vamos construir</span><span class="lbl hideM">Clique em uma fase</span></div>
+  <div class="chrome"><span class="eyebrow">04 · Como vamos construir</span><span class="lbl hideM">Clique em uma fase</span></div>
   <div class="content">
     <div class="head rv">
       <h2>10 etapas em 7 fases.<br><b>Um único sistema</b></h2>
@@ -623,14 +586,14 @@ b{font-weight:500}
   <div class="foot">
     <span class="lab">75<i>LAB</i></span>
     <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
-      <span class="cnt"><b class="cur-n">06</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
+      <span class="cnt"><b class="cur-n">05</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
   </div>
 </section>
 
-<!-- ================= 7 · PILOTO ANTES DA ESCALA ================= -->
+<!-- ================= 6 · PILOTO ANTES DA ESCALA ================= -->
 <section class="slide bg-terra" data-t="Piloto e escala">
   <svg class="pat full"><rect width="100%" height="100%" fill="url(#petG)"/></svg>
-  <div class="chrome"><span class="eyebrow">06 · Validar antes de escalar</span><span class="lbl hideM">Aplicação real antes da escala</span></div>
+  <div class="chrome"><span class="eyebrow">05 · Validar antes de escalar</span><span class="lbl hideM">Aplicação real antes da escala</span></div>
   <div class="content">
     <div class="head rv">
       <h2>Provado na loja.<br><b>Depois, na rede</b></h2>
@@ -670,14 +633,14 @@ b{font-weight:500}
   <div class="foot">
     <span class="lab">75<i>LAB</i></span>
     <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
-      <span class="cnt"><b class="cur-n">07</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
+      <span class="cnt"><b class="cur-n">06</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
   </div>
 </section>
 
-<!-- ================= 8 · RESPONSABILIDADES E GOVERNANÇA ================= -->
+<!-- ================= 7 · RESPONSABILIDADES E GOVERNANÇA ================= -->
 <section class="slide" data-t="Papéis e governança">
   <svg class="pat corner"><rect width="100%" height="100%" fill="url(#petT)"/></svg>
-  <div class="chrome"><span class="eyebrow">07 · Quem faz o quê</span><span class="lbl hideM">Alterne entre projeto e rede</span></div>
+  <div class="chrome"><span class="eyebrow">06 · Quem faz o quê</span><span class="lbl hideM">Alterne entre projeto e rede</span></div>
   <div class="content">
     <div class="head rv">
       <h2>Papéis claros.<br><b>Um padrão que se mantém</b></h2>
@@ -736,6 +699,50 @@ b{font-weight:500}
   <div class="foot">
     <span class="lab">75<i>LAB</i></span>
     <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
+      <span class="cnt"><b class="cur-n">07</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
+  </div>
+</section>
+
+<!-- ================= 8 · ENTREGÁVEIS ================= -->
+<section class="slide bg-mata" data-t="Entregáveis">
+  <svg class="pat top"><rect width="100%" height="100%" fill="url(#petG)"/></svg>
+  <div class="chrome"><span class="eyebrow">07 · O que você recebe</span><span class="lbl hideM">Produtos e serviços do projeto</span></div>
+  <div class="content">
+    <div class="head rv">
+      <h2>9 produtos que ficam na rede.<br><b>6 serviços que conduzimos</b></h2>
+      <div class="tabs"><button class="tab on ci" data-tab="0">Produtos · 9</button><button class="tab ci" data-tab="1">Serviços · 6</button></div>
+    </div>
+    <div class="rv" style="min-height:clamp(250px,40vh,340px)">
+      <div class="pane on" data-pane="0">
+        <div class="grid g3">
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-tree"/></svg></span><span class="ptype">Produto</span></div><h3>Árvore de Categorias</h3><p class="tiny">Hierarquia oficial, glossário e regras para novos SKUs.</p></div>
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-rule"/></svg></span><span class="ptype">Produto</span></div><h3>Documento Divina Logic</h3><p class="tiny">Princípios de exposição, matriz Obrigatório/Adaptável/Recomendado e protocolos.</p></div>
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-grid"/></svg></span><span class="ptype">Produto</span></div><h3>Biblioteca de Planogramas</h3><p class="tiny">Planogramas-base, modelos modulares e ficha de leitura.</p></div>
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-sign"/></svg></span><span class="ptype">Produto</span></div><h3>Kit Visual de Navegação</h3><p class="tiny">Testeiras, faixas, benefícios e templates das peças de gôndola.</p></div>
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-book"/></svg></span><span class="ptype">Produto</span></div><h3>Manual Digital Divina Navegação</h3><p class="tiny">15 capítulos, com versão master para atualizações.</p></div>
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-list"/></svg></span><span class="ptype">Produto</span></div><h3>Guia Rápido Operacional</h3><p class="tiny">Checklists de rotina, ruptura, produto novo e FAQ.</p></div>
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-cap"/></svg></span><span class="ptype">Produto</span></div><h3>Kit de Treinamento</h3><p class="tiny">Trilha em 8 módulos, apresentação, exercícios e quiz.</p></div>
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-store"/></svg></span><span class="ptype">Produto</span></div><h3>Matriz de Clusters</h3><p class="tiny">Regras de adaptação por formato de loja: P, M e G.</p></div>
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-seal"/></svg></span><span class="ptype">Produto</span></div><h3>Checklist de Auditoria</h3><p class="tiny">10 a 15 critérios: OK, Ajustar ou Não se aplica.</p></div>
+        </div>
+      </div>
+      <div class="pane" data-pane="1">
+        <div class="grid g3">
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-search"/></svg></span><span class="ptype sv">Serviço</span></div><h3>Imersão e diagnóstico</h3><p class="tiny">Levantamento da loja piloto, registro fotográfico e mapa AS IS.</p></div>
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-store"/></svg></span><span class="ptype sv">Serviço</span></div><h3>Implantação assistida</h3><p class="tiny">Acompanhamento da aplicação na loja piloto, com antes e depois.</p></div>
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-target"/></svg></span><span class="ptype sv">Serviço</span></div><h3>Teste e validação</h3><p class="tiny">A equipe aplica o sistema; corrigimos o que gerar dúvida.</p></div>
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-team"/></svg></span><span class="ptype sv">Serviço</span></div><h3>Treinamento centralizado</h3><p class="tiny">Capacitação da equipe que vai multiplicar o padrão na rede.</p></div>
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-grow"/></svg></span><span class="ptype sv">Serviço</span></div><h3>Plano de rollout e governança</h3><p class="tiny">Ondas de implantação, papéis e versionamento do padrão.</p></div>
+          <div class="tile pcard ci"><div class="trow"><span class="ic"><svg><use href="#i-cycle"/></svg></span><span class="ptype sv">Serviço</span></div><h3>Janela de suporte</h3><p class="tiny">Apoio pós-entrega com período e canal definidos.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="band rv"><svg style="width:15px;height:15px"><use href="#i-book"/></svg>
+      <b>Material vivo</b><span class="sep"></span>tudo com versão e data de atualização, para a rede evoluir sem reconstruir o sistema</div>
+  </div>
+  <div class="foot">
+    <span class="lab">75<i>LAB</i></span>
+    <div class="nav"><button class="ixb ci" data-ix>Índice</button><button class="nb ci" data-prev><svg><use href="#i-l"/></svg></button>
       <span class="cnt"><b class="cur-n">08</b> / 10</span><button class="nb ci" data-next><svg><use href="#i-arr"/></svg></button></div>
   </div>
 </section>
@@ -750,42 +757,29 @@ b{font-weight:500}
     <div class="rv"><h2 style="max-width:22ch">A metodologia central <b>da rede inteira</b></h2></div>
     <div class="rv split" style="display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(16px,2.3vw,44px);align-items:start">
       <div>
-        <div class="big pop"><small>R$</small><span id="cUp">30.000</span></div>
+        <div class="big pop"><small>R$</small><span id="cUp">29.900</span></div>
         <div class="dl" style="margin-top:clamp(10px,1.3vw,20px)">
           <div><span>Base do projeto</span><b>1 loja piloto</b></div>
           <div><span>Estrutura</span><b>10 etapas em 7 fases</b></div>
           <div><span>Suporte</span><b>Janela limitada pós-entrega</b></div>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <div class="tabs"><button class="tab on ci" data-tab="0">Está incluído</button><button class="tab ci" data-tab="1">Não está incluído</button></div>
-        <div class="pane on" data-pane="0">
-          <ul class="ul cols">
-            <li><svg><use href="#i-ok"/></svg>Uma loja piloto</li>
-            <li><svg><use href="#i-ok"/></svg>Arquitetura principal de categorias</li>
-            <li><svg><use href="#i-ok"/></svg>Naming das categorias-chave</li>
-            <li><svg><use href="#i-ok"/></svg>Sistema Divina Logic</li>
-            <li><svg><use href="#i-ok"/></svg>Planogramas-base e lógica modular</li>
-            <li><svg><use href="#i-ok"/></svg>Sistema visual e templates de peças</li>
-            <li><svg><use href="#i-ok"/></svg>Implantação assistida do piloto</li>
-            <li><svg><use href="#i-ok"/></svg>Manual definitivo e guia rápido</li>
-            <li><svg><use href="#i-ok"/></svg>Treinamento centralizado</li>
-            <li><svg><use href="#i-ok"/></svg>Clusterização por formato</li>
-            <li><svg><use href="#i-ok"/></svg>Checklist de auditoria</li>
-            <li><svg><use href="#i-ok"/></svg>Janela limitada de suporte</li>
-          </ul>
+      <div style="display:flex;flex-direction:column;gap:clamp(9px,1vw,14px)">
+        <div class="eyebrow">O que o investimento cobre</div>
+        <div class="grid g2">
+          <button class="tile stat ci" data-go="7" data-gotab="0"><span class="snum">9</span><h3>Produtos</h3><p class="tiny">que ficam com a rede</p><span class="go">Ver produtos <svg><use href="#i-arr"/></svg></span></button>
+          <button class="tile stat ci" data-go="7" data-gotab="1"><span class="snum">6</span><h3>Serviços</h3><p class="tiny">conduzidos pela 75LAB</p><span class="go">Ver serviços <svg><use href="#i-arr"/></svg></span></button>
         </div>
-        <div class="pane" data-pane="1">
-          <ul class="ul cols no">
-            <li><svg><use href="#i-no"/></svg>Visita individual a todas as franquias</li>
-            <li><svg><use href="#i-no"/></svg>Implantação física em todas as lojas</li>
-            <li><svg><use href="#i-no"/></svg>Produção e instalação de materiais</li>
-            <li><svg><use href="#i-no"/></svg>Levantamento SKU a SKU da rede</li>
-            <li><svg><use href="#i-no"/></svg>Planograma customizado por loja</li>
-            <li><svg><use href="#i-no"/></svg>Suporte ilimitado e atualizações permanentes</li>
-            <li><svg><use href="#i-no"/></svg>Custos de terceiros, logística e deslocamentos</li>
-          </ul>
-        </div>
+        <div class="eyebrow" style="margin-top:4px">Não está incluído</div>
+        <ul class="ul cols no">
+          <li><svg><use href="#i-no"/></svg>Visita individual a todas as franquias</li>
+          <li><svg><use href="#i-no"/></svg>Implantação física em todas as lojas</li>
+          <li><svg><use href="#i-no"/></svg>Produção e instalação de materiais</li>
+          <li><svg><use href="#i-no"/></svg>Levantamento SKU a SKU da rede</li>
+          <li><svg><use href="#i-no"/></svg>Planograma customizado por loja</li>
+          <li><svg><use href="#i-no"/></svg>Suporte ilimitado e atualizações permanentes</li>
+          <li><svg><use href="#i-no"/></svg>Custos de terceiros, logística e deslocamentos</li>
+        </ul>
       </div>
     </div>
     <div class="btns rv"><button class="btn ci" data-go="9">Ver o próximo passo <svg><use href="#i-arr"/></svg></button></div>
@@ -798,7 +792,7 @@ b{font-weight:500}
 </section>
 
 <!-- ================= 10 · SUCESSO E DECISÃO ================= -->
-<section class="slide bg-mata" data-t="Sucesso e próximo passo">
+<section class="slide bg-terra" data-t="Sucesso e próximo passo">
   <svg class="pat full"><rect width="100%" height="100%" fill="url(#petG)"/></svg>
   <div class="chrome">
     <span class="eyebrow">09 · O próximo passo</span>
@@ -954,6 +948,10 @@ b{font-weight:500}
     document.querySelectorAll('.cur-n').forEach(function(e){ e.textContent = String(i + 1).padStart(2, '0'); });
   }
   function next(){ go(i + 1); } function prev(){ go(i - 1); }
+  function setTab(s, k){
+    s.querySelectorAll('[data-tab]').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-tab') === k); });
+    s.querySelectorAll('.pane').forEach(function(p){ p.classList.toggle('on', p.getAttribute('data-pane') === k); });
+  }
   slides[0].classList.add('act'); paint();
 
   document.addEventListener('click', function(e){
@@ -961,7 +959,7 @@ b{font-weight:500}
     if(!t) return;
     if(t.hasAttribute('data-next')) return next();
     if(t.hasAttribute('data-prev')) return prev();
-    if(t.hasAttribute('data-go'))   { closeIx(); return go(+t.getAttribute('data-go')); }
+    if(t.hasAttribute('data-go'))   { closeIx(); var gi = +t.getAttribute('data-go'); if(t.hasAttribute('data-gotab')) setTab(slides[gi], t.getAttribute('data-gotab')); return go(gi); }
     if(t.hasAttribute('data-ix'))   return openIx();
     if(t.id === 'ixClose')          return closeIx();
     if(t.id === 'pdf')              return window.print();
@@ -972,11 +970,7 @@ b{font-weight:500}
       t.parentNode.querySelectorAll('.tab').forEach(function(b){ b.classList.toggle('on', b === t); });
       return drawMod(+t.getAttribute('data-mod'));
     }
-    if(t.hasAttribute('data-tab')){
-      var k = t.getAttribute('data-tab'), s = t.closest('.slide');
-      s.querySelectorAll('[data-tab]').forEach(function(b){ b.classList.toggle('on', b === t); });
-      s.querySelectorAll('.pane').forEach(function(p){ p.classList.toggle('on', p.getAttribute('data-pane') === k); });
-    }
+    if(t.hasAttribute('data-tab')) setTab(t.closest('.slide'), t.getAttribute('data-tab'));
   });
 
   var ix = document.getElementById('ix'), ixg = document.getElementById('ixg');
@@ -1015,7 +1009,7 @@ b{font-weight:500}
   var done = false;
   function countUp(){
     if(done) return; done = true;
-    var el = document.getElementById('cUp'), end = 30000, t0 = null;
+    var el = document.getElementById('cUp'), end = 29900, t0 = null;
     function step(ts){
       if(!t0) t0 = ts; var p = Math.min((ts - t0) / 1300, 1);
       el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString('pt-BR');
