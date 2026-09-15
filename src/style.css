@@ -142,7 +142,7 @@ svg{overflow:visible}
 #ixClose{height:44px;padding:0 22px;border-radius:100px;background:rgba(255,255,255,.1);color:var(--creme);font-size:12px;letter-spacing:.22em;text-transform:uppercase}
 #ixClose:hover{background:var(--amber);color:var(--ink)}
 
-/* =================== 01 · CAPA — título + órbita =================== */
+/* =================== 01 · CAPA · título + órbita =================== */
 .s1 .brand{position:absolute;left:80px;top:46px;display:flex;align-items:center;gap:22px}
 .s1 .brand img{height:30px;display:block}
 .s1 .brand .desc{font-size:10px;letter-spacing:.46em;color:var(--amber);text-transform:uppercase;font-weight:500;margin-top:7px;text-align:center}
@@ -168,7 +168,7 @@ svg{overflow:visible}
 .onode:hover .dot svg{color:var(--ink)}
 .onode:hover .n{background:var(--creme)}
 
-/* =================== 02 · DESAFIO — comparador antes × depois =================== */
+/* =================== 02 · DESAFIO · comparador antes × depois =================== */
 .s2 .title{position:absolute;left:80px;top:104px}
 .s2 .title .h{font-size:58px}
 .s2 .ctl{position:absolute;right:80px;top:104px;display:flex;flex-direction:column;align-items:flex-end;gap:16px}
@@ -202,7 +202,7 @@ svg{overflow:visible}
 .prob h4{font-size:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
 .prob p{font-size:15px;font-weight:300;line-height:1.4;color:var(--ink2);margin-top:4px}
 
-/* =================== 03 · SISTEMA — roda central =================== */
+/* =================== 03 · SISTEMA · roda central =================== */
 .s3 .title{position:absolute;left:0;right:0;top:100px;text-align:center}
 .s3 .title .h{font-size:50px}
 .s3 .tap{margin-top:14px;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#6A4F35;font-weight:600}
@@ -232,7 +232,7 @@ svg{overflow:visible}
 .mk svg{width:17px;height:17px}
 .isnt .mk svg{color:var(--terra)}.is .mk svg{color:var(--amber)}
 
-/* =================== 04 · DIVINA LOGIC — simulador + regras =================== */
+/* =================== 04 · DIVINA LOGIC · simulador + regras =================== */
 .s4 .title{position:absolute;left:80px;top:100px;width:1000px}
 .s4 .title .h{font-size:60px}
 .s4 .title .lead{margin-top:12px;font-size:20px}
@@ -269,7 +269,7 @@ svg{overflow:visible}
 .rule .a{font-size:27px;font-weight:600;line-height:1.1}
 .rule p{font-size:16px;font-weight:300;line-height:1.38;opacity:.9;margin-top:4px}
 
-/* =================== 05 · METODOLOGIA — escada =================== */
+/* =================== 05 · METODOLOGIA · escada =================== */
 .s5 .title{position:absolute;left:80px;top:100px}
 .s5 .title .h{font-size:58px}
 .s5 .title .small{margin-top:10px;max-width:760px}
@@ -298,7 +298,7 @@ svg{overflow:visible}
 .stp .flag svg{width:13px;height:13px;color:var(--amber)}
 .floor{position:absolute;left:80px;right:80px;top:806px;height:3px;border-radius:3px;background:rgba(71,50,37,.22)}
 
-/* =================== 06 · PILOTO E ESCALA — ondas =================== */
+/* =================== 06 · PILOTO E ESCALA · ondas =================== */
 .rip{position:absolute;left:90px;top:150px;width:660px;height:660px}
 .rip:after{content:'';position:absolute;left:50%;top:50%;width:240px;height:240px;margin:-120px 0 0 -120px;border-radius:50%;background:rgba(222,152,53,.3);animation:ripple 3.4s ease-out infinite;z-index:2;pointer-events:none}
 .rc{position:absolute;left:50%;top:50%;border-radius:50%;transform:translate(-50%,-50%);transition:background .35s}
@@ -338,7 +338,7 @@ svg{overflow:visible}
 .pill{font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:100px;white-space:nowrap;transition:background .3s,color .3s}
 .pill.ok{background:#2E6B4E;color:var(--creme)}.pill.aj{background:var(--amber);color:var(--ink)}.pill.na{background:#EDE4D3;color:var(--ink3)}
 
-/* =================== 07 · PAPÉIS — matriz =================== */
+/* =================== 07 · PAPÉIS · matriz =================== */
 .s7 .title{position:absolute;left:80px;top:100px}
 .s7 .title .h{font-size:56px}
 .s7 .seg{position:absolute;right:80px;top:150px}
@@ -361,7 +361,7 @@ svg{overflow:visible}
 .strip svg{width:15px;height:15px;color:var(--amber-x)}
 .strip.flow span{background:var(--terra);color:var(--creme);font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
 
-/* =================== 08 · ENTREGÁVEIS — prateleira + tíquetes =================== */
+/* =================== 08 · ENTREGÁVEIS · prateleira + tíquetes =================== */
 .s8 .title{position:absolute;left:80px;top:100px}
 .s8 .title .h{font-size:52px}
 .glabel{position:absolute;left:80px;top:230px}
@@ -401,7 +401,7 @@ svg{overflow:visible}
 .tkt.on{background:var(--amber);color:var(--ink)}
 .tkt.on svg{color:var(--terra)}
 
-/* =================== 09 · INVESTIMENTO — etiqueta + cupom =================== */
+/* =================== 09 · INVESTIMENTO · etiqueta + cupom =================== */
 .s9 .s9h{position:absolute;left:80px;top:100px;font-size:46px}
 .tag9{position:absolute;left:96px;top:212px;width:700px;height:420px;background:var(--creme);border-radius:30px;transform:rotate(-3.5deg);padding:48px 54px;color:var(--ink);overflow:hidden}
 .tag9 .hole{position:absolute;left:36px;top:38px;width:30px;height:30px;border-radius:50%;background:var(--amber)}
@@ -431,7 +431,7 @@ button.rl2:hover span{color:var(--amber-x)}
 .tot span{font-size:15px;letter-spacing:.24em;text-transform:uppercase;font-weight:600}
 .tot b{font-size:36px;font-weight:600;letter-spacing:-.01em}
 
-/* =================== 10 · FECHO — manifesto + caminho =================== */
+/* =================== 10 · FECHO · manifesto + caminho =================== */
 .s10 .man{position:absolute;left:0;right:0;top:104px;text-align:center}
 .s10 .man .h{font-size:64px}
 .s10 .man .lead{max-width:840px;margin:20px auto 0;font-size:20px}
