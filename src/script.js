@@ -94,29 +94,45 @@
 
   /* ================= 02 · PRATELEIRAS ANTES × DEPOIS ================= */
   (function(){
-    var BRAND = ['#CDB99A','#B98B63','#93A088','#D9A866'], TYPE = ['i-jar','i-target','i-drop'], ROWS = [110,200,290];
+    var BRAND = ['#CDB99A','#B98B63','#93A088','#D9A866'], TYPE = ['i-jar','i-target','i-drop'];
+    var ROWS = [172,256,340], PW = 42, PH = 58, STEP = 47, X0 = 120;
     function pkg(svg, x, y, fill, type){
-      svg.appendChild(sv('rect',{x:x,y:y,width:46,height:66,rx:7,fill:fill}));
-      var u = sv('use',{href:'#' + TYPE[type],x:x + 10,y:y + 20,width:26,height:26}); u.setAttribute('style','color:#3A2A1E'); svg.appendChild(u);
+      svg.appendChild(sv('rect',{x:x,y:y,width:PW,height:PH,rx:6,fill:fill}));
+      var u = sv('use',{href:'#' + TYPE[type],x:x + 9,y:y + 17,width:24,height:24}); u.setAttribute('style','color:#3A2A1E'); svg.appendChild(u);
     }
-    function planks(svg, color){ ROWS.forEach(function(y){ svg.appendChild(sv('rect',{x:40,y:y + 68,width:1360,height:7,rx:3,fill:color})); }); }
-    // hoje: blocos por marca, tipos misturados
+    function planks(svg, color){ ROWS.forEach(function(y){ svg.appendChild(sv('rect',{x:X0 - 20,y:y + PH + 2,width:1440 - X0,height:7,rx:3,fill:color})); }); }
+    function label(svg, x, y, cls, txt, anchor){ var t = sv('text',{x:x,y:y,'text-anchor':anchor || 'middle','class':cls}); t.textContent = txt; svg.appendChild(t); }
+    function pill(svg, x, w, fill, txt){ svg.appendChild(sv('rect',{x:x,y:138,width:w,height:22,rx:11,fill:fill})); label(svg, x + w / 2, 153, 'brd', txt); }
+
+    // HOJE: blocos por marca, tipos misturados, preço sem ordem
     var b = $('shB'), mix = [0,1,0,2,1,0];
     planks(b, '#BCAB8E');
     for(var br = 0; br < 4; br++){
-      var gx = 70 + br * (6 * 52 + 22);
-      ROWS.forEach(function(y, r){ for(var q = 0; q < 6; q++) pkg(b, gx + q * 52, y, BRAND[br], mix[(q + br + r) % 6]); });
-      var t = sv('text',{x:gx + 153,y:394,'text-anchor':'middle','class':'blbl'}); t.textContent = 'MARCA ' + 'ABCD'[br]; b.appendChild(t);
+      var gx = X0 + br * (6 * STEP + 24);
+      pill(b, gx, 6 * STEP - 5, BRAND[br], 'MARCA ' + (br + 1));
+      ROWS.forEach(function(y, r){ for(var q = 0; q < 6; q++) pkg(b, gx + q * STEP, y, BRAND[br], mix[(q + br + r) % 6]); });
     }
-    // proposto: blocos por necessidade, marcas em ordem dentro de cada bloco
-    var a = $('shA'), CATS = [['PROTEÍNAS',10,0,[0,0,0,1,1,1,2,2,3,3]],['CREATINAS',7,1,[0,0,1,1,2,2,3]],['ÔMEGAS',7,2,[0,0,1,1,2,2,3]]], x = 70;
+
+    // PROPOSTO: necessidade (categoria + motivo) > marca (blocos verticais) > preço (caros em cima, baratos embaixo)
+    var a = $('shA');
     planks(a, '#7A6250');
+    a.appendChild(sv('path',{d:'M34 ' + (ROWS[2] + PH) + ' V' + (ROWS[0] + 4),stroke:'#DE9835','stroke-width':2,fill:'none'}));
+    a.appendChild(sv('path',{d:'M27 ' + (ROWS[0] + 13) + ' L34 ' + (ROWS[0] + 3) + ' L41 ' + (ROWS[0] + 13),stroke:'#DE9835','stroke-width':2,fill:'none','stroke-linecap':'round','stroke-linejoin':'round'}));
+    label(a, 20, 152, 'prcs', 'MAIS CARO', 'start');
+    label(a, 20, ROWS[2] + PH + 24, 'prcs', 'MAIS BARATO', 'start');
+    ['$$$','$$','$'].forEach(function(p, r){ label(a, 50, ROWS[r] + PH / 2 + 6, 'prc', p, 'start'); });
+    var CATS = [['PROTEÍNAS','Ganho de massa muscular',0],['CREATINAS','Recuperação do grupo muscular',1],['ÔMEGAS','Saúde cardiovascular',2]];
+    var BW = 2 * STEP - 5, CW = 8 * STEP + 3 * 8 - 5, x = X0;
     CATS.forEach(function(c){
-      var w = c[1] * 52 - 6;
-      a.appendChild(sv('rect',{x:x,y:72,width:w,height:28,rx:8,fill:'#DE9835'}));
-      var tt = sv('text',{x:x + w / 2,y:91,'text-anchor':'middle','class':'tst'}); tt.textContent = c[0]; a.appendChild(tt);
-      ROWS.forEach(function(y){ for(var q = 0; q < c[1]; q++) pkg(a, x + q * 52, y + 14, BRAND[c[3][q]], c[2]); });
-      x += w + 50;
+      a.appendChild(sv('rect',{x:x,y:74,width:CW,height:28,rx:8,fill:'#DE9835'}));
+      label(a, x + CW / 2, 93, 'tst', c[0]);
+      label(a, x + CW / 2, 125, 'ben', c[1]);
+      for(var br = 0; br < 4; br++){
+        var bx = x + br * (2 * STEP + 8);
+        pill(a, bx, BW, BRAND[br], 'MARCA ' + (br + 1));
+        ROWS.forEach(function(y){ for(var q = 0; q < 2; q++) pkg(a, bx + q * STEP, y, BRAND[br], c[2]); });
+      }
+      x += CW + 40;
     });
   })();
   var cmp = $('cmp'), dragging = false;

@@ -176,13 +176,13 @@ svg{overflow:visible}
 .legend2 span{display:inline-flex;align-items:center;gap:7px}
 .legend2 svg{width:20px;height:20px;color:var(--ink)}
 .legend2 em{font-style:normal;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber-x);font-weight:600;margin-left:6px}
-.cmp{position:absolute;left:80px;top:258px;width:1440px;height:400px;border-radius:26px;overflow:hidden;--x:50%;user-select:none;touch-action:none}
+.cmp{position:absolute;left:80px;top:258px;width:1440px;height:430px;border-radius:26px;overflow:hidden;--x:50%;user-select:none;touch-action:none}
 .cmp .ly{position:absolute;inset:0}
 .cmp .before{background:#E6DCC8}
 .cmp .after{background:var(--terra);clip-path:inset(0 0 0 var(--x))}
 .cmp.anim .after{transition:clip-path .7s var(--ease)}
 .cmp.anim .handle{transition:left .7s var(--ease)}
-.cmp .shelfsvg{position:absolute;left:0;top:0;width:1440px;height:400px}
+.cmp .shelfsvg{position:absolute;left:0;top:0;width:1440px;height:430px}
 .cmp .tagl{position:absolute;top:22px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;padding:9px 16px;border-radius:100px}
 .cmp .before .tagl{left:24px;background:rgba(71,50,37,.1);color:var(--ink2)}
 .cmp .after .tagl{right:24px;background:var(--amber);color:var(--ink)}
@@ -194,9 +194,12 @@ svg{overflow:visible}
 .cmp .knob{position:absolute;top:50%;left:0;width:66px;height:66px;margin:-33px 0 0 -33px;border-radius:50%;background:var(--amber);display:grid;place-items:center}
 .cmp .knob svg{width:30px;height:30px;color:var(--ink)}
 .pin{position:absolute;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;background:var(--terra);color:var(--amber);font-weight:600;font-size:17px;display:grid;place-items:center;animation:pulse 2.6s ease-in-out infinite}
-.blbl{font:500 12px 'Jost',sans-serif;letter-spacing:.2em;fill:#7E6146}
+.brd{font:600 10px 'Jost',sans-serif;letter-spacing:.14em;fill:#3A2A1E}
+.ben{font:500 15px 'Jost',sans-serif;fill:#F5F0E4}
+.prc{font:600 17px 'Jost',sans-serif;fill:#DE9835}
+.prcs{font:600 9.5px 'Jost',sans-serif;letter-spacing:.12em;fill:#CFC2B0}
 .tst{font:600 13px 'Jost',sans-serif;letter-spacing:.18em;fill:#3A2A1E}
-.probs{position:absolute;left:80px;right:80px;top:688px;display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.probs{position:absolute;left:80px;right:80px;top:704px;display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
 .prob{display:flex;gap:14px;align-items:flex-start}
 .prob .pn{flex:0 0 40px;height:40px;border-radius:50%;background:var(--terra);color:var(--amber);font-weight:600;font-size:17px;display:grid;place-items:center}
 .prob h4{font-size:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
