@@ -386,9 +386,13 @@ svg{overflow:visible}
 .tag9{position:absolute;left:96px;top:212px;width:700px;height:420px;background:var(--creme);border-radius:30px;transform:rotate(-3.5deg);padding:48px 54px;color:var(--ink);overflow:hidden}
 .tag9 .hole{position:absolute;left:36px;top:38px;width:30px;height:30px;border-radius:50%;background:var(--amber)}
 .tag9 .tl{padding-left:44px;font-size:14px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:var(--amber-x)}
-.tag9 .pn{font-size:156px;font-weight:200;line-height:.9;letter-spacing:-.03em;margin-top:34px;white-space:nowrap}
-.tag9 .pn small{font-size:42px;font-weight:400;letter-spacing:0;vertical-align:top;margin-right:10px;position:relative;top:18px}
-.tag9 .facts{display:flex;gap:10px;margin-top:30px;flex-wrap:wrap}
+.tag9 .pn{font-size:132px;font-weight:200;line-height:.9;letter-spacing:-.03em;margin-top:34px;white-space:nowrap}
+.tag9 .pn small{font-size:38px;font-weight:400;letter-spacing:0;vertical-align:top;margin-right:10px;position:relative;top:16px}
+.tag9 .pn em{font-style:normal;font-size:23px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-x);margin-left:16px}
+.tag9 .plan{display:flex;align-items:baseline;gap:14px;background:#EDE4D3;border-radius:14px;padding:12px 20px;margin-top:18px}
+.tag9 .plan b{font-size:21px;font-weight:600}
+.tag9 .plan span{font-size:14px;color:var(--ink3)}
+.tag9 .facts{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
 .tag9 .facts span{background:#EDE4D3;border-radius:100px;padding:10px 16px;font-size:15px}
 .tag9 .bar{position:absolute;left:0;right:0;bottom:0;height:62px;background:var(--terra);color:var(--amber);display:flex;align-items:center;justify-content:space-between;padding:0 54px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
 .s9btn{position:absolute;left:110px;top:708px}
@@ -398,18 +402,21 @@ svg{overflow:visible}
 .rcpt .rh{text-align:center}
 .rcpt .rh b{display:block;font-size:17px;letter-spacing:.24em;text-transform:uppercase;font-weight:600}
 .rcpt .rh span{display:block;font-size:13px;color:var(--ink3);margin-top:4px;letter-spacing:.08em}
-.dash{height:0;border-top:2px dashed rgba(71,50,37,.22);margin:18px 0}
+.dash{height:0;border-top:2px dashed rgba(71,50,37,.22);margin:13px 0}
 .rs{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--amber-x);margin-bottom:8px}
 .rl2{width:100%;display:flex;align-items:baseline;gap:0;padding:6px 0;font-size:16px;color:var(--ink);text-align:left}
 .rl2 .ld{flex:1;border-bottom:2px dotted rgba(71,50,37,.28);margin:0 10px;translate:0 -4px}
 .rl2 em{font-style:normal;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--amber-x);display:inline-flex;align-items:center;gap:4px}
 .rl2 em svg{width:16px;height:16px;color:#2E6B4E}
 button.rl2:hover span{color:var(--amber-x)}
-.nx li{font-size:14px;color:var(--ink3);padding:3px 0;display:flex;gap:10px;align-items:center}
+.nx li{font-size:14px;color:var(--ink3);padding:1.5px 0;display:flex;gap:10px;align-items:center}
 .nx li svg{width:13px;height:13px;color:#B98A62;flex:0 0 13px}
 .tot{display:flex;justify-content:space-between;align-items:baseline}
 .tot span{font-size:15px;letter-spacing:.24em;text-transform:uppercase;font-weight:600}
 .tot b{font-size:36px;font-weight:600;letter-spacing:-.01em}
+.totsub{display:flex;justify-content:space-between;align-items:baseline;margin-top:6px}
+.totsub span{font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--ink3)}
+.totsub b{font-size:20px;font-weight:600;color:var(--ink2)}
 
 /* =================== 09 · FECHO · manifesto + caminho =================== */
 .s10 .man{position:absolute;left:0;right:0;top:104px;text-align:center}
