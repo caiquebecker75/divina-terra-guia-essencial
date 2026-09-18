@@ -121,7 +121,7 @@
     label(a, 20, 152, 'prcs', 'MAIS CARO', 'start');
     label(a, 20, ROWS[2] + PH + 24, 'prcs', 'MAIS BARATO', 'start');
     ['$$$','$$','$'].forEach(function(p, r){ label(a, 50, ROWS[r] + PH / 2 + 6, 'prc', p, 'start'); });
-    var CATS = [['PROTEÍNAS','Ganho de massa muscular',0],['CREATINAS','Recuperação do grupo muscular',1],['ÔMEGAS','Saúde cardiovascular',2]];
+    var CATS = [['PROTEÍNAS','Ganho de massa muscular',0],['CREATINAS','Recuperação do grupo muscular',1],['ÔMEGAS','Saúde do coração',2]];
     var BW = 2 * STEP - 5, CW = 8 * STEP + 3 * 8 - 5, x = X0;
     CATS.forEach(function(c){
       a.appendChild(sv('rect',{x:x,y:74,width:CW,height:28,rx:8,fill:'#DE9835'}));
