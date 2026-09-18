@@ -267,7 +267,7 @@
   var counted = false;
   function countUp(){
     if(counted) return; counted = true;
-    var el = $('cUp'), end = 29900, t0 = null;
+    var el = $('cUp'), end = 10000, t0 = null;
     function step(ts){ if(!t0) t0 = ts; var p = Math.min((ts - t0) / 1300, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString('pt-BR'); if(p < 1) requestAnimationFrame(step); }
     requestAnimationFrame(step);
   }

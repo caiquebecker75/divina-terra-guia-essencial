@@ -397,9 +397,10 @@ svg{overflow:visible}
 .tag9{position:absolute;left:96px;top:212px;width:700px;height:420px;background:var(--creme);border-radius:30px;transform:rotate(-3.5deg);padding:48px 54px;color:var(--ink);overflow:hidden}
 .tag9 .hole{position:absolute;left:36px;top:38px;width:30px;height:30px;border-radius:50%;background:var(--amber)}
 .tag9 .tl{padding-left:44px;font-size:14px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:var(--amber-x)}
-.tag9 .pn{font-size:132px;font-weight:200;line-height:.9;letter-spacing:-.03em;margin-top:34px;white-space:nowrap}
-.tag9 .pn small{font-size:38px;font-weight:400;letter-spacing:0;vertical-align:top;margin-right:10px;position:relative;top:16px}
-.tag9 .pn em{font-style:normal;font-size:23px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-x);margin-left:16px}
+.tag9 .pn{font-size:104px;font-weight:200;line-height:.9;letter-spacing:-.03em;margin-top:34px;white-space:nowrap}
+.tag9 .pn small{font-size:32px;font-weight:400;letter-spacing:0;vertical-align:top;margin-right:8px;position:relative;top:14px}
+.tag9 .pn .mult{font-style:normal;font-weight:400;font-size:68px;margin-right:12px;color:var(--ink2)}
+.tag9 .pn em{font-style:normal;font-size:21px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-x);margin-left:16px}
 .tag9 .plan{display:flex;align-items:baseline;gap:14px;background:#EDE4D3;border-radius:14px;padding:12px 20px;margin-top:18px}
 .tag9 .plan b{font-size:21px;font-weight:600}
 .tag9 .plan span{font-size:14px;color:var(--ink3)}
@@ -684,8 +685,8 @@ button.rl2:hover span{color:var(--amber-x)}
   <div class="tag9 rv" style="--d:1">
     <span class="hole"></span>
     <span class="tl">Divina Navegação · projeto completo</span>
-    <div class="pn"><small>R$</small><span id="cUp">29.900</span><em>à vista</em></div>
-    <div class="plan"><b>ou 3 parcelas de R$ 10.000</b><span>total parcelado R$ 30.000</span></div>
+    <div class="pn"><i class="mult">3 ×</i><small>R$</small><span id="cUp">10.000</span><em>parcelado</em></div>
+    <div class="plan"><b>ou R$ 29.900 à vista</b><span>total parcelado R$ 30.000</span></div>
     <div class="facts"><span>1 loja piloto</span><span>10 etapas em 7 fases</span><span>Janela limitada de suporte</span></div>
     <div class="bar"><span>Divina Terra × 75LAB</span><span>Um ativo da rede</span></div>
   </div>
@@ -710,8 +711,8 @@ button.rl2:hover span{color:var(--amber-x)}
       <li><svg><use href="#i-no"/></svg>Custos de terceiros, logística e deslocamentos</li>
     </ul>
     <div class="dash"></div>
-    <div class="tot"><span>Total à vista</span><b>R$ 29.900</b></div>
-    <div class="totsub"><span>ou 3 parcelas de</span><b>R$ 10.000</b></div>
+    <div class="tot"><span>3 parcelas de</span><b>R$ 10.000</b></div>
+    <div class="totsub"><span>ou à vista</span><b>R$ 29.900</b></div>
     <svg class="zig" viewBox="0 0 580 16" preserveAspectRatio="none"><path id="zig"/></svg>
   </div>
  </section>
@@ -1043,7 +1044,7 @@ button.rl2:hover span{color:var(--amber-x)}
   var counted = false;
   function countUp(){
     if(counted) return; counted = true;
-    var el = $('cUp'), end = 29900, t0 = null;
+    var el = $('cUp'), end = 10000, t0 = null;
     function step(ts){ if(!t0) t0 = ts; var p = Math.min((ts - t0) / 1300, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString('pt-BR'); if(p < 1) requestAnimationFrame(step); }
     requestAnimationFrame(step);
   }

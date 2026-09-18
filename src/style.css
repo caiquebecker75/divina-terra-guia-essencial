@@ -386,9 +386,10 @@ svg{overflow:visible}
 .tag9{position:absolute;left:96px;top:212px;width:700px;height:420px;background:var(--creme);border-radius:30px;transform:rotate(-3.5deg);padding:48px 54px;color:var(--ink);overflow:hidden}
 .tag9 .hole{position:absolute;left:36px;top:38px;width:30px;height:30px;border-radius:50%;background:var(--amber)}
 .tag9 .tl{padding-left:44px;font-size:14px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:var(--amber-x)}
-.tag9 .pn{font-size:132px;font-weight:200;line-height:.9;letter-spacing:-.03em;margin-top:34px;white-space:nowrap}
-.tag9 .pn small{font-size:38px;font-weight:400;letter-spacing:0;vertical-align:top;margin-right:10px;position:relative;top:16px}
-.tag9 .pn em{font-style:normal;font-size:23px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-x);margin-left:16px}
+.tag9 .pn{font-size:104px;font-weight:200;line-height:.9;letter-spacing:-.03em;margin-top:34px;white-space:nowrap}
+.tag9 .pn small{font-size:32px;font-weight:400;letter-spacing:0;vertical-align:top;margin-right:8px;position:relative;top:14px}
+.tag9 .pn .mult{font-style:normal;font-weight:400;font-size:68px;margin-right:12px;color:var(--ink2)}
+.tag9 .pn em{font-style:normal;font-size:21px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-x);margin-left:16px}
 .tag9 .plan{display:flex;align-items:baseline;gap:14px;background:#EDE4D3;border-radius:14px;padding:12px 20px;margin-top:18px}
 .tag9 .plan b{font-size:21px;font-weight:600}
 .tag9 .plan span{font-size:14px;color:var(--ink3)}
